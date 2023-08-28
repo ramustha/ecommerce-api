@@ -48,7 +48,7 @@ data class BukalapakSearchResponse(
         @SerialName("id")
         val id: String,
         @SerialName("images")
-        val images: Images?,
+        val images: Images,
         @SerialName("imported")
         val imported: Boolean?,
         @SerialName("installments")
@@ -145,9 +145,9 @@ data class BukalapakSearchResponse(
         @Serializable
         data class Images(
             @SerialName("large_urls")
-            val largeUrls: List<String?>?,
+            val largeUrls: List<String>,
             @SerialName("small_urls")
-            val smallUrls: List<String?>?
+            val smallUrls: List<String>
         )
 
         @Serializable

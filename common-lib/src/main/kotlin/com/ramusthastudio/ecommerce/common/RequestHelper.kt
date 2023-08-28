@@ -2,7 +2,16 @@ package com.ramusthastudio.ecommerce.common
 
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 
-fun blibliCommonRequest(query: String): CommonSearchRequest {
+fun commonSearchRequest(query: String): CommonSearchRequest {
+    return CommonSearchRequest(
+        page = "1",
+        offset = "0",
+        xparam = mutableMapOf(),
+        query = query
+    )
+}
+
+fun blibliSearchRequest(query: String): CommonSearchRequest {
     return CommonSearchRequest(
         page = "1",
         offset = "0",
@@ -11,7 +20,7 @@ fun blibliCommonRequest(query: String): CommonSearchRequest {
     )
 }
 
-fun bukalapakCommonRequest(query: String): CommonSearchRequest {
+fun bukalapakSearchRequest(query: String): CommonSearchRequest {
     return CommonSearchRequest(
         page = "1",
         offset = "0",

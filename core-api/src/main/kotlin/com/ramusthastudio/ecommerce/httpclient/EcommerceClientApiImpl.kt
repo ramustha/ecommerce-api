@@ -1,6 +1,9 @@
 package com.ramusthastudio.ecommerce.httpclient
 
+import com.ramusthastudio.ecommerce.common.commonSearchRequest
+import com.ramusthastudio.ecommerce.mapper.convertBlibliSearchResponse
 import com.ramusthastudio.ecommerce.mapper.convertBukalapakSearchResponse
+import com.ramusthastudio.ecommerce.model.BlibliSearchResponse
 import com.ramusthastudio.ecommerce.model.BukalapakAuthRequest
 import com.ramusthastudio.ecommerce.model.BukalapakAuthResponse
 import com.ramusthastudio.ecommerce.model.BukalapakSearchResponse
@@ -14,37 +17,50 @@ import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.ContentType
+import io.ktor.http.URLProtocol
 import io.ktor.http.contentType
 import io.ktor.http.path
 
-class EcommerceClientApiImpl: EcommerceClientApi {
+class EcommerceClientApiImpl : EcommerceClientApi {
     override suspend fun searchProduct(
         ecommerceHost: EcommerceHost,
-        commonSearchRequest: CommonSearchRequest
+        query: String
     ): CommonSearchResponse {
         HttpClientApi.create().use {
+            val commonSearchRequest: CommonSearchRequest = commonSearchRequest(query)
+
             if (ecommerceHost == EcommerceHost.BUKALAPAK) {
                 val authRequest = EcommerceHost.BUKALAPAK_AUTH
                 val xparam = commonSearchRequest.xparam
 
-                val authResponse: HttpResponse = it.post {
+                it.post {
                     url {
-                        protocol = authRequest.protocol
+                        protocol = URLProtocol.HTTPS
                         host = authRequest.host
                         path(authRequest.path)
                         contentType(ContentType.Application.Json)
                         setBody(BukalapakAuthRequest())
                     }
-                }
-
-                val bukalapakAuthResponse = authResponse.body<BukalapakAuthResponse>()
-                xparam["access_token"] = bukalapakAuthResponse.accessToken
+                }.let { res -> xparam["access_token"] = res.body<BukalapakAuthResponse>().accessToken }
             }
 
             val searchResponse: HttpResponse = it.get {
                 constructHttpRequest(ecommerceHost, commonSearchRequest)
             }
-            return convertBukalapakSearchResponse(searchResponse.body<BukalapakSearchResponse>())
+
+            when (ecommerceHost) {
+                EcommerceHost.BUKALAPAK -> {
+                    return convertBukalapakSearchResponse(searchResponse.body<BukalapakSearchResponse>())
+                }
+
+                EcommerceHost.BLIBLI -> {
+                    return convertBlibliSearchResponse(searchResponse.body<BlibliSearchResponse>())
+                }
+
+                else -> {
+                    throw IllegalArgumentException("Host not found!")
+                }
+            }
         }
     }
 
@@ -52,10 +68,13 @@ class EcommerceClientApiImpl: EcommerceClientApi {
         ecommerceHost: EcommerceHost,
         request: CommonSearchRequest
     ) {
+        val xparam = request.xparam
+
         when (ecommerceHost) {
             EcommerceHost.BLIBLI -> {
+                xparam["channelId"] = "web"
                 return url {
-                    protocol = ecommerceHost.protocol
+                    protocol = URLProtocol.HTTPS
                     host = ecommerceHost.host
                     path(ecommerceHost.path)
                     parameters.append("page", request.page)
@@ -68,8 +87,9 @@ class EcommerceClientApiImpl: EcommerceClientApi {
             }
 
             EcommerceHost.BUKALAPAK -> {
+                xparam["limit"] = "50"
                 return url {
-                    protocol = ecommerceHost.protocol
+                    protocol = URLProtocol.HTTPS
                     host = ecommerceHost.host
                     path(ecommerceHost.path)
                     parameters.append("page", request.page)

@@ -1,12 +1,14 @@
 package com.ramusthastudio.ecommerce.mapper
 
+import com.ramusthastudio.ecommerce.model.BlibliSearchResponse
 import com.ramusthastudio.ecommerce.model.BukalapakSearchResponse
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
+import com.ramusthastudio.ecommerce.model.EcommerceHost
+import java.math.BigDecimal
+
+fun convertNonNumeric(input: String): BigDecimal = BigDecimal(input.replace(Regex("[^\\d]"), ""))
 
 fun convertBukalapakSearchResponse(bukalapakSearchResponse: BukalapakSearchResponse): CommonSearchResponse {
-    bukalapakSearchResponse.data.stream()
-        .map { convertBukalapakData(it) }
-        .toList()
     return CommonSearchResponse(
         bukalapakSearchResponse.data.stream()
             .map { convertBukalapakData(it) }
@@ -15,31 +17,69 @@ fun convertBukalapakSearchResponse(bukalapakSearchResponse: BukalapakSearchRespo
     )
 }
 
-fun convertBukalapakData(bukalapakData: BukalapakSearchResponse.Data): CommonSearchResponse.Data {
+fun convertBukalapakData(responseData: BukalapakSearchResponse.Data): CommonSearchResponse.Data {
     return CommonSearchResponse.Data(
-        bukalapakData.id,
-        bukalapakData.name,
-        bukalapakData.condition,
-        bukalapakData.active,
-        bukalapakData.description,
-        bukalapakData.price,
-        bukalapakData.originalPrice,
-        bukalapakData.store.address.city,
-        bukalapakData.store.address.province,
-        bukalapakData.url,
-        bukalapakData.videoUrl,
+        responseData.id,
+        responseData.name,
+        responseData.condition,
+        responseData.active,
+        responseData.description,
+        responseData.price,
+        responseData.originalPrice,
+        responseData.store.address.city,
+        responseData.store.address.province,
+        responseData.url,
+        responseData.videoUrl,
         CommonSearchResponse.Data.Images(
-            bukalapakData.images?.largeUrls,
-            bukalapakData.images?.smallUrls,
+            responseData.images.largeUrls,
+            responseData.images.smallUrls,
         ),
     )
 }
 
-fun convertBukalapakMeta(bukalapakData: BukalapakSearchResponse.Meta): CommonSearchResponse.Meta {
+fun convertBukalapakMeta(responseMeta: BukalapakSearchResponse.Meta): CommonSearchResponse.Meta {
     return CommonSearchResponse.Meta(
-        bukalapakData.page,
-        bukalapakData.perPage,
-        bukalapakData.total,
-        bukalapakData.totalPages,
+        responseMeta.page,
+        responseMeta.perPage,
+        responseMeta.total,
+        responseMeta.totalPages,
+    )
+}
+
+fun convertBlibliSearchResponse(blibliSearchResponse: BlibliSearchResponse): CommonSearchResponse {
+    return CommonSearchResponse(
+        blibliSearchResponse.data.products.stream()
+            .map { convertBlibliData(it) }
+            .toList(),
+        convertBlibliMeta(blibliSearchResponse.data.paging)
+    )
+}
+
+fun convertBlibliData(responseData: BlibliSearchResponse.Data.Product): CommonSearchResponse.Data {
+    return CommonSearchResponse.Data(
+        responseData.id,
+        responseData.name,
+        null,
+        true,
+        responseData.uniqueSellingPoint,
+        convertNonNumeric(responseData.price.offerPriceDisplay),
+        convertNonNumeric(responseData.price.priceDisplay),
+        responseData.location,
+        null,
+        "https://" + EcommerceHost.BLIBLI.host + responseData.url,
+        null,
+        CommonSearchResponse.Data.Images(
+            emptyList(),
+            responseData.images,
+        ),
+    )
+}
+
+fun convertBlibliMeta(responseMeta: BlibliSearchResponse.Data.Paging): CommonSearchResponse.Meta {
+    return CommonSearchResponse.Meta(
+        responseMeta.page,
+        responseMeta.itemPerPage,
+        responseMeta.totalItem,
+        responseMeta.totalPage,
     )
 }
