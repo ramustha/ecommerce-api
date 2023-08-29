@@ -21,9 +21,9 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
 
-        <core-api.version>0.0.1-SNAPSHOT</core-api.version>
-        <common-lib.version>0.0.1-SNAPSHOT</common-lib.version>
-        <backend-service.version>0.0.1-SNAPSHOT</backend-service.version>
+        <ecommerce-api-core.version>0.0.1-SNAPSHOT</ecommerce-api-core.version>
+        <ecommerce-api-common.version>0.0.1-SNAPSHOT</ecommerce-api-common.version>
+        <ecommerce-api-endpoint.version>0.0.1-SNAPSHOT</ecommerce-api-endpoint.version>
 
         <ktor-client.version>2.3.3</ktor-client.version>
         <slf4j.version>2.0.7</slf4j.version>
@@ -51,18 +51,18 @@
 
             <dependency>
                 <groupId>com.ramusthastudio.ecommerce</groupId>
-                <artifactId>common-lib</artifactId>
-                <version>${common-lib.version}</version>
+                <artifactId>ecommerce-api-common</artifactId>
+                <version>${ecommerce-api-common.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.ramusthastudio.ecommerce</groupId>
-                <artifactId>core-api</artifactId>
-                <version>${core-api.version}</version>
+                <artifactId>ecommerce-api-core</artifactId>
+                <version>${ecommerce-api-core.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.ramusthastudio.ecommerce</groupId>
-                <artifactId>backend-service</artifactId>
-                <version>${backend-service.version}</version>
+                <artifactId>ecommerce-api-endpoint</artifactId>
+                <version>${ecommerce-api-endpoint.version}</version>
             </dependency>
 
             <dependency>
@@ -131,9 +131,9 @@
     </dependencies>
 
     <modules>
-        <module>core-api</module>
-        <module>common-lib</module>
-        <module>backend-service</module>
+        <module>ecommerce-api-core</module>
+        <module>ecommerce-api-common</module>
+        <module>ecommerce-api-endpoint</module>
     </modules>
 
     <build>

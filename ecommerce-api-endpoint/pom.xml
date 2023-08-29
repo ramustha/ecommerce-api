@@ -10,7 +10,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>backend-service</artifactId>
+    <artifactId>ecommerce-api-endpoint</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
 
