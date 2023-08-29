@@ -1,6 +1,7 @@
 package com.ramusthastudio.ecommerce.httpclient
 
 import com.ramusthastudio.ecommerce.common.commonSearchRequest
+import com.ramusthastudio.ecommerce.common.getResourceValue
 import com.ramusthastudio.ecommerce.mapper.convertBlibliSearchResponse
 import com.ramusthastudio.ecommerce.mapper.convertBukalapakSearchResponse
 import com.ramusthastudio.ecommerce.mapper.convertTokopediaSearchResponse
@@ -36,8 +37,7 @@ class EcommerceClientApiImpl(
     engine: HttpClientEngine = CIO.create()
 ) : EcommerceClientApi {
     private val httpClient = initializeHttpClient(engine)
-    private val userAgent =
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+    private val userAgent = "headers".getResourceValue("user-agent") ?: "curl/7.64.1"
 
     @OptIn(ExperimentalSerializationApi::class)
     private fun initializeHttpClient(
