@@ -1,4 +1,4 @@
-package com.ramusthastudio.ecommerce
+package com.ramusthastudio.ecommerce.common
 
 import java.io.File
 

@@ -1,6 +1,6 @@
 package com.ramusthastudio.ecommerce.httpclient
 
-import com.ramusthastudio.ecommerce.asResource
+import com.ramusthastudio.ecommerce.common.asResource
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceHost
 import io.ktor.client.engine.HttpClientEngine
@@ -18,7 +18,7 @@ interface AbstractEcommerceClientApiTest {
         responseString: String,
         httpStatusCode: HttpStatusCode = HttpStatusCode.OK,
         headers: Headers = headersOf(HttpHeaders.ContentType, "application/json")
-    ) = MockEngine { request ->
+    ) = MockEngine {
         respond(
             content = ByteReadChannel(responseString.asResource()),
             status = httpStatusCode,
