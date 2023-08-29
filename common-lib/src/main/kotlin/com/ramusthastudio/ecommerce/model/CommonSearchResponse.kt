@@ -3,8 +3,8 @@ package com.ramusthastudio.ecommerce.model
 import java.math.BigDecimal
 
 data class CommonSearchResponse(
-    val data: List<Data>,
-    val meta: Meta
+    val data: List<Data> = emptyList(),
+    val meta: Meta = Meta()
 ) {
     data class Data(
         val id: String,
@@ -29,7 +29,7 @@ data class CommonSearchResponse(
 
     data class Meta(
         val page: Int = -1,
-        val perPage: Int = -1,
+        val perPage: Int? = -1,
         val total: Int? = -1,
         val totalPages: Int? = -1
     )

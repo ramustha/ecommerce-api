@@ -46,9 +46,9 @@ fun convertBukalapakData(responseData: BukalapakSearchResponse.Data): CommonSear
 fun convertBukalapakMeta(responseMeta: BukalapakSearchResponse.Meta): CommonSearchResponse.Meta {
     return CommonSearchResponse.Meta(
         responseMeta.page,
-        responseMeta.perPage,
-        responseMeta.total,
-        responseMeta.totalPages,
+        responseMeta.perPage ?: -1,
+        responseMeta.total ?: -1,
+        responseMeta.totalPages ?: -1,
     )
 }
 

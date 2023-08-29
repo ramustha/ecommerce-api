@@ -352,7 +352,7 @@ data class BukalapakSearchResponse(
         @SerialName("page")
         val page: Int,
         @SerialName("per_page")
-        val perPage: Int,
+        val perPage: Int?,
         @SerialName("position")
         val position: List<Position?>?,
         @SerialName("price_range")

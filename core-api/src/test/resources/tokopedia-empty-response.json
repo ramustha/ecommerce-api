@@ -1,0 +1,77 @@
+[
+  {
+    "data": {
+      "ace_search_product_v4": {
+        "header": {
+          "totalData": 0,
+          "totalDataText": "",
+          "processTime": 0.003248999,
+          "responseCode": 0,
+          "errorMessage": "",
+          "additionalParams": "",
+          "keywordProcess": "0",
+          "componentId": "02.01.00.00",
+          "__typename": "AceSearchUnifyHeader"
+        },
+        "data": {
+          "banner": {
+            "position": 0,
+            "text": "",
+            "imageUrl": "",
+            "url": "",
+            "componentId": "",
+            "trackingOption": 0,
+            "__typename": "AceSearchUnifyBanner"
+          },
+          "backendFilters": "",
+          "isQuerySafe": true,
+          "ticker": {
+            "text": "",
+            "query": "",
+            "typeId": 0,
+            "componentId": "",
+            "trackingOption": 0,
+            "__typename": "AceSearchUnifyTicker"
+          },
+          "redirection": {
+            "redirectUrl": "",
+            "departmentId": 0,
+            "__typename": "AceSearchUnifyRedirection"
+          },
+          "related": {
+            "position": 0,
+            "trackingOption": 0,
+            "relatedKeyword": "",
+            "otherRelated": [],
+            "__typename": "AceSearchUnifyRelated"
+          },
+          "suggestion": {
+            "currentKeyword": "",
+            "suggestion": "",
+            "suggestionCount": 0,
+            "instead": "",
+            "insteadCount": 0,
+            "query": "",
+            "text": "",
+            "componentId": "",
+            "trackingOption": 0,
+            "__typename": "AceSearchUnifySuggestion"
+          },
+          "products": [],
+          "violation": {
+            "headerText": "",
+            "descriptionText": "",
+            "imageURL": "",
+            "ctaURL": "",
+            "ctaApplink": "",
+            "buttonText": "",
+            "buttonType": "",
+            "__typename": "AceSearchUnifyViolation"
+          },
+          "__typename": "AceSearchUnifyData"
+        },
+        "__typename": "AceSearchUnifyResponse"
+      }
+    }
+  }
+]
