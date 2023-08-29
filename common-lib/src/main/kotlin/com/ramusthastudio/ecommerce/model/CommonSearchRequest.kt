@@ -4,6 +4,6 @@ data class CommonSearchRequest(
     val page: String, //
     val offset: String,
     val limit: String = "20",
-    var xparam: MutableMap<String, String>,
+    var xparam: MutableMap<String, String> = mutableMapOf(),
     val query: String, // searchTerm, keywords
 )

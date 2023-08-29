@@ -11,9 +11,10 @@ data class CommonSearchResponse(
         val name: String,
         val condition: String?,
         val active: Boolean = true,
-        val description: String,
+        val description: String?,
         val price: BigDecimal,
         val originalPrice: BigDecimal,
+        val storeName: String?,
         val storeAddressCity: String,
         val storeAddressProvince: String?,
         val url: String,
@@ -27,9 +28,9 @@ data class CommonSearchResponse(
     }
 
     data class Meta(
-        val page: Int,
-        val perPage: Int,
-        val total: Int,
-        val totalPages: Int
+        val page: Int = -1,
+        val perPage: Int = -1,
+        val total: Int? = -1,
+        val totalPages: Int? = -1
     )
 }

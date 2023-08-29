@@ -362,9 +362,9 @@ data class BukalapakSearchResponse(
         @SerialName("suggestions")
         val suggestions: Suggestions?,
         @SerialName("total")
-        val total: Int,
+        val total: Int?,
         @SerialName("total_pages")
-        val totalPages: Int
+        val totalPages: Int?
     ) {
         @Serializable
         data class BlockedKeywords(

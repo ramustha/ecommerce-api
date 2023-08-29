@@ -6,8 +6,24 @@ import kotlinx.coroutines.delay
 
 suspend fun main() {
     val clientApi = EcommerceClientApiImpl()
-    val searchProduct = clientApi.searchProduct(
+    var searchProduct = clientApi.searchProduct(
+        EcommerceHost.BUKALAPAK,
+        "batocera"
+    )
+    delay(1000)
+
+    println("response ${searchProduct}")
+
+    searchProduct = clientApi.searchProduct(
         EcommerceHost.BLIBLI,
+        "batocera"
+    )
+    delay(1000)
+
+    println("response ${searchProduct}")
+
+    searchProduct = clientApi.searchProduct(
+        EcommerceHost.TOKOPEDIA,
         "batocera"
     )
     delay(1000)
