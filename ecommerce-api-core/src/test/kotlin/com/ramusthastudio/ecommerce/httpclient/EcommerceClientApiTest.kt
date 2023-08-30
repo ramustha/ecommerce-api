@@ -96,7 +96,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
             assertNotNull(productData.storeName)
             assertNotNull(productData.storeAddressCity)
             assertNotNull(productData.url)
-            assertNotNull(productData.images.smallUrls)
+            assertNotNull(productData.imagesUrl)
             assertNotEquals(-1, productMeta.page)
             assertNotEquals(-1, productMeta.perPage)
             assertNotEquals(-1, productMeta.total)
@@ -122,7 +122,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
             assertNotNull(productData.storeName)
             assertNotNull(productData.storeAddressCity)
             assertNotNull(productData.url)
-            assertNotNull(productData.images.smallUrls)
+            assertNotNull(productData.imagesUrl)
             assertNotEquals(-1, productMeta.page)
             assertNotEquals(-1, productMeta.perPage)
             assertNotEquals(-1, productMeta.total)
@@ -147,7 +147,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
             assertNotNull(productData.storeName)
             assertNotNull(productData.storeAddressCity)
             assertNotNull(productData.url)
-            assertNotNull(productData.images.smallUrls)
+            assertNotNull(productData.imagesUrl)
             assertNotEquals(-1, productMeta.total)
         }
     }

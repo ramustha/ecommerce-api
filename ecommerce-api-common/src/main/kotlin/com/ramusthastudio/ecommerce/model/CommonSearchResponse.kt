@@ -16,16 +16,9 @@ data class CommonSearchResponse(
         val originalPrice: BigDecimal,
         val storeName: String?,
         val storeAddressCity: String,
-        val storeAddressProvince: String?,
         val url: String,
-        val videoUrl: String?,
-        val images: Images,
-    ) {
-        data class Images(
-            val largeUrls: List<String>,
-            val smallUrls: List<String>
-        )
-    }
+        val imagesUrl: String,
+    )
 
     data class Meta(
         val page: Int = -1,

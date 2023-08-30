@@ -33,13 +33,8 @@ fun convertBukalapakData(responseData: BukalapakSearchResponse.Data): CommonSear
         responseData.originalPrice,
         responseData.store.name,
         responseData.store.address.city,
-        responseData.store.address.province,
         responseData.url,
-        responseData.videoUrl,
-        CommonSearchResponse.Data.Images(
-            responseData.images.largeUrls,
-            responseData.images.smallUrls,
-        ),
+        responseData.images.largeUrls.first(),
     )
 }
 
@@ -72,13 +67,8 @@ fun convertBlibliData(responseData: BlibliSearchResponse.Data.Product): CommonSe
         responseData.price.priceDisplay.toNumeric(),
         responseData.merchantName,
         responseData.location,
-        null,
         "https://" + EcommerceHost.BLIBLI.host + responseData.url,
-        null,
-        CommonSearchResponse.Data.Images(
-            emptyList(),
-            responseData.images,
-        ),
+        responseData.images.first(),
     )
 }
 
@@ -113,13 +103,8 @@ fun convertTokopediaData(
         responseData.originalPrice.toNumeric(),
         responseData.shop.name,
         responseData.shop.city,
-        null,
         responseData.url,
-        null,
-        CommonSearchResponse.Data.Images(
-            emptyList(),
-            listOf(responseData.imageUrl),
-        ),
+        responseData.imageUrl,
     )
 }
 
