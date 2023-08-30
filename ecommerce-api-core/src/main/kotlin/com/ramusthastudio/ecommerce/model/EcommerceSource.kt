@@ -1,6 +1,6 @@
 package com.ramusthastudio.ecommerce.model
 
-enum class EcommerceHost(
+enum class EcommerceSource(
     val host: String,
     val path: String
 ) {

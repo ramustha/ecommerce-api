@@ -24,6 +24,8 @@ data class CommonSearchResponse(
         val page: Int = -1,
         val perPage: Int? = -1,
         val total: Int? = -1,
-        val totalPages: Int? = -1
+        val totalPages: Int? = -1,
+        val source: String? = null,
+        val priority: Long = -1
     )
 }

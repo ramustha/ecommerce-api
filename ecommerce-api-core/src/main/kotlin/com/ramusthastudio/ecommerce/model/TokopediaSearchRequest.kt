@@ -20,7 +20,7 @@ fun constructTokopediaBody(query: String): TokopediaSearchRequest {
     return TokopediaSearchRequest(
         operationName = "SearchProductQueryV4",
         variables = TokopediaSearchRequest.Variables(constructTokopediaParams(query)),
-        query = "tokopedia-query.graphql".asResource()
+        query = "tokopedia-request.graphql".asResource()
     )
 }
 

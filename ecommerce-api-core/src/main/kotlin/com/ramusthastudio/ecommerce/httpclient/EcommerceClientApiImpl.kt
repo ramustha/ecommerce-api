@@ -1,54 +1,27 @@
 package com.ramusthastudio.ecommerce.httpclient
 
-import com.ramusthastudio.ecommerce.common.commonSearchRequest
-import com.ramusthastudio.ecommerce.common.getResourceValue
-import com.ramusthastudio.ecommerce.mapper.convertBlibliSearchResponse
-import com.ramusthastudio.ecommerce.mapper.convertBukalapakSearchResponse
-import com.ramusthastudio.ecommerce.mapper.convertTokopediaSearchResponse
-import com.ramusthastudio.ecommerce.model.BlibliSearchResponse
-import com.ramusthastudio.ecommerce.model.BukalapakAuthRequest
-import com.ramusthastudio.ecommerce.model.BukalapakAuthResponse
-import com.ramusthastudio.ecommerce.model.BukalapakSearchResponse
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
-import com.ramusthastudio.ecommerce.model.EcommerceHost
-import com.ramusthastudio.ecommerce.model.TokopediaSearchResponse
-import com.ramusthastudio.ecommerce.model.constructTokopediaBody
+import com.ramusthastudio.ecommerce.model.EcommerceSource
 import io.ktor.client.HttpClient
-import io.ktor.client.call.body
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.cache.HttpCache
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
-import io.ktor.client.request.header
-import io.ktor.client.request.post
-import io.ktor.client.request.request
-import io.ktor.client.request.setBody
-import io.ktor.client.statement.HttpResponse
-import io.ktor.http.ContentType
-import io.ktor.http.HttpHeaders
-import io.ktor.http.HttpMethod
-import io.ktor.http.URLProtocol
-import io.ktor.http.contentType
-import io.ktor.http.headers
-import io.ktor.http.path
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.merge
+import kotlinx.coroutines.flow.toList
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
-import kotlin.collections.set
 
-class EcommerceClientApiImpl(
-    engine: HttpClientEngine = CIO.create()
-) : EcommerceClientApi {
+class EcommerceClientApiImpl(engine: HttpClientEngine = CIO.create()) : EcommerceClientApi {
     private val httpClient = initializeHttpClient(engine)
-    private val userAgent = "headers".getResourceValue("user-agent") ?: "curl/7.64.1"
 
     @OptIn(ExperimentalSerializationApi::class)
-    private fun initializeHttpClient(
-        engine: HttpClientEngine
-    ) = HttpClient(engine) {
+    private fun initializeHttpClient(engine: HttpClientEngine) = HttpClient(engine) {
         install(ContentNegotiation) {
             json(Json {
                 prettyPrint = true
@@ -69,90 +42,26 @@ class EcommerceClientApiImpl(
         println("HTTP Client Closed")
     }
 
+    override suspend fun searchProductCombine(
+        commonSearchRequest: CommonSearchRequest
+    ): List<CommonSearchResponse> {
+        return merge(
+            flowOf(BukalapakClientEngine(httpClient, commonSearchRequest).searchByRestful()),
+            flowOf(BlibliClientEngine(httpClient, commonSearchRequest).searchByRestful()),
+            flowOf(TokopediaClientEngine(httpClient, commonSearchRequest).searchByRestful())
+        ).toList()
+    }
+
     override suspend fun searchProduct(
-        ecommerceHost: EcommerceHost,
-        query: String
+        ecommerceSource: EcommerceSource,
+        commonSearchRequest: CommonSearchRequest
     ): CommonSearchResponse {
-        val commonSearchRequest: CommonSearchRequest = commonSearchRequest(query)
-        val xparam = commonSearchRequest.xparam
-        return when (ecommerceHost) {
-            EcommerceHost.BUKALAPAK_AUTH -> CommonSearchResponse()
-            EcommerceHost.BUKALAPAK -> {
-                if (!httpClient.engine.toString().contains("MockEngine")) {
-                    val authRequest = EcommerceHost.BUKALAPAK_AUTH
-
-                    httpClient.post {
-                        url {
-                            protocol = URLProtocol.HTTPS
-                            host = authRequest.host
-                            path(authRequest.path)
-                            contentType(ContentType.Application.Json)
-                            header(HttpHeaders.UserAgent, userAgent)
-                            setBody(BukalapakAuthRequest())
-                        }
-                    }.let { res -> xparam["access_token"] = res.body<BukalapakAuthResponse>().accessToken }
-                }
-
-                xparam["limit"] = "50"
-                val searchResponse: HttpResponse = httpClient.request {
-                    url {
-                        headers {
-                            append(HttpHeaders.UserAgent, userAgent)
-                        }
-                        protocol = URLProtocol.HTTPS
-                        host = ecommerceHost.host
-                        method = HttpMethod.Get
-                        path(ecommerceHost.path)
-                        header(HttpHeaders.UserAgent, userAgent)
-                        parameters.append("page", commonSearchRequest.page)
-                        parameters.append("offset", commonSearchRequest.offset)
-                        parameters.append("keywords", commonSearchRequest.query)
-                        xparam.forEach {
-                            parameters.append(it.key, it.value)
-                        }
-                    }
-                }
-                convertBukalapakSearchResponse(searchResponse.body<BukalapakSearchResponse>())
-            }
-
-            EcommerceHost.BLIBLI -> {
-                xparam["channelId"] = "web"
-                val searchResponse: HttpResponse = httpClient.request {
-                    url {
-                        protocol = URLProtocol.HTTPS
-                        host = ecommerceHost.host
-                        method = HttpMethod.Get
-                        path(ecommerceHost.path)
-                        header(HttpHeaders.UserAgent, userAgent)
-                        parameters.append("page", commonSearchRequest.page)
-                        parameters.append("start", commonSearchRequest.offset)
-                        parameters.append("searchTerm", commonSearchRequest.query)
-                        xparam.forEach {
-                            parameters.append(it.key, it.value)
-                        }
-                    }
-                }
-                convertBlibliSearchResponse(searchResponse.body<BlibliSearchResponse>())
-            }
-
-            EcommerceHost.TOKOPEDIA -> {
-                val searchResponse: HttpResponse = httpClient.request {
-                    url {
-                        protocol = URLProtocol.HTTPS
-                        host = ecommerceHost.host
-                        method = HttpMethod.Post
-                        path(ecommerceHost.path)
-                        contentType(ContentType.Application.Json)
-                        header(HttpHeaders.UserAgent, userAgent)
-                        header(HttpHeaders.Referrer, "https://www.tokopedia.com")
-                        setBody(listOf(constructTokopediaBody(commonSearchRequest.query)))
-                    }
-                }
-                val responseList = searchResponse.body<List<TokopediaSearchResponse>>()
-                convertTokopediaSearchResponse(responseList.first())
-            }
-
-            EcommerceHost.SHOPEE -> CommonSearchResponse()
+        return when (ecommerceSource) {
+            EcommerceSource.BUKALAPAK_AUTH -> CommonSearchResponse()
+            EcommerceSource.BUKALAPAK -> BukalapakClientEngine(httpClient, commonSearchRequest).searchByRestful()
+            EcommerceSource.BLIBLI -> BlibliClientEngine(httpClient, commonSearchRequest).searchByRestful()
+            EcommerceSource.TOKOPEDIA -> TokopediaClientEngine(httpClient, commonSearchRequest).searchByRestful()
+            EcommerceSource.SHOPEE -> CommonSearchResponse()
         }
     }
 }

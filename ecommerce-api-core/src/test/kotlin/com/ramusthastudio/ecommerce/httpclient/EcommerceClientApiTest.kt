@@ -1,7 +1,8 @@
 package com.ramusthastudio.ecommerce.httpclient
 
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
-import com.ramusthastudio.ecommerce.model.EcommerceHost
+import com.ramusthastudio.ecommerce.model.EcommerceSource
+import com.ramusthastudio.ecommerce.model.commonSearchRequest
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -20,7 +21,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     @Test
     fun bukalapakAuthTest() {
         runBlocking {
-            val searchProduct = ecommerceClientApi.searchProduct(EcommerceHost.BUKALAPAK_AUTH)
+            val searchProduct = ecommerceClientApi.searchProduct(EcommerceSource.BUKALAPAK_AUTH)
 
             assertEquals(emptyList<CommonSearchResponse.Data>(), searchProduct.data)
             assertEquals(CommonSearchResponse.Meta(), searchProduct.meta)
@@ -30,51 +31,42 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     @Test
     override fun searchProductEmptyBlibliTest() {
         runBlocking {
-            val searchProduct = ecommerceClientApi.searchProduct(EcommerceHost.BLIBLI)
+            val searchProduct = ecommerceClientApi.searchProduct(EcommerceSource.BLIBLI)
 
             assertEquals(emptyList<CommonSearchResponse.Data>(), searchProduct.data)
-            assertEquals(
-                CommonSearchResponse.Meta(
-                    page = 1,
-                    perPage = 0,
-                    total = 0,
-                    totalPages = 0,
-                ), searchProduct.meta
-            )
+            assertEquals(1, searchProduct.meta.page)
+            assertEquals(0, searchProduct.meta.perPage)
+            assertEquals(0, searchProduct.meta.total)
+            assertEquals(0, searchProduct.meta.totalPages)
+            assertEquals("BLIBLI", searchProduct.meta.source)
         }
     }
 
     @Test
     override fun searchProductEmptyBukalapakTest() {
         runBlocking {
-            val searchProduct = ecommerceClientApi.searchProduct(EcommerceHost.BUKALAPAK)
+            val searchProduct = ecommerceClientApi.searchProduct(EcommerceSource.BUKALAPAK)
 
             assertEquals(emptyList<CommonSearchResponse.Data>(), searchProduct.data)
-            assertEquals(
-                CommonSearchResponse.Meta(
-                    page = 1,
-                    perPage = -1,
-                    total = -1,
-                    totalPages = -1,
-                ), searchProduct.meta
-            )
+            assertEquals(1, searchProduct.meta.page)
+            assertEquals(-1, searchProduct.meta.perPage)
+            assertEquals(-1, searchProduct.meta.total)
+            assertEquals(-1, searchProduct.meta.totalPages)
+            assertEquals("BUKALAPAK", searchProduct.meta.source)
         }
     }
 
     @Test
     override fun searchProductEmptyTokopediaTest() {
         runBlocking {
-            val searchProduct = ecommerceClientApi.searchProduct(EcommerceHost.TOKOPEDIA)
+            val searchProduct = ecommerceClientApi.searchProduct(EcommerceSource.TOKOPEDIA)
 
             assertEquals(emptyList<CommonSearchResponse.Data>(), searchProduct.data)
-            assertEquals(
-                CommonSearchResponse.Meta(
-                    page = -1,
-                    perPage = -1,
-                    total = 0,
-                    totalPages = -1,
-                ), searchProduct.meta
-            )
+            assertEquals(-1, searchProduct.meta.page)
+            assertEquals(-1, searchProduct.meta.perPage)
+            assertEquals(0, searchProduct.meta.total)
+            assertEquals(-1, searchProduct.meta.totalPages)
+            assertEquals("TOKOPEDIA", searchProduct.meta.source)
         }
     }
 
@@ -82,7 +74,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     override fun searchProductNormalBlibliTest() {
         runBlocking {
             val searchProduct = ecommerceClientApi.searchProduct(
-                EcommerceHost.BLIBLI, "batocera"
+                EcommerceSource.BLIBLI, commonSearchRequest("batocera")
             )
 
             val productData = searchProduct.data.first()
@@ -108,7 +100,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     override fun searchProductNormalBukalapakTest() {
         runBlocking {
             val searchProduct = ecommerceClientApi.searchProduct(
-                EcommerceHost.BUKALAPAK, "batocera"
+                EcommerceSource.BUKALAPAK, commonSearchRequest("batocera")
             )
 
             val productData = searchProduct.data.first()
@@ -134,7 +126,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     override fun searchProductNormalTokopediaTest() {
         runBlocking {
             val searchProduct = ecommerceClientApi.searchProduct(
-                EcommerceHost.TOKOPEDIA, "batocera"
+                EcommerceSource.TOKOPEDIA, commonSearchRequest("batocera")
             )
 
             val productData = searchProduct.data.first()
@@ -149,6 +141,23 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
             assertNotNull(productData.url)
             assertNotNull(productData.imagesUrl)
             assertNotEquals(-1, productMeta.total)
+        }
+    }
+
+    @Test
+    override fun searchProductEmptyCombineTest() {
+        runBlocking {
+            val searchProductList = ecommerceClientApi.searchProductCombine()
+            assertEquals(3, searchProductList.size)
+        }
+    }
+
+    override fun searchProductNormalCombineTest() {
+        runBlocking {
+            val searchProductList = ecommerceClientApi.searchProductCombine(
+                commonSearchRequest("batocera")
+            )
+            assertEquals(3, searchProductList.size)
         }
     }
 }
