@@ -4,6 +4,7 @@ import com.ramusthastudio.ecommerce.common.asResourceMap
 import com.ramusthastudio.ecommerce.mapper.convertTokopediaSearchResponse
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
+import com.ramusthastudio.ecommerce.model.EcommerceEngine
 import com.ramusthastudio.ecommerce.model.EcommerceSource
 import com.ramusthastudio.ecommerce.model.TokopediaSearchResponse
 import com.ramusthastudio.ecommerce.model.constructTokopediaBody
@@ -26,8 +27,6 @@ class TokopediaClientEngine(
     private val ecommerceSource = EcommerceSource.TOKOPEDIA
 
     override suspend fun searchByRestful(): CommonSearchResponse {
-        commonSearchRequest.xparam.clear() // reset
-
         val searchResponse: HttpResponse = httpClient.post {
             url {
                 protocol = URLProtocol.HTTPS
@@ -50,5 +49,16 @@ class TokopediaClientEngine(
 
     override suspend fun searchByScraper(): CommonSearchResponse {
         return CommonSearchResponse()
+    }
+}
+
+suspend fun tokopediaSearch(
+    httpClient: HttpClient,
+    commonSearchRequest: CommonSearchRequest,
+    action: () -> EcommerceEngine
+): CommonSearchResponse {
+    return when (action()) {
+        EcommerceEngine.RESTFUL -> TokopediaClientEngine(httpClient, commonSearchRequest).searchByRestful()
+        EcommerceEngine.SCRAPER -> TokopediaClientEngine(httpClient, commonSearchRequest).searchByScraper()
     }
 }

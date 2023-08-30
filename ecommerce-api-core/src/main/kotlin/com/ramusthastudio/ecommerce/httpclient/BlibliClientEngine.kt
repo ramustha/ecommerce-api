@@ -5,6 +5,7 @@ import com.ramusthastudio.ecommerce.mapper.convertBlibliSearchResponse
 import com.ramusthastudio.ecommerce.model.BlibliSearchResponse
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
+import com.ramusthastudio.ecommerce.model.EcommerceEngine
 import com.ramusthastudio.ecommerce.model.EcommerceSource
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -22,9 +23,8 @@ class BlibliClientEngine(
 
     override suspend fun searchByRestful(): CommonSearchResponse {
         val xparam = commonSearchRequest.xparam
-        xparam.clear() // reset
-
         xparam["channelId"] = "web"
+
         val searchResponse: HttpResponse = httpClient.get {
             url {
                 protocol = URLProtocol.HTTPS
@@ -41,6 +41,7 @@ class BlibliClientEngine(
                 }
             }
         }
+        xparam.remove("channelId")
         return convertBlibliSearchResponse(
             searchResponse.responseTime.timestamp,
             searchResponse.body<BlibliSearchResponse>()
@@ -49,5 +50,16 @@ class BlibliClientEngine(
 
     override suspend fun searchByScraper(): CommonSearchResponse {
         return CommonSearchResponse()
+    }
+}
+
+suspend fun blibliSearch(
+    httpClient: HttpClient,
+    commonSearchRequest: CommonSearchRequest,
+    action: () -> EcommerceEngine
+): CommonSearchResponse {
+    return when (action()) {
+        EcommerceEngine.RESTFUL -> BlibliClientEngine(httpClient, commonSearchRequest).searchByRestful()
+        EcommerceEngine.SCRAPER -> BlibliClientEngine(httpClient, commonSearchRequest).searchByScraper()
     }
 }

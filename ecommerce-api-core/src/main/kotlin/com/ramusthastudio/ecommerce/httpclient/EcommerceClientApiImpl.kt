@@ -2,6 +2,7 @@ package com.ramusthastudio.ecommerce.httpclient
 
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
+import com.ramusthastudio.ecommerce.model.EcommerceEngine
 import com.ramusthastudio.ecommerce.model.EcommerceSource
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
@@ -11,9 +12,6 @@ import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.serialization.kotlinx.json.json
-import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.flow.merge
-import kotlinx.coroutines.flow.toList
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 
@@ -45,11 +43,11 @@ class EcommerceClientApiImpl(engine: HttpClientEngine = CIO.create()) : Ecommerc
     override suspend fun searchProductCombine(
         commonSearchRequest: CommonSearchRequest
     ): List<CommonSearchResponse> {
-        return merge(
-            flowOf(BukalapakClientEngine(httpClient, commonSearchRequest).searchByRestful()),
-            flowOf(BlibliClientEngine(httpClient, commonSearchRequest).searchByRestful()),
-            flowOf(TokopediaClientEngine(httpClient, commonSearchRequest).searchByRestful())
-        ).toList()
+        return listOf(
+            bukalapakSearch(httpClient, commonSearchRequest) { EcommerceEngine.RESTFUL },
+            tokopediaSearch(httpClient, commonSearchRequest) { EcommerceEngine.RESTFUL },
+            blibliSearch(httpClient, commonSearchRequest) { EcommerceEngine.RESTFUL }
+        ).sortedBy { it.meta.priority }
     }
 
     override suspend fun searchProduct(
@@ -58,9 +56,9 @@ class EcommerceClientApiImpl(engine: HttpClientEngine = CIO.create()) : Ecommerc
     ): CommonSearchResponse {
         return when (ecommerceSource) {
             EcommerceSource.BUKALAPAK_AUTH -> CommonSearchResponse()
-            EcommerceSource.BUKALAPAK -> BukalapakClientEngine(httpClient, commonSearchRequest).searchByRestful()
-            EcommerceSource.BLIBLI -> BlibliClientEngine(httpClient, commonSearchRequest).searchByRestful()
-            EcommerceSource.TOKOPEDIA -> TokopediaClientEngine(httpClient, commonSearchRequest).searchByRestful()
+            EcommerceSource.BUKALAPAK -> bukalapakSearch(httpClient, commonSearchRequest) { EcommerceEngine.RESTFUL }
+            EcommerceSource.BLIBLI -> blibliSearch(httpClient, commonSearchRequest) { EcommerceEngine.RESTFUL }
+            EcommerceSource.TOKOPEDIA -> tokopediaSearch(httpClient, commonSearchRequest) { EcommerceEngine.RESTFUL }
             EcommerceSource.SHOPEE -> CommonSearchResponse()
         }
     }
