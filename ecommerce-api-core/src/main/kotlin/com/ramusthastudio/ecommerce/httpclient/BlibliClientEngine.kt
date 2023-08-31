@@ -1,5 +1,8 @@
 package com.ramusthastudio.ecommerce.httpclient
 
+import com.microsoft.playwright.Browser
+import com.microsoft.playwright.Page
+import com.microsoft.playwright.options.WaitUntilState
 import com.ramusthastudio.ecommerce.common.asResourceMap
 import com.ramusthastudio.ecommerce.mapper.convertBlibliSearchResponse
 import com.ramusthastudio.ecommerce.model.BlibliSearchResponse
@@ -14,9 +17,14 @@ import io.ktor.client.request.header
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.URLProtocol
 import io.ktor.http.path
+import it.skrape.core.htmlDocument
+import it.skrape.selects.html5.script
+import kotlinx.serialization.json.Json
+
 
 class BlibliClientEngine(
     private val httpClient: HttpClient,
+    private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest
 ) : ClientEngine {
     private val ecommerceSource = EcommerceSource.BLIBLI
@@ -49,17 +57,39 @@ class BlibliClientEngine(
     }
 
     override suspend fun searchByScraper(): CommonSearchResponse {
-        return CommonSearchResponse()
+        val page: Page = browser.newPage()
+        val navigateOptions = Page.NavigateOptions()
+        navigateOptions.setWaitUntil(WaitUntilState.LOAD)
+
+        page.navigate("https://www.blibli.com/cari/batocera?page=1&start=0&sort=0", navigateOptions)
+        page.keyboard().down("End")
+
+        val searchData = mutableListOf<CommonSearchResponse.Data>()
+        htmlDocument(page.content()) {
+            script {
+                withAttribute = "type" to "application/ld+json"
+                val json = findFirst { removeScriptTag(this@findFirst.html) }
+                val jsonElement = Json.parseToJsonElement(json)
+            }
+        }
+        return CommonSearchResponse(
+            searchData,
+            CommonSearchResponse.Meta(
+                source = ecommerceSource.toString(),
+                priority = System.currentTimeMillis()
+            )
+        )
     }
 }
 
 suspend fun blibliSearch(
     httpClient: HttpClient,
+    browser: Browser,
     commonSearchRequest: CommonSearchRequest,
     action: () -> EcommerceEngine
 ): CommonSearchResponse {
     return when (action()) {
-        EcommerceEngine.RESTFUL -> BlibliClientEngine(httpClient, commonSearchRequest).searchByRestful()
-        EcommerceEngine.SCRAPER -> BlibliClientEngine(httpClient, commonSearchRequest).searchByScraper()
+        EcommerceEngine.RESTFUL -> BlibliClientEngine(httpClient, browser, commonSearchRequest).searchByRestful()
+        EcommerceEngine.SCRAPER -> BlibliClientEngine(httpClient, browser, commonSearchRequest).searchByScraper()
     }
 }

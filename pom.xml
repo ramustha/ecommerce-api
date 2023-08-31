@@ -25,7 +25,9 @@
         <ecommerce-api-common.version>0.0.1-SNAPSHOT</ecommerce-api-common.version>
         <ecommerce-api-endpoint.version>0.0.1-SNAPSHOT</ecommerce-api-endpoint.version>
 
-        <ktor-client.version>2.3.3</ktor-client.version>
+        <ktor-client.version>2.3.4</ktor-client.version>
+        <playwright.version>1.36.0</playwright.version>
+        <skrapeit-html-parser.version>1.2.2</skrapeit-html-parser.version>
         <slf4j.version>2.0.7</slf4j.version>
         <logback-classic.version>1.4.9</logback-classic.version>
         <junit.version>5.10.2</junit.version>
@@ -95,6 +97,17 @@
                 <groupId>io.ktor</groupId>
                 <artifactId>ktor-client-logging-jvm</artifactId>
                 <version>${ktor-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.microsoft.playwright</groupId>
+                <artifactId>playwright</artifactId>
+                <version>${playwright.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>it.skrape</groupId>
+                <artifactId>skrapeit-html-parser</artifactId>
+                <version>${skrapeit-html-parser.version}</version>
             </dependency>
 
             <dependency>

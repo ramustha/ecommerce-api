@@ -9,13 +9,12 @@ data class CommonSearchResponse(
     data class Data(
         val id: String,
         val name: String,
-        val condition: String?,
-        val active: Boolean = true,
-        val description: String?,
-        val price: BigDecimal,
-        val originalPrice: BigDecimal,
-        val storeName: String?,
-        val storeAddressCity: String,
+        var price: BigDecimal? = null,
+        var originalPrice: BigDecimal? = null,
+        var lowPrice: BigDecimal? = null,
+        var highPrice: BigDecimal? = null,
+        var storeName: String? = null,
+        var storeAddressCity: String? = null,
         val url: String,
         val imagesUrl: String,
     )
@@ -26,6 +25,7 @@ data class CommonSearchResponse(
         val total: Int? = -1,
         val totalPages: Int? = -1,
         val source: String? = null,
-        val priority: Long = -1
+        val priority: Long = -1,
+        val responseTime: Long = -1
     )
 }

@@ -1,5 +1,7 @@
 package com.ramusthastudio.ecommerce.httpclient
 
+import com.microsoft.playwright.BrowserType
+import com.microsoft.playwright.Playwright
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceEngine.RESTFUL
@@ -23,9 +25,15 @@ import kotlinx.serialization.json.Json
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
-class EcommerceClientApiImpl(engine: HttpClientEngine = CIO.create()) : EcommerceClientApi {
+class EcommerceClientApiImpl(
+    httpEngine: HttpClientEngine = CIO.create()
+) : EcommerceClientApi {
     private val log: Logger = LoggerFactory.getLogger(this.javaClass)
-    private val httpClient = initializeHttpClient(engine)
+    private val httpClient = initializeHttpClient(httpEngine)
+    private val playWright: Playwright = Playwright.create()
+    private val browser = playWright.firefox().launch(
+        BrowserType.LaunchOptions().setHeadless(true).setSlowMo(1000.0)
+    )
     private var currentState: Boolean = true
 
     @OptIn(ExperimentalSerializationApi::class)
@@ -47,6 +55,7 @@ class EcommerceClientApiImpl(engine: HttpClientEngine = CIO.create()) : Ecommerc
 
     override fun close() {
         httpClient.close()
+        playWright.close()
         log.info("HTTP Client Closed")
     }
 
@@ -59,7 +68,7 @@ class EcommerceClientApiImpl(engine: HttpClientEngine = CIO.create()) : Ecommerc
         return listOf(
             bukalapakSearch(httpClient, commonSearchRequest) { ecommerceEngine },
             tokopediaSearch(httpClient, commonSearchRequest) { ecommerceEngine },
-            blibliSearch(httpClient, commonSearchRequest) { ecommerceEngine }
+            blibliSearch(httpClient, browser, commonSearchRequest) { ecommerceEngine }
         )
             .sortedBy { it.meta.priority }
             .apply { currentState = !currentState }
@@ -75,9 +84,9 @@ class EcommerceClientApiImpl(engine: HttpClientEngine = CIO.create()) : Ecommerc
         return when (ecommerceSource) {
             BUKALAPAK_AUTH -> CommonSearchResponse()
             BUKALAPAK -> bukalapakSearch(httpClient, commonSearchRequest) { ecommerceEngine }
-            BLIBLI -> blibliSearch(httpClient, commonSearchRequest) { ecommerceEngine }
+            BLIBLI -> blibliSearch(httpClient, browser, commonSearchRequest) { ecommerceEngine }
             TOKOPEDIA -> tokopediaSearch(httpClient, commonSearchRequest) { ecommerceEngine }
-            SHOPEE -> CommonSearchResponse()
+            SHOPEE -> shopeeSearch(httpClient, browser, commonSearchRequest) { SCRAPER }
         }.apply { currentState = !currentState }
     }
 }

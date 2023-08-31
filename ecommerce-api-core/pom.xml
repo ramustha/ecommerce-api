@@ -40,6 +40,15 @@
         </dependency>
 
         <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>it.skrape</groupId>
+            <artifactId>skrapeit-html-parser</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.ramusthastudio.ecommerce</groupId>
             <artifactId>ecommerce-api-common</artifactId>
         </dependency>

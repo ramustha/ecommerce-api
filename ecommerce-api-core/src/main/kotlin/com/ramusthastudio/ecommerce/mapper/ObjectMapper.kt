@@ -30,17 +30,14 @@ fun convertBukalapakSearchResponse(
 
 fun convertBukalapakData(responseData: BukalapakSearchResponse.Data): CommonSearchResponse.Data {
     return CommonSearchResponse.Data(
-        responseData.id,
-        responseData.name,
-        responseData.condition,
-        responseData.active,
-        responseData.description,
-        responseData.price,
-        responseData.originalPrice,
-        responseData.store.name,
-        responseData.store.address.city,
-        responseData.url,
-        responseData.images.largeUrls.first(),
+        id = responseData.id,
+        name = responseData.name,
+        price = responseData.price,
+        originalPrice = responseData.originalPrice,
+        storeName = responseData.store.name,
+        storeAddressCity = responseData.store.address.city,
+        url = responseData.url,
+        imagesUrl = responseData.images.largeUrls.first(),
     )
 }
 
@@ -75,17 +72,14 @@ fun convertBlibliSearchResponse(
 
 fun convertBlibliData(responseData: BlibliSearchResponse.Data.Product): CommonSearchResponse.Data {
     return CommonSearchResponse.Data(
-        responseData.id,
-        responseData.name,
-        null,
-        true,
-        responseData.uniqueSellingPoint,
-        responseData.price.offerPriceDisplay.toNumeric(),
-        responseData.price.priceDisplay.toNumeric(),
-        responseData.merchantName,
-        responseData.location,
-        "https://" + EcommerceSource.BLIBLI.host + responseData.url,
-        responseData.images.first(),
+        id = responseData.id,
+        name = responseData.name,
+        price = responseData.price.offerPriceDisplay.toNumeric(),
+        originalPrice = responseData.price.priceDisplay.toNumeric(),
+        storeName = responseData.merchantName,
+        storeAddressCity = responseData.location,
+        url = "https://" + EcommerceSource.BLIBLI.host + responseData.url,
+        imagesUrl = responseData.images.first(),
     )
 }
 
@@ -122,17 +116,14 @@ fun convertTokopediaData(
     responseData: TokopediaSearchResponse.Data.AceSearchProductV4.Data.Product
 ): CommonSearchResponse.Data {
     return CommonSearchResponse.Data(
-        responseData.id.toString(),
-        responseData.name,
-        null,
-        true,
-        null,
-        responseData.price.toNumeric(),
-        responseData.originalPrice.toNumeric(),
-        responseData.shop.name,
-        responseData.shop.city,
-        responseData.url,
-        responseData.imageUrl,
+        id = responseData.id.toString(),
+        name = responseData.name,
+        price = responseData.price.toNumeric(),
+        originalPrice = responseData.originalPrice.toNumeric(),
+        storeName = responseData.shop.name,
+        storeAddressCity = responseData.shop.city,
+        url = responseData.url,
+        imagesUrl = responseData.imageUrl,
     )
 }
 

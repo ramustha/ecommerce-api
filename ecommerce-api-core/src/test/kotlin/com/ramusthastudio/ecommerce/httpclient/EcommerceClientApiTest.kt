@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
+import java.time.Duration
 
 class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     private val ecommerceClientApi = EcommerceClientApiImpl()
@@ -82,7 +83,6 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
 
             assertNotNull(productData.id)
             assertNotNull(productData.name)
-            assertNotNull(productData.description)
             assertNotNull(productData.price)
             assertNotNull(productData.originalPrice)
             assertNotNull(productData.storeName)
@@ -108,7 +108,6 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
 
             assertNotNull(productData.id)
             assertNotNull(productData.name)
-            assertNotNull(productData.description)
             assertNotNull(productData.price)
             assertNotNull(productData.originalPrice)
             assertNotNull(productData.storeName)
@@ -145,6 +144,29 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     }
 
     @Test
+    fun searchProductNormalShopeeTest() {
+        runBlocking {
+            val ecommerceSource = EcommerceSource.SHOPEE
+            val searchProduct = ecommerceClientApi.searchProduct(
+                ecommerceSource, commonSearchRequest("batocera")
+            )
+
+            val productData = searchProduct.data.first()
+            val productMeta = searchProduct.meta
+            println("response time = ${Duration.ofMillis(productMeta.responseTime)}")
+
+            assertNotEquals(0, searchProduct.data.size)
+            assertNotNull(productData.id)
+            assertNotNull(productData.name)
+            assertNotNull(productData.url)
+            assertNotNull(productData.imagesUrl)
+            assertEquals(ecommerceSource.toString(), productMeta.source)
+            assertNotEquals(-1, productMeta.priority)
+            assertNotEquals(-1, productMeta.responseTime)
+        }
+    }
+
+    @Test
     override fun searchProductEmptyCombineTest() {
         runBlocking {
             val searchProductList = ecommerceClientApi.searchProductCombine()
@@ -152,6 +174,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
         }
     }
 
+    @Test
     override fun searchProductNormalCombineTest() {
         runBlocking {
             val searchProductList = ecommerceClientApi.searchProductCombine(
