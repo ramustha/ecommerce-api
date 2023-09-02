@@ -47,21 +47,25 @@ class ShopeeClientEngine(
                 withAttribute = "type" to "application/ld+json"
                 val json = findAll { replaceScriptTag(this@findAll.html) }
                 val jsonElement = Json.parseToJsonElement(json).jsonArray.filterNotNull()
-                jsonElement.jsonArray.filter { it.jsonObject["@type"].toString() == "\"Product\"" }
-                    .map {
+                jsonElement.filter { it.jsonObject["@type"]?.jsonPrimitive?.content == "Product" }
+                    .forEach {
                         log.debug("scrape content = {} from url = {}", it, page.url())
 
-                        val offers = it.jsonObject["offers"]
-                        val price = offers?.jsonObject?.get("Price")?.jsonPrimitive?.content
-                        val lowPrice = offers?.jsonObject?.get("lowPrice")?.jsonPrimitive?.content
-                        val highPrice = offers?.jsonObject?.get("highPrice")?.jsonPrimitive?.content
+                        val offers = it.jsonObject["offers"]?.jsonObject
+                        val priceStr = offers?.get("Price")?.jsonPrimitive?.content
+                        val lowPriceStr = offers?.get("lowPrice")?.jsonPrimitive?.content
+                        val highPriceStr = offers?.get("highPrice")?.jsonPrimitive?.content
+
+                        val price = priceStr?.toBigDecimalOrNull() ?: BigDecimal("-1")
+                        val lowPrice = lowPriceStr?.toBigDecimalOrNull() ?: BigDecimal("-1")
+                        val highPrice = highPriceStr?.toBigDecimalOrNull() ?: BigDecimal("-1")
 
                         val productData = CommonSearchResponse.Data(
                             id = it.jsonObject["productID"].toString(),
                             name = it.jsonObject["name"].toString(),
-                            price = BigDecimal(price ?: "-1"),
-                            lowPrice = BigDecimal(lowPrice ?: "-1"),
-                            highPrice = BigDecimal(highPrice ?: "-1"),
+                            price = price,
+                            lowPrice = lowPrice,
+                            highPrice = highPrice,
                             url = it.jsonObject["url"].toString(),
                             imagesUrl = it.jsonObject["image"].toString()
                         )
