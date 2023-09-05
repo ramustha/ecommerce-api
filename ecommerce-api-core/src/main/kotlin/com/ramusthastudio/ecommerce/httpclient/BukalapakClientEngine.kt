@@ -1,5 +1,6 @@
 package com.ramusthastudio.ecommerce.httpclient
 
+import com.microsoft.playwright.Browser
 import com.ramusthastudio.ecommerce.common.asResourceMap
 import com.ramusthastudio.ecommerce.mapper.convertBukalapakSearchResponse
 import com.ramusthastudio.ecommerce.model.BukalapakAuthRequest
@@ -9,6 +10,7 @@ import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceEngine
 import com.ramusthastudio.ecommerce.model.EcommerceSource
+import com.ramusthastudio.ecommerce.model.SearchParameter
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -20,14 +22,16 @@ import io.ktor.http.ContentType
 import io.ktor.http.URLProtocol
 import io.ktor.http.contentType
 import io.ktor.http.path
+import kotlinx.coroutines.coroutineScope
 
 class BukalapakClientEngine(
     private val httpClient: HttpClient,
+    private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest
 ) : ClientEngine {
     private val ecommerceSource = EcommerceSource.BUKALAPAK
 
-    override suspend fun searchByRestful(): CommonSearchResponse {
+    override suspend fun searchByRestful(): CommonSearchResponse = coroutineScope {
         val xparam = commonSearchRequest.xparam
 
         if (!httpClient.engine.toString().contains("MockEngine")) {
@@ -67,24 +71,30 @@ class BukalapakClientEngine(
         xparam.remove("access_token")
         xparam.remove("limit")
         searchResponse.call
-        return convertBukalapakSearchResponse(
+
+        convertBukalapakSearchResponse(
             searchResponse.responseTime.timestamp,
             searchResponse.body<BukalapakSearchResponse>()
         )
     }
 
-    override suspend fun searchByScraper(): CommonSearchResponse {
-        return CommonSearchResponse()
+    override suspend fun searchByScraper(content: String?): CommonSearchResponse = coroutineScope {
+        CommonSearchResponse()
     }
 }
 
 suspend fun bukalapakSearch(
     httpClient: HttpClient,
-    commonSearchRequest: CommonSearchRequest,
-    action: () -> EcommerceEngine
+    browser: Browser,
+    searchParameter: () -> SearchParameter
 ): CommonSearchResponse {
-    return when (action()) {
-        EcommerceEngine.RESTFUL -> BukalapakClientEngine(httpClient, commonSearchRequest).searchByRestful()
-        EcommerceEngine.SCRAPER -> BukalapakClientEngine(httpClient, commonSearchRequest).searchByScraper()
+    val parameter = searchParameter()
+    val searchRequest = parameter.commonSearchRequest
+    return when (parameter.ecommerceEngine) {
+        EcommerceEngine.RESTFUL ->
+            BukalapakClientEngine(httpClient, browser, searchRequest).searchByRestful()
+
+        EcommerceEngine.SCRAPER ->
+            BukalapakClientEngine(httpClient, browser, searchRequest).searchByScraper(parameter.content)
     }
 }

@@ -1,11 +1,13 @@
 package com.ramusthastudio.ecommerce.httpclient
 
+import com.microsoft.playwright.Browser
 import com.ramusthastudio.ecommerce.common.asResourceMap
 import com.ramusthastudio.ecommerce.mapper.convertTokopediaSearchResponse
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceEngine
 import com.ramusthastudio.ecommerce.model.EcommerceSource
+import com.ramusthastudio.ecommerce.model.SearchParameter
 import com.ramusthastudio.ecommerce.model.TokopediaSearchResponse
 import com.ramusthastudio.ecommerce.model.constructTokopediaBody
 import io.ktor.client.HttpClient
@@ -19,14 +21,16 @@ import io.ktor.http.HttpHeaders
 import io.ktor.http.URLProtocol
 import io.ktor.http.contentType
 import io.ktor.http.path
+import kotlinx.coroutines.coroutineScope
 
 class TokopediaClientEngine(
     private val httpClient: HttpClient,
+    private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest
 ) : ClientEngine {
     private val ecommerceSource = EcommerceSource.TOKOPEDIA
 
-    override suspend fun searchByRestful(): CommonSearchResponse {
+    override suspend fun searchByRestful(): CommonSearchResponse = coroutineScope {
         val searchResponse: HttpResponse = httpClient.post {
             url {
                 protocol = URLProtocol.HTTPS
@@ -40,25 +44,30 @@ class TokopediaClientEngine(
                 setBody(listOf(constructTokopediaBody(commonSearchRequest.query)))
             }
         }
-        val responseList = searchResponse.body<List<TokopediaSearchResponse>>()
-        return convertTokopediaSearchResponse(
+
+        convertTokopediaSearchResponse(
             searchResponse.responseTime.timestamp,
-            responseList.first()
+            searchResponse.body<List<TokopediaSearchResponse>>().first()
         )
     }
 
-    override suspend fun searchByScraper(): CommonSearchResponse {
-        return CommonSearchResponse()
+    override suspend fun searchByScraper(content: String?): CommonSearchResponse = coroutineScope {
+        CommonSearchResponse()
     }
 }
 
 suspend fun tokopediaSearch(
     httpClient: HttpClient,
-    commonSearchRequest: CommonSearchRequest,
-    action: () -> EcommerceEngine
+    browser: Browser,
+    searchParameter: () -> SearchParameter
 ): CommonSearchResponse {
-    return when (action()) {
-        EcommerceEngine.RESTFUL -> TokopediaClientEngine(httpClient, commonSearchRequest).searchByRestful()
-        EcommerceEngine.SCRAPER -> TokopediaClientEngine(httpClient, commonSearchRequest).searchByScraper()
+    val parameter = searchParameter()
+    val searchRequest = parameter.commonSearchRequest
+    return when (parameter.ecommerceEngine) {
+        EcommerceEngine.RESTFUL ->
+            TokopediaClientEngine(httpClient, browser, searchRequest).searchByRestful()
+
+        EcommerceEngine.SCRAPER ->
+            TokopediaClientEngine(httpClient, browser, searchRequest).searchByScraper(parameter.content)
     }
 }

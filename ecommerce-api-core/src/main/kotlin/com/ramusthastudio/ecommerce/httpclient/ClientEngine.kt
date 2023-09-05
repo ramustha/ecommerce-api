@@ -5,7 +5,7 @@ import java.util.regex.Pattern
 
 interface ClientEngine {
     suspend fun searchByRestful(): CommonSearchResponse
-    suspend fun searchByScraper(): CommonSearchResponse
+    suspend fun searchByScraper(content: String? = null): CommonSearchResponse
 
     fun replaceScriptTag(html: String): String {
         val replacements = mapOf(

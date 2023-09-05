@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
 import java.time.Duration
+import kotlin.system.measureTimeMillis
 
 class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     private val ecommerceClientApi = EcommerceClientApiImpl()
@@ -144,7 +145,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     }
 
     @Test
-    fun searchProductNormalShopeeTest() {
+    override fun searchProductNormalShopeeTest() {
         runBlocking {
             val ecommerceSource = EcommerceSource.SHOPEE
             val searchProduct = ecommerceClientApi.searchProduct(
@@ -169,18 +170,24 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     @Test
     override fun searchProductEmptyCombineTest() {
         runBlocking {
-            val searchProductList = ecommerceClientApi.searchProductCombine()
-            assertEquals(3, searchProductList.size)
+            val time = measureTimeMillis {
+                val searchProductList = ecommerceClientApi.searchProductCombine()
+                assertEquals(4, searchProductList.size)
+            }
+            println("time = $time")
         }
     }
 
     @Test
     override fun searchProductNormalCombineTest() {
         runBlocking {
-            val searchProductList = ecommerceClientApi.searchProductCombine(
-                commonSearchRequest("batocera")
-            )
-            assertEquals(3, searchProductList.size)
+            val time = measureTimeMillis {
+                val searchProductList = ecommerceClientApi.searchProductCombine(
+                    commonSearchRequest("batocera")
+                )
+                assertEquals(4, searchProductList.size)
+            }
+            println("time = $time")
         }
     }
 }

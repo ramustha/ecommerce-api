@@ -42,6 +42,8 @@ interface AbstractEcommerceClientApiTest {
     fun searchProductNormalBukalapakTest()
     fun searchProductNormalTokopediaTest()
 
+    fun searchProductNormalShopeeTest()
+
     fun searchProductEmptyCombineTest()
     fun searchProductNormalCombineTest()
 }

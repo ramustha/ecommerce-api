@@ -10,6 +10,7 @@ import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceEngine
 import com.ramusthastudio.ecommerce.model.EcommerceSource
+import com.ramusthastudio.ecommerce.model.SearchParameter
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -19,6 +20,7 @@ import io.ktor.http.URLProtocol
 import io.ktor.http.path
 import it.skrape.core.htmlDocument
 import it.skrape.selects.html5.script
+import kotlinx.coroutines.coroutineScope
 import kotlinx.serialization.json.Json
 
 
@@ -29,7 +31,7 @@ class BlibliClientEngine(
 ) : ClientEngine {
     private val ecommerceSource = EcommerceSource.BLIBLI
 
-    override suspend fun searchByRestful(): CommonSearchResponse {
+    override suspend fun searchByRestful(): CommonSearchResponse = coroutineScope {
         val xparam = commonSearchRequest.xparam
         xparam["channelId"] = "web"
 
@@ -50,13 +52,14 @@ class BlibliClientEngine(
             }
         }
         xparam.remove("channelId")
-        return convertBlibliSearchResponse(
+
+        convertBlibliSearchResponse(
             searchResponse.responseTime.timestamp,
             searchResponse.body<BlibliSearchResponse>()
         )
     }
 
-    override suspend fun searchByScraper(): CommonSearchResponse {
+    override suspend fun searchByScraper(content: String?): CommonSearchResponse = coroutineScope {
         val page: Page = browser.newPage()
         val navigateOptions = Page.NavigateOptions()
         navigateOptions.setWaitUntil(WaitUntilState.LOAD)
@@ -72,7 +75,8 @@ class BlibliClientEngine(
                 val jsonElement = Json.parseToJsonElement(json)
             }
         }
-        return CommonSearchResponse(
+
+        CommonSearchResponse(
             searchData,
             CommonSearchResponse.Meta(
                 source = ecommerceSource.toString(),
@@ -85,11 +89,15 @@ class BlibliClientEngine(
 suspend fun blibliSearch(
     httpClient: HttpClient,
     browser: Browser,
-    commonSearchRequest: CommonSearchRequest,
-    action: () -> EcommerceEngine
+    searchParameter: () -> SearchParameter
 ): CommonSearchResponse {
-    return when (action()) {
-        EcommerceEngine.RESTFUL -> BlibliClientEngine(httpClient, browser, commonSearchRequest).searchByRestful()
-        EcommerceEngine.SCRAPER -> BlibliClientEngine(httpClient, browser, commonSearchRequest).searchByScraper()
+    val parameter = searchParameter()
+    val searchRequest = parameter.commonSearchRequest
+    return when (parameter.ecommerceEngine) {
+        EcommerceEngine.RESTFUL ->
+            BlibliClientEngine(httpClient, browser, searchRequest).searchByRestful()
+
+        EcommerceEngine.SCRAPER ->
+            BlibliClientEngine(httpClient, browser, searchRequest).searchByScraper(parameter.content)
     }
 }

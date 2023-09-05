@@ -12,6 +12,7 @@ import com.ramusthastudio.ecommerce.model.EcommerceSource.BUKALAPAK
 import com.ramusthastudio.ecommerce.model.EcommerceSource.BUKALAPAK_AUTH
 import com.ramusthastudio.ecommerce.model.EcommerceSource.SHOPEE
 import com.ramusthastudio.ecommerce.model.EcommerceSource.TOKOPEDIA
+import com.ramusthastudio.ecommerce.model.SearchParameter
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.engine.cio.CIO
@@ -62,13 +63,15 @@ class EcommerceClientApiImpl(
     override suspend fun searchProductCombine(
         commonSearchRequest: CommonSearchRequest
     ): List<CommonSearchResponse> {
-        val ecommerceEngine = if (currentState) RESTFUL else SCRAPER
-        log.info("ecommerceEngine = $ecommerceEngine")
+        val engine = if (currentState) RESTFUL else SCRAPER
+        log.info("engine = $engine")
 
+        val searchParameter = SearchParameter(commonSearchRequest, engine)
         return listOf(
-            bukalapakSearch(httpClient, commonSearchRequest) { ecommerceEngine },
-            tokopediaSearch(httpClient, commonSearchRequest) { ecommerceEngine },
-            blibliSearch(httpClient, browser, commonSearchRequest) { ecommerceEngine }
+            bukalapakSearch(httpClient, browser) { searchParameter },
+            tokopediaSearch(httpClient, browser) { searchParameter },
+            blibliSearch(httpClient, browser) { searchParameter },
+            shopeeSearch(httpClient, browser) { SearchParameter(commonSearchRequest, SCRAPER) }
         )
             .sortedBy { it.meta.priority }
             .apply { currentState = !currentState }
@@ -78,15 +81,16 @@ class EcommerceClientApiImpl(
         ecommerceSource: EcommerceSource,
         commonSearchRequest: CommonSearchRequest
     ): CommonSearchResponse {
-        val ecommerceEngine = if (currentState) RESTFUL else SCRAPER
-        log.info("ecommerceEngine = $ecommerceEngine")
+        val engine = if (currentState) RESTFUL else SCRAPER
+        log.info("engine = $engine")
 
+        val searchParameter = SearchParameter(commonSearchRequest, engine)
         return when (ecommerceSource) {
             BUKALAPAK_AUTH -> CommonSearchResponse()
-            BUKALAPAK -> bukalapakSearch(httpClient, commonSearchRequest) { ecommerceEngine }
-            BLIBLI -> blibliSearch(httpClient, browser, commonSearchRequest) { ecommerceEngine }
-            TOKOPEDIA -> tokopediaSearch(httpClient, commonSearchRequest) { ecommerceEngine }
-            SHOPEE -> shopeeSearch(httpClient, browser, commonSearchRequest) { SCRAPER }
+            BUKALAPAK -> bukalapakSearch(httpClient, browser) { searchParameter }
+            BLIBLI -> blibliSearch(httpClient, browser) { searchParameter }
+            TOKOPEDIA -> tokopediaSearch(httpClient, browser) { searchParameter }
+            SHOPEE -> shopeeSearch(httpClient, browser) { SearchParameter(commonSearchRequest, SCRAPER) }
         }.apply { currentState = !currentState }
     }
 }

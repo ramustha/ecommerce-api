@@ -142,4 +142,8 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
             mockEngine.close()
         }
     }
+
+    override fun searchProductNormalShopeeTest() {
+
+    }
 }
