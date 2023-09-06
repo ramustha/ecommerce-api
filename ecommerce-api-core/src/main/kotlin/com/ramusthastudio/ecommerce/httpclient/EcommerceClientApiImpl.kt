@@ -21,6 +21,8 @@ import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import org.slf4j.Logger
@@ -56,22 +58,35 @@ class EcommerceClientApiImpl(
 
     override fun close() {
         httpClient.close()
-        playWright.close()
         log.info("HTTP Client Closed")
+        playWright.close()
+        log.info("Playwright Closed")
     }
 
     override suspend fun searchProductCombine(
         commonSearchRequest: CommonSearchRequest
-    ): List<CommonSearchResponse> {
+    ): List<CommonSearchResponse> = coroutineScope {
         val engine = if (currentState) RESTFUL else SCRAPER
         log.info("engine = $engine")
 
         val searchParameter = SearchParameter(commonSearchRequest, engine)
-        return listOf(
-            bukalapakSearch(httpClient, browser) { searchParameter },
-            tokopediaSearch(httpClient, browser) { searchParameter },
-            blibliSearch(httpClient, browser) { searchParameter },
+        val bukalapakSearch = async {
+            bukalapakSearch(httpClient, browser) { searchParameter }
+        }
+        val tokopediaSearch = async {
+            tokopediaSearch(httpClient, browser) { searchParameter }
+        }
+        val blibliSearch = async {
+            blibliSearch(httpClient, browser) { searchParameter }
+        }
+        val shopeeSearch = async {
             shopeeSearch(httpClient, browser) { SearchParameter(commonSearchRequest, SCRAPER) }
+        }
+        listOf(
+            bukalapakSearch.await(),
+            tokopediaSearch.await(),
+            blibliSearch.await(),
+            shopeeSearch.await(),
         )
             .sortedBy { it.meta.priority }
             .apply { currentState = !currentState }
