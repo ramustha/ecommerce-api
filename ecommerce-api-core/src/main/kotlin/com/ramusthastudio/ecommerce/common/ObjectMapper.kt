@@ -1,4 +1,4 @@
-package com.ramusthastudio.ecommerce.mapper
+package com.ramusthastudio.ecommerce.common
 
 import com.ramusthastudio.ecommerce.model.BlibliSearchResponse
 import com.ramusthastudio.ecommerce.model.BukalapakSearchResponse
@@ -78,7 +78,7 @@ fun convertBlibliData(responseData: BlibliSearchResponse.Data.Product): CommonSe
         originalPrice = responseData.price.priceDisplay.toNumeric(),
         storeName = responseData.merchantName,
         storeAddressCity = responseData.location,
-        url = "https://" + EcommerceSource.BLIBLI.host + responseData.url,
+        url = "https://" + EcommerceSource.BLIBLI.restfulHost + responseData.url,
         imagesUrl = responseData.images.first(),
     )
 }

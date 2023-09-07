@@ -2,7 +2,7 @@ package com.ramusthastudio.ecommerce.httpclient
 
 import com.microsoft.playwright.Browser
 import com.ramusthastudio.ecommerce.common.asResourceMap
-import com.ramusthastudio.ecommerce.mapper.convertTokopediaSearchResponse
+import com.ramusthastudio.ecommerce.common.convertTokopediaSearchResponse
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceEngine
@@ -36,11 +36,11 @@ class TokopediaClientEngine(
         val searchResponse: HttpResponse = httpClient.post {
             url {
                 protocol = URLProtocol.HTTPS
-                host = ecommerceSource.host
+                host = ecommerceSource.restfulHost
 
                 "common-headers".asResourceMap().map { header(it.key, it.value) }
 
-                path(ecommerceSource.path)
+                path(ecommerceSource.restfulPath)
                 contentType(ContentType.Application.Json)
                 header(HttpHeaders.Referrer, "https://www.tokopedia.com")
                 setBody(listOf(constructTokopediaBody(commonSearchRequest.query)))
@@ -57,7 +57,7 @@ class TokopediaClientEngine(
     }
 
     override suspend fun searchByScraper(content: String?): CommonSearchResponse = coroutineScope {
-        CommonSearchResponse()
+        TODO("Please implement search by scraper first")
     }
 }
 
@@ -67,8 +67,9 @@ suspend fun tokopediaSearch(
     searchParameter: () -> SearchParameter
 ): CommonSearchResponse {
     val parameter = searchParameter()
+    val ecommerceEngine = parameter.ecommerceEngine ?: EcommerceEngine.RESTFUL
     val searchRequest = parameter.commonSearchRequest
-    return when (parameter.ecommerceEngine) {
+    return when (ecommerceEngine) {
         EcommerceEngine.RESTFUL ->
             TokopediaClientEngine(httpClient, browser, searchRequest).searchByRestful()
 

@@ -4,7 +4,7 @@ import com.microsoft.playwright.Browser
 import com.microsoft.playwright.Page
 import com.microsoft.playwright.options.WaitUntilState
 import com.ramusthastudio.ecommerce.common.asResourceMap
-import com.ramusthastudio.ecommerce.mapper.convertBlibliSearchResponse
+import com.ramusthastudio.ecommerce.common.convertBlibliSearchResponse
 import com.ramusthastudio.ecommerce.model.BlibliSearchResponse
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
@@ -40,11 +40,11 @@ class BlibliClientEngine(
         val searchResponse: HttpResponse = httpClient.get {
             url {
                 protocol = URLProtocol.HTTPS
-                host = ecommerceSource.host
+                host = ecommerceSource.restfulHost
 
                 "common-headers".asResourceMap().map { header(it.key, it.value) }
 
-                path(ecommerceSource.path)
+                path(ecommerceSource.restfulPath)
                 parameters.append("page", commonSearchRequest.page)
                 parameters.append("start", commonSearchRequest.offset)
                 parameters.append("searchTerm", commonSearchRequest.query)
@@ -102,8 +102,9 @@ suspend fun blibliSearch(
     searchParameter: () -> SearchParameter
 ): CommonSearchResponse {
     val parameter = searchParameter()
+    val ecommerceEngine = parameter.ecommerceEngine ?: EcommerceEngine.RESTFUL
     val searchRequest = parameter.commonSearchRequest
-    return when (parameter.ecommerceEngine) {
+    return when (ecommerceEngine) {
         EcommerceEngine.RESTFUL ->
             BlibliClientEngine(httpClient, browser, searchRequest).searchByRestful()
 

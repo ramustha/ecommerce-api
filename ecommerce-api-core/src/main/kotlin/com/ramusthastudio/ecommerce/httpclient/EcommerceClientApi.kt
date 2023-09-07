@@ -14,7 +14,8 @@ interface EcommerceClientApi : Closeable {
 
     suspend fun searchProduct(
         ecommerceSource: EcommerceSource,
-        commonSearchRequest: CommonSearchRequest = commonSearchRequest()
+        commonSearchRequest: CommonSearchRequest = commonSearchRequest(),
+        content: String? = null
     ): CommonSearchResponse
 }
 

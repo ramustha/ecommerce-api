@@ -1,7 +1,10 @@
 package com.ramusthastudio.ecommerce.httpclient
 
+import com.ramusthastudio.ecommerce.common.asResource
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
+import com.ramusthastudio.ecommerce.model.EcommerceEngine
 import com.ramusthastudio.ecommerce.model.EcommerceSource
+import com.ramusthastudio.ecommerce.model.commonSearchRequest
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.containsString
@@ -143,7 +146,32 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
         }
     }
 
+    @Test
     override fun searchProductNormalShopeeTest() {
+        runBlocking {
+            val mockContent = "scrape/shopee-response.html".asResource()
+            val commonSearchRequest = commonSearchRequest(
+                engine = EcommerceEngine.SCRAPER.toString()
+            )
+            val searchProduct = searchProductMock(
+                EcommerceSource.SHOPEE, commonSearchRequest, mockContent
+            )
+            val searchResultData = searchProduct.data.first()
 
+            assertEquals("17692676207", searchResultData.id)
+            assertEquals(BigDecimal.valueOf(-1), searchResultData.price)
+            assertEquals(BigDecimal.valueOf(170000), searchResultData.lowPrice)
+            assertEquals(BigDecimal.valueOf(370000), searchResultData.highPrice)
+            assertThat(
+                searchResultData.name,
+                containsString("GAME BATOCERA FULL GAME PS1-4")
+            )
+            assertThat(
+                searchResultData.url,
+                containsString("https://shopee.co.id/GAME-BATOCERA-FULL-GAME-PS1-4-i.99032190.17692676207")
+            )
+            assertEquals(-1, searchProduct.meta.total)
+            assertEquals(EcommerceSource.SHOPEE.toString(), searchProduct.meta.source)
+        }
     }
 }

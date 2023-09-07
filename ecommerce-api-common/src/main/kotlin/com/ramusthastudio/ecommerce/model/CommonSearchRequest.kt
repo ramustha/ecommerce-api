@@ -5,13 +5,21 @@ data class CommonSearchRequest(
     val offset: String,
     val limit: String = "20",
     var xparam: MutableMap<String, String> = mutableMapOf(),
-    val query: String
+    val query: String,
+    val engine: String?,
+    val ecommerce: String?
 )
 
-fun commonSearchRequest(query: String = ""): CommonSearchRequest {
+fun commonSearchRequest(
+    query: String = "",
+    engine: String? = null,
+    ecommerce: String? = null
+): CommonSearchRequest {
     return CommonSearchRequest(
         page = "1",
         offset = "0",
-        query = query
+        query = query,
+        engine = engine,
+        ecommerce = ecommerce,
     )
 }

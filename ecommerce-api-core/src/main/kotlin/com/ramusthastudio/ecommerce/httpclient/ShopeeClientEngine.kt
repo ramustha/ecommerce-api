@@ -3,6 +3,9 @@ package com.ramusthastudio.ecommerce.httpclient
 import com.microsoft.playwright.Browser
 import com.microsoft.playwright.Page
 import com.microsoft.playwright.options.LoadState
+import com.ramusthastudio.ecommerce.common.getJsonObject
+import com.ramusthastudio.ecommerce.common.getJsonValue
+import com.ramusthastudio.ecommerce.common.toBigDecimalOr
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceEngine
@@ -15,10 +18,7 @@ import it.skrape.selects.html5.script
 import kotlinx.coroutines.coroutineScope
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonArray
-import kotlinx.serialization.json.jsonObject
-import kotlinx.serialization.json.jsonPrimitive
 import org.slf4j.LoggerFactory
-import org.slf4j.MDC
 import java.math.BigDecimal
 import java.util.*
 
@@ -40,9 +40,12 @@ class ShopeeClientEngine(
 
         Optional.ofNullable(content)
             .ifPresentOrElse({
+                log.debug("extracted from file")
                 extractContent(it, searchData)
             }, {
-                val url = ecommerceSource.host + ecommerceSource.path + "/" + commonSearchRequest.query
+                log.debug("extracted from url")
+
+                val url = ecommerceSource.scraperHost + ecommerceSource.scraperPath + "/" + commonSearchRequest.query
 
                 val page: Page = browser.newPage()
                 page.navigate(
@@ -75,25 +78,29 @@ class ShopeeClientEngine(
                 withAttribute = "type" to "application/ld+json"
                 val json = findAll { replaceScriptTag(this@findAll.html) }
                 val jsonElement = Json.parseToJsonElement(json).jsonArray.filterNotNull()
-                jsonElement.filter { it.jsonObject["@type"]?.jsonPrimitive?.content == "Product" }
+                jsonElement.filter { it.getJsonValue("@type").equals("Product", ignoreCase = true) }
                     .forEach {
-                        val offers = it.jsonObject["offers"]?.jsonObject
-                        val priceStr = offers?.get("Price")?.jsonPrimitive?.content
-                        val lowPriceStr = offers?.get("lowPrice")?.jsonPrimitive?.content
-                        val highPriceStr = offers?.get("highPrice")?.jsonPrimitive?.content
+                        val productId = it.getJsonValue("productID")
+                        val name = it.getJsonValue("name")
+                        val url = it.getJsonValue("url")
+                        val image = it.getJsonValue("image")
 
-                        val price = priceStr?.toBigDecimalOrNull() ?: BigDecimal("-1")
-                        val lowPrice = lowPriceStr?.toBigDecimalOrNull() ?: BigDecimal("-1")
-                        val highPrice = highPriceStr?.toBigDecimalOrNull() ?: BigDecimal("-1")
+                        val offers = it.getJsonObject("offers")
+                        val price =
+                            offers?.getJsonValue("Price")?.toBigDecimalOr(BigDecimal.valueOf(-1))
+                        val lowPrice =
+                            offers?.getJsonValue("lowPrice")?.toBigDecimalOr(BigDecimal.valueOf(-1))
+                        val highPrice =
+                            offers?.getJsonValue("highPrice")?.toBigDecimalOr(BigDecimal.valueOf(-1))
 
                         val productData = CommonSearchResponse.Data(
-                            id = it.jsonObject["productID"].toString(),
-                            name = it.jsonObject["name"].toString(),
-                            price = price,
-                            lowPrice = lowPrice,
-                            highPrice = highPrice,
-                            url = it.jsonObject["url"].toString(),
-                            imagesUrl = it.jsonObject["image"].toString()
+                            id = productId,
+                            name = name,
+                            price = price?.setScale(0),
+                            lowPrice = lowPrice?.setScale(0),
+                            highPrice = highPrice?.setScale(0),
+                            url = url,
+                            imagesUrl = image,
                         )
                         searchData.add(productData)
                     }
@@ -108,8 +115,9 @@ suspend fun shopeeSearch(
     searchParameter: () -> SearchParameter
 ): CommonSearchResponse {
     val parameter = searchParameter()
+    val ecommerceEngine = EcommerceEngine.SCRAPER
     val searchRequest = parameter.commonSearchRequest
-    return when (parameter.ecommerceEngine) {
+    return when (ecommerceEngine) {
         EcommerceEngine.RESTFUL ->
             ShopeeClientEngine(httpClient, browser, searchRequest).searchByRestful()
 

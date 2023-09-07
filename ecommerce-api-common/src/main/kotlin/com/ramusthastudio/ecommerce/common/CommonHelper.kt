@@ -3,7 +3,7 @@ package com.ramusthastudio.ecommerce.common
 import java.io.File
 
 fun String.asResource(): String = File(ClassLoader.getSystemResource(this).file).readText()
-fun String.getResourceValue(key: String): String? = asResourceMap()[key]
+fun String.getResourceValue(key: String, default: String): String = asResourceMap().getOrDefault(key, default)
 fun String.asResourceMap(): Map<String, String> =
     File(ClassLoader.getSystemResource(this).file)
         .useLines { lines ->

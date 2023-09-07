@@ -2,7 +2,7 @@ package com.ramusthastudio.ecommerce.httpclient
 
 import com.microsoft.playwright.Browser
 import com.ramusthastudio.ecommerce.common.asResourceMap
-import com.ramusthastudio.ecommerce.mapper.convertBukalapakSearchResponse
+import com.ramusthastudio.ecommerce.common.convertBukalapakSearchResponse
 import com.ramusthastudio.ecommerce.model.BukalapakAuthRequest
 import com.ramusthastudio.ecommerce.model.BukalapakAuthResponse
 import com.ramusthastudio.ecommerce.model.BukalapakSearchResponse
@@ -42,11 +42,11 @@ class BukalapakClientEngine(
             httpClient.post {
                 url {
                     protocol = URLProtocol.HTTPS
-                    host = authRequest.host
+                    host = authRequest.restfulHost
 
                     "common-headers".asResourceMap().map { header(it.key, it.value) }
 
-                    path(authRequest.path)
+                    path(authRequest.restfulPath)
                     contentType(ContentType.Application.Json)
                     setBody(BukalapakAuthRequest())
                 }
@@ -57,11 +57,11 @@ class BukalapakClientEngine(
         val searchResponse: HttpResponse = httpClient.get {
             url {
                 protocol = URLProtocol.HTTPS
-                host = ecommerceSource.host
+                host = ecommerceSource.restfulHost
 
                 "common-headers".asResourceMap().map { header(it.key, it.value) }
 
-                path(ecommerceSource.path)
+                path(ecommerceSource.restfulPath)
                 parameters.append("page", commonSearchRequest.page)
                 parameters.append("offset", commonSearchRequest.offset)
                 parameters.append("keywords", commonSearchRequest.query)
@@ -84,7 +84,7 @@ class BukalapakClientEngine(
     }
 
     override suspend fun searchByScraper(content: String?): CommonSearchResponse = coroutineScope {
-        CommonSearchResponse()
+        TODO("Please implement search by scraper first")
     }
 }
 
@@ -94,8 +94,9 @@ suspend fun bukalapakSearch(
     searchParameter: () -> SearchParameter
 ): CommonSearchResponse {
     val parameter = searchParameter()
+    val ecommerceEngine = parameter.ecommerceEngine ?: EcommerceEngine.RESTFUL
     val searchRequest = parameter.commonSearchRequest
-    return when (parameter.ecommerceEngine) {
+    return when (ecommerceEngine) {
         EcommerceEngine.RESTFUL ->
             BukalapakClientEngine(httpClient, browser, searchRequest).searchByRestful()
 

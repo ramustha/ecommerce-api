@@ -1,8 +1,10 @@
 package com.ramusthastudio.ecommerce.httpclient
 
 import com.ramusthastudio.ecommerce.common.asResource
+import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceSource
+import com.ramusthastudio.ecommerce.model.commonSearchRequest
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.engine.mock.MockEngine
 import io.ktor.client.engine.mock.respond
@@ -29,9 +31,19 @@ interface AbstractEcommerceClientApiTest {
     suspend fun searchProductMock(
         engine: HttpClientEngine,
         ecommerceSource: EcommerceSource,
+        commonSearchRequest: CommonSearchRequest = commonSearchRequest()
     ): CommonSearchResponse {
         val ecommerceClientApi = EcommerceClientApiImpl(engine)
         return ecommerceClientApi.searchProduct(ecommerceSource)
+    }
+
+    suspend fun searchProductMock(
+        ecommerceSource: EcommerceSource,
+        commonSearchRequest: CommonSearchRequest,
+        content: String
+    ): CommonSearchResponse {
+        val ecommerceClientApi = EcommerceClientApiImpl()
+        return ecommerceClientApi.searchProduct(ecommerceSource, commonSearchRequest, content)
     }
 
     fun searchProductEmptyBlibliTest()
