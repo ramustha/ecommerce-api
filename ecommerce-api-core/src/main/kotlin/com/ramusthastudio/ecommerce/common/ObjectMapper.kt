@@ -5,13 +5,6 @@ import com.ramusthastudio.ecommerce.model.BukalapakSearchResponse
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceSource
 import com.ramusthastudio.ecommerce.model.TokopediaSearchResponse
-import java.math.BigDecimal
-
-fun String.toNumeric(): BigDecimal {
-    val numericString = this.replace(Regex("\\D"), "")
-    if (numericString.isBlank()) return BigDecimal.ZERO
-    return BigDecimal(numericString)
-}
 
 fun convertBukalapakSearchResponse(
     processTime: Long,
@@ -74,8 +67,8 @@ fun convertBlibliData(responseData: BlibliSearchResponse.Data.Product): CommonSe
     return CommonSearchResponse.Data(
         id = responseData.id,
         name = responseData.name,
-        price = responseData.price.offerPriceDisplay.toNumeric(),
-        originalPrice = responseData.price.priceDisplay.toNumeric(),
+        price = responseData.price.offerPriceDisplay.currencyFormat(),
+        originalPrice = responseData.price.priceDisplay.currencyFormat(),
         storeName = responseData.merchantName,
         storeAddressCity = responseData.location,
         url = "https://" + EcommerceSource.BLIBLI.restfulHost + responseData.url,
@@ -118,8 +111,8 @@ fun convertTokopediaData(
     return CommonSearchResponse.Data(
         id = responseData.id.toString(),
         name = responseData.name,
-        price = responseData.price.toNumeric(),
-        originalPrice = responseData.originalPrice.toNumeric(),
+        price = responseData.price.currencyFormat(),
+        originalPrice = responseData.originalPrice.currencyFormat(),
         storeName = responseData.shop.name,
         storeAddressCity = responseData.shop.city,
         url = responseData.url,

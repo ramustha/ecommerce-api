@@ -8,7 +8,7 @@ enum class EcommerceSource(
 ) {
     BLIBLI(
         "www.blibli.com",
-        "https://www.blibli.com",
+        "www.blibli.com",
         "/backend/search/products",
         "/cari"
     ),
@@ -20,19 +20,19 @@ enum class EcommerceSource(
     ),
     BUKALAPAK(
         "api.bukalapak.com",
-        "https://www.bukalapak.com",
+        "www.bukalapak.com",
         "/multistrategy-products",
         "/products"
     ),
     SHOPEE(
         "shopee.co.id",
-        "https://shopee.co.id",
+        "shopee.co.id",
         "/v4/search/search_items",
         "/search"
     ),
     TOKOPEDIA(
         "gql.tokopedia.com",
-        "https://www.tokopedia.com",
+        "www.tokopedia.com",
         "/graphql/SearchProductQueryV4",
         "/search"
     ),

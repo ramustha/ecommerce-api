@@ -3,23 +3,27 @@ package com.ramusthastudio.ecommerce.httpclient
 import com.microsoft.playwright.Browser
 import com.microsoft.playwright.Page
 import com.microsoft.playwright.options.LoadState
+import com.ramusthastudio.ecommerce.common.currencyFormat
 import com.ramusthastudio.ecommerce.common.getJsonObject
 import com.ramusthastudio.ecommerce.common.getJsonValue
-import com.ramusthastudio.ecommerce.common.toBigDecimalOr
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceEngine
 import com.ramusthastudio.ecommerce.model.EcommerceSource
 import com.ramusthastudio.ecommerce.model.SearchParameter
 import io.ktor.client.HttpClient
+import io.ktor.http.URLBuilder
+import io.ktor.http.URLProtocol
+import io.ktor.http.path
+import io.ktor.http.set
 import it.skrape.core.htmlDocument
 import it.skrape.selects.html
 import it.skrape.selects.html5.script
 import kotlinx.coroutines.coroutineScope
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonArray
 import org.slf4j.LoggerFactory
-import java.math.BigDecimal
 import java.util.*
 
 class ShopeeClientEngine(
@@ -45,12 +49,18 @@ class ShopeeClientEngine(
             }, {
                 log.debug("extracted from url")
 
-                val url = ecommerceSource.scraperHost + ecommerceSource.scraperPath + "/" + commonSearchRequest.query
+                val urlBuilder = URLBuilder()
+                urlBuilder.set {
+                    protocol = URLProtocol.HTTPS
+                    host = ecommerceSource.scraperHost
 
+                    path(ecommerceSource.scraperPath)
+                    parameters.append("keyword", commonSearchRequest.query)
+                    parameters.append("page", commonSearchRequest.page)
+                }
                 val page: Page = browser.newPage()
-                page.navigate(
-                    "https://shopee.co.id/search?keyword=${commonSearchRequest.query}&page=0"
-                )
+                page.navigate(urlBuilder.build().toString())
+
                 page.waitForLoadState(LoadState.NETWORKIDLE)
                 page.keyboard().down("End")
                 extractContent(page.content(), searchData)
@@ -73,39 +83,38 @@ class ShopeeClientEngine(
         searchData: MutableList<CommonSearchResponse.Data>
     ) {
         htmlDocument(availableContent) {
-            log.debug("available content = {}", availableContent)
             script {
                 withAttribute = "type" to "application/ld+json"
                 val json = findAll { replaceScriptTag(this@findAll.html) }
-                val jsonElement = Json.parseToJsonElement(json).jsonArray.filterNotNull()
-                jsonElement.filter { it.getJsonValue("@type").equals("Product", ignoreCase = true) }
-                    .forEach {
-                        val productId = it.getJsonValue("productID")
-                        val name = it.getJsonValue("name")
-                        val url = it.getJsonValue("url")
-                        val image = it.getJsonValue("image")
+                log.debug("available content = {}", json)
 
-                        val offers = it.getJsonObject("offers")
-                        val price =
-                            offers?.getJsonValue("Price")?.toBigDecimalOr(BigDecimal.valueOf(-1))
-                        val lowPrice =
-                            offers?.getJsonValue("lowPrice")?.toBigDecimalOr(BigDecimal.valueOf(-1))
-                        val highPrice =
-                            offers?.getJsonValue("highPrice")?.toBigDecimalOr(BigDecimal.valueOf(-1))
-
-                        val productData = CommonSearchResponse.Data(
-                            id = productId,
-                            name = name,
-                            price = price?.setScale(0),
-                            lowPrice = lowPrice?.setScale(0),
-                            highPrice = highPrice?.setScale(0),
-                            url = url,
-                            imagesUrl = image,
-                        )
-                        searchData.add(productData)
-                    }
+                Json.parseToJsonElement(json).jsonArray.filterNotNull()
+                    .filter { it.getJsonValue("@type").equals("Product", ignoreCase = true) }
+                    .forEach { productJson -> searchData.add(extractProductData(productJson)) }
             }
         }
+    }
+
+    private fun extractProductData(productJson: JsonElement): CommonSearchResponse.Data {
+        val productId = productJson.getJsonValue("productID")
+        val name = productJson.getJsonValue("name")
+        val url = productJson.getJsonValue("url")
+        val image = productJson.getJsonValue("image")
+
+        val offers = productJson.getJsonObject("offers")
+        val price = offers?.getJsonValue("price")?.currencyFormat()
+        val lowPrice = offers?.getJsonValue("lowPrice")?.currencyFormat()
+        val highPrice = offers?.getJsonValue("highPrice")?.currencyFormat()
+
+        return CommonSearchResponse.Data(
+            id = productId,
+            name = name,
+            price = price,
+            lowPrice = lowPrice,
+            highPrice = highPrice,
+            url = url,
+            imagesUrl = image,
+        )
     }
 }
 

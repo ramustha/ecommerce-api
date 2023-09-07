@@ -14,16 +14,19 @@ interface ClientEngine {
             "</script>" to "]"
         )
 
-        val sb = StringBuilder(html)
+        var result = html
         for ((oldValue, newValue) in replacements) {
+            val sb = StringBuilder(result)
             var index = sb.indexOf(oldValue)
+
             while (index != -1) {
                 sb.replace(index, index + oldValue.length, newValue)
-                index += newValue.length
-                index = sb.indexOf(oldValue, index)
+                index = sb.indexOf(oldValue, index + newValue.length)
             }
+
+            result = sb.toString()
         }
-        return sb.toString()
+        return result
     }
 
     fun removeScriptTag(str: String): String {

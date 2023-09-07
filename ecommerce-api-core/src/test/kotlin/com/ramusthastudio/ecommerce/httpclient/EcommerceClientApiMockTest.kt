@@ -9,6 +9,7 @@ import kotlinx.coroutines.runBlocking
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.containsString
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test
 import java.math.BigDecimal
 
@@ -156,7 +157,7 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
             val searchProduct = searchProductMock(
                 EcommerceSource.SHOPEE, commonSearchRequest, mockContent
             )
-            val searchResultData = searchProduct.data.first()
+            var searchResultData = searchProduct.data.first()
 
             assertEquals("17692676207", searchResultData.id)
             assertEquals(BigDecimal.valueOf(-1), searchResultData.price)
@@ -172,6 +173,53 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
             )
             assertEquals(-1, searchProduct.meta.total)
             assertEquals(EcommerceSource.SHOPEE.toString(), searchProduct.meta.source)
+
+            searchResultData = searchProduct.data.first { it.id == "9156229116" }
+
+            assertEquals("9156229116", searchResultData.id)
+            assertEquals(BigDecimal.valueOf(1258562), searchResultData.price)
+            assertEquals(BigDecimal.valueOf(-1), searchResultData.lowPrice)
+            assertEquals(BigDecimal.valueOf(-1), searchResultData.highPrice)
+            assertThat(
+                searchResultData.name,
+                containsString("Komputer motherboard For Asus ROG STRIX B250G GAMING")
+            )
+            assertThat(
+                searchResultData.url,
+                containsString("https://shopee.co.id/Komputer-motherboard-For-Asus-ROG-STRIX-B250G-GAMING")
+            )
+            assertEquals(-1, searchProduct.meta.total)
+            assertEquals(EcommerceSource.SHOPEE.toString(), searchProduct.meta.source)
+        }
+    }
+
+    @Test
+    fun searchProductNormalBlibliScraperTest() {
+        runBlocking {
+            val mockContent = "scrape/blibli-response.html".asResource()
+            val commonSearchRequest = commonSearchRequest(
+                engine = EcommerceEngine.SCRAPER.toString()
+            )
+            val searchProduct = searchProductMock(
+                EcommerceSource.BLIBLI, commonSearchRequest, mockContent
+            )
+            val searchResultData = searchProduct.data.first()
+
+            assertEquals("TIS-70232-14582", searchResultData.id)
+            assertEquals(BigDecimal.valueOf(605000), searchResultData.price)
+            assertNull(searchResultData.lowPrice)
+            assertNull(searchResultData.highPrice)
+            assertThat(
+                searchResultData.name,
+                containsString("USB Flashdisk Batocera Flashdisk Full Games Flashdisk Batocera USB")
+            )
+            assertThat(
+                searchResultData.url,
+                containsString("/p/usb-flashdisk-batocera-flashdisk-full-games-flashdisk-batocera-usb/")
+            )
+            assertEquals(-1, searchProduct.meta.total)
+            assertEquals(EcommerceSource.BLIBLI.toString(), searchProduct.meta.source)
+
         }
     }
 }
