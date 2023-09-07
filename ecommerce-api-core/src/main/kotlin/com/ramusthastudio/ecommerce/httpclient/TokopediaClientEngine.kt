@@ -22,12 +22,14 @@ import io.ktor.http.URLProtocol
 import io.ktor.http.contentType
 import io.ktor.http.path
 import kotlinx.coroutines.coroutineScope
+import org.slf4j.LoggerFactory
 
 class TokopediaClientEngine(
     private val httpClient: HttpClient,
     private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest
 ) : ClientEngine {
+    private val log = LoggerFactory.getLogger(this.javaClass)
     private val ecommerceSource = EcommerceSource.TOKOPEDIA
 
     override suspend fun searchByRestful(): CommonSearchResponse = coroutineScope {
@@ -45,8 +47,11 @@ class TokopediaClientEngine(
             }
         }
 
+        val processTime = searchResponse.responseTime.timestamp - searchResponse.requestTime.timestamp
+        log.debug("process time (RESTFUL)= $processTime")
+
         convertTokopediaSearchResponse(
-            searchResponse.responseTime.timestamp,
+            processTime = processTime,
             searchResponse.body<List<TokopediaSearchResponse>>().first()
         )
     }

@@ -14,7 +14,7 @@ fun String.toNumeric(): BigDecimal {
 }
 
 fun convertBukalapakSearchResponse(
-    responseTime: Long,
+    processTime: Long,
     bukalapakSearchResponse: BukalapakSearchResponse
 ): CommonSearchResponse {
     return CommonSearchResponse(
@@ -22,7 +22,7 @@ fun convertBukalapakSearchResponse(
             .map { convertBukalapakData(it) }
             .toList(),
         convertBukalapakMeta(
-            responseTime,
+            processTime,
             bukalapakSearchResponse.meta
         )
     )
@@ -42,7 +42,7 @@ fun convertBukalapakData(responseData: BukalapakSearchResponse.Data): CommonSear
 }
 
 fun convertBukalapakMeta(
-    responseTime: Long,
+    processTime: Long,
     responseMeta: BukalapakSearchResponse.Meta
 ): CommonSearchResponse.Meta {
     return CommonSearchResponse.Meta(
@@ -51,12 +51,12 @@ fun convertBukalapakMeta(
         responseMeta.total ?: -1,
         responseMeta.totalPages ?: -1,
         EcommerceSource.BUKALAPAK.toString(),
-        responseTime,
+        processTime,
     )
 }
 
 fun convertBlibliSearchResponse(
-    responseTime: Long,
+    processTime: Long,
     blibliSearchResponse: BlibliSearchResponse
 ): CommonSearchResponse {
     return CommonSearchResponse(
@@ -64,7 +64,7 @@ fun convertBlibliSearchResponse(
             .map { convertBlibliData(it) }
             .toList(),
         convertBlibliMeta(
-            responseTime,
+            processTime,
             blibliSearchResponse.data.paging
         )
     )
@@ -84,7 +84,7 @@ fun convertBlibliData(responseData: BlibliSearchResponse.Data.Product): CommonSe
 }
 
 fun convertBlibliMeta(
-    responseTime: Long,
+    processTime: Long,
     responseMeta: BlibliSearchResponse.Data.Paging
 ): CommonSearchResponse.Meta {
     return CommonSearchResponse.Meta(
@@ -93,12 +93,12 @@ fun convertBlibliMeta(
         responseMeta.totalItem,
         responseMeta.totalPage,
         EcommerceSource.BLIBLI.toString(),
-        responseTime,
+        processTime,
     )
 }
 
 fun convertTokopediaSearchResponse(
-    responseTime: Long,
+    processTime: Long,
     tokopediaSearchResponse: TokopediaSearchResponse
 ): CommonSearchResponse {
     return CommonSearchResponse(
@@ -106,7 +106,7 @@ fun convertTokopediaSearchResponse(
             .map { convertTokopediaData(it) }
             .toList(),
         convertTokopediaMeta(
-            responseTime,
+            processTime,
             tokopediaSearchResponse.data.aceSearchProductV4.header
         )
     )
@@ -128,12 +128,12 @@ fun convertTokopediaData(
 }
 
 fun convertTokopediaMeta(
-    responseTime: Long,
+    processTime: Long,
     responseMeta: TokopediaSearchResponse.Data.AceSearchProductV4.Header
 ): CommonSearchResponse.Meta {
     return CommonSearchResponse.Meta(
         total = responseMeta.totalData,
         source = EcommerceSource.TOKOPEDIA.toString(),
-        priority = responseTime,
+        processTime = processTime,
     )
 }

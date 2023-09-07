@@ -35,7 +35,7 @@ class EcommerceClientApiImpl(
     private val httpClient = initializeHttpClient(httpEngine)
     private val playWright: Playwright = Playwright.create()
     private val browser = playWright.firefox().launch(
-        BrowserType.LaunchOptions().setHeadless(true).setSlowMo(1000.0)
+        BrowserType.LaunchOptions().setHeadless(true)
     )
     private var currentState: Boolean = true
 
@@ -88,7 +88,7 @@ class EcommerceClientApiImpl(
             blibliSearch.await(),
             shopeeSearch.await(),
         )
-            .sortedBy { it.meta.priority }
+            .sortedBy { it.meta.processTime }
             .apply { currentState = !currentState }
     }
 

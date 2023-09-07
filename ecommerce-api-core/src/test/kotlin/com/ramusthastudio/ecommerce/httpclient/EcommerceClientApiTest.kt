@@ -9,8 +9,6 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
-import java.time.Duration
-import kotlin.system.measureTimeMillis
 
 class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     private val ecommerceClientApi = EcommerceClientApiImpl()
@@ -154,7 +152,6 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
 
             val productData = searchProduct.data.first()
             val productMeta = searchProduct.meta
-            println("response time = ${Duration.ofMillis(productMeta.responseTime)}")
 
             assertNotEquals(0, searchProduct.data.size)
             assertNotNull(productData.id)
@@ -162,32 +159,25 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
             assertNotNull(productData.url)
             assertNotNull(productData.imagesUrl)
             assertEquals(ecommerceSource.toString(), productMeta.source)
-            assertNotEquals(-1, productMeta.priority)
-            assertNotEquals(-1, productMeta.responseTime)
+            assertNotEquals(-1, productMeta.processTime)
         }
     }
 
     @Test
     override fun searchProductEmptyCombineTest() {
         runBlocking {
-            val time = measureTimeMillis {
-                val searchProductList = ecommerceClientApi.searchProductCombine()
-                assertEquals(4, searchProductList.size)
-            }
-            println("time = $time")
+            val searchProductList = ecommerceClientApi.searchProductCombine()
+            assertEquals(4, searchProductList.size)
         }
     }
 
     @Test
     override fun searchProductNormalCombineTest() {
         runBlocking {
-            val time = measureTimeMillis {
-                val searchProductList = ecommerceClientApi.searchProductCombine(
-                    commonSearchRequest("batocera")
-                )
-                assertEquals(4, searchProductList.size)
-            }
-            println("time = $time")
+            val searchProductList = ecommerceClientApi.searchProductCombine(
+                commonSearchRequest("batocera")
+            )
+            assertEquals(4, searchProductList.size)
         }
     }
 }

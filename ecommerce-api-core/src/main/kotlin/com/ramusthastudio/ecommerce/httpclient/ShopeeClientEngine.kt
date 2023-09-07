@@ -2,7 +2,7 @@ package com.ramusthastudio.ecommerce.httpclient
 
 import com.microsoft.playwright.Browser
 import com.microsoft.playwright.Page
-import com.microsoft.playwright.options.WaitUntilState
+import com.microsoft.playwright.options.LoadState
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceEngine
@@ -18,6 +18,7 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.slf4j.LoggerFactory
+import org.slf4j.MDC
 import java.math.BigDecimal
 import java.util.*
 
@@ -30,7 +31,7 @@ class ShopeeClientEngine(
     private val ecommerceSource = EcommerceSource.SHOPEE
 
     override suspend fun searchByRestful(): CommonSearchResponse = coroutineScope {
-        CommonSearchResponse()
+        TODO("Please implement search by restful first")
     }
 
     override suspend fun searchByScraper(content: String?): CommonSearchResponse = coroutineScope {
@@ -42,24 +43,24 @@ class ShopeeClientEngine(
                 extractContent(it, searchData)
             }, {
                 val url = ecommerceSource.host + ecommerceSource.path + "/" + commonSearchRequest.query
-                val navigateOptions = Page.NavigateOptions()
-                navigateOptions.setWaitUntil(WaitUntilState.LOAD)
 
                 val page: Page = browser.newPage()
                 page.navigate(
-                    "https://shopee.co.id/search?keyword=${commonSearchRequest.query}&page=0",
-                    navigateOptions
+                    "https://shopee.co.id/search?keyword=${commonSearchRequest.query}&page=0"
                 )
+                page.waitForLoadState(LoadState.NETWORKIDLE)
                 page.keyboard().down("End")
                 extractContent(page.content(), searchData)
             })
+
+        val processTime = System.currentTimeMillis() - starTime
+        log.debug("process time (SCRAPE)= $processTime")
 
         CommonSearchResponse(
             searchData,
             CommonSearchResponse.Meta(
                 source = ecommerceSource.toString(),
-                priority = System.currentTimeMillis(),
-                responseTime = System.currentTimeMillis() - starTime
+                processTime = processTime
             )
         )
     }
@@ -69,14 +70,13 @@ class ShopeeClientEngine(
         searchData: MutableList<CommonSearchResponse.Data>
     ) {
         htmlDocument(availableContent) {
+            log.debug("available content = {}", availableContent)
             script {
                 withAttribute = "type" to "application/ld+json"
                 val json = findAll { replaceScriptTag(this@findAll.html) }
                 val jsonElement = Json.parseToJsonElement(json).jsonArray.filterNotNull()
                 jsonElement.filter { it.jsonObject["@type"]?.jsonPrimitive?.content == "Product" }
                     .forEach {
-                        log.debug("scrape content = {}", it)
-
                         val offers = it.jsonObject["offers"]?.jsonObject
                         val priceStr = offers?.get("Price")?.jsonPrimitive?.content
                         val lowPriceStr = offers?.get("lowPrice")?.jsonPrimitive?.content

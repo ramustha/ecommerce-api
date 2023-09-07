@@ -23,12 +23,14 @@ import io.ktor.http.URLProtocol
 import io.ktor.http.contentType
 import io.ktor.http.path
 import kotlinx.coroutines.coroutineScope
+import org.slf4j.LoggerFactory
 
 class BukalapakClientEngine(
     private val httpClient: HttpClient,
     private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest
 ) : ClientEngine {
+    private val log = LoggerFactory.getLogger(this.javaClass)
     private val ecommerceSource = EcommerceSource.BUKALAPAK
 
     override suspend fun searchByRestful(): CommonSearchResponse = coroutineScope {
@@ -72,8 +74,11 @@ class BukalapakClientEngine(
         xparam.remove("limit")
         searchResponse.call
 
+        val processTime = searchResponse.responseTime.timestamp - searchResponse.requestTime.timestamp
+        log.debug("process time (RESTFUL)= $processTime")
+
         convertBukalapakSearchResponse(
-            searchResponse.responseTime.timestamp,
+            processTime,
             searchResponse.body<BukalapakSearchResponse>()
         )
     }

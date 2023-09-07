@@ -22,6 +22,7 @@ import it.skrape.core.htmlDocument
 import it.skrape.selects.html5.script
 import kotlinx.coroutines.coroutineScope
 import kotlinx.serialization.json.Json
+import org.slf4j.LoggerFactory
 
 
 class BlibliClientEngine(
@@ -29,6 +30,7 @@ class BlibliClientEngine(
     private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest
 ) : ClientEngine {
+    private val log = LoggerFactory.getLogger(this.javaClass)
     private val ecommerceSource = EcommerceSource.BLIBLI
 
     override suspend fun searchByRestful(): CommonSearchResponse = coroutineScope {
@@ -53,13 +55,18 @@ class BlibliClientEngine(
         }
         xparam.remove("channelId")
 
+        val processTime = searchResponse.responseTime.timestamp - searchResponse.requestTime.timestamp
+        log.debug("process time (RESTFUL)= $processTime")
+
         convertBlibliSearchResponse(
-            searchResponse.responseTime.timestamp,
+            processTime,
             searchResponse.body<BlibliSearchResponse>()
         )
     }
 
     override suspend fun searchByScraper(content: String?): CommonSearchResponse = coroutineScope {
+        val starTime = System.currentTimeMillis()
+
         val page: Page = browser.newPage()
         val navigateOptions = Page.NavigateOptions()
         navigateOptions.setWaitUntil(WaitUntilState.LOAD)
@@ -76,11 +83,14 @@ class BlibliClientEngine(
             }
         }
 
+        val processTime = System.currentTimeMillis() - starTime
+        log.debug("process time (SCRAPE)= $processTime")
+
         CommonSearchResponse(
             searchData,
             CommonSearchResponse.Meta(
                 source = ecommerceSource.toString(),
-                priority = System.currentTimeMillis()
+                processTime = processTime
             )
         )
     }
