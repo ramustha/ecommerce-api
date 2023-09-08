@@ -222,4 +222,64 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
 
         }
     }
+
+    @Test
+    fun searchProductNormalTokopediaScraperTest() {
+        runBlocking {
+            val mockContent = "scrape/tokopedia-response.html".asResource()
+            val commonSearchRequest = commonSearchRequest(
+                engine = EcommerceEngine.SCRAPER.toString()
+            )
+            val searchProduct = searchProductMock(
+                EcommerceSource.TOKOPEDIA, commonSearchRequest, mockContent
+            )
+            val searchResultData = searchProduct.data.first()
+
+            assertEquals("TIS-70232-14582", searchResultData.id)
+            assertEquals(BigDecimal.valueOf(605000), searchResultData.price)
+            assertNull(searchResultData.lowPrice)
+            assertNull(searchResultData.highPrice)
+            assertThat(
+                searchResultData.name,
+                containsString("USB Flashdisk Batocera Flashdisk Full Games Flashdisk Batocera USB")
+            )
+            assertThat(
+                searchResultData.url,
+                containsString("/p/usb-flashdisk-batocera-flashdisk-full-games-flashdisk-batocera-usb/")
+            )
+            assertEquals(-1, searchProduct.meta.total)
+            assertEquals(EcommerceSource.TOKOPEDIA.toString(), searchProduct.meta.source)
+
+        }
+    }
+
+    @Test
+    fun searchProductNormalBukalapakScraperTest() {
+        runBlocking {
+            val mockContent = "scrape/bukalapak-response.html".asResource()
+            val commonSearchRequest = commonSearchRequest(
+                engine = EcommerceEngine.SCRAPER.toString()
+            )
+            val searchProduct = searchProductMock(
+                EcommerceSource.BUKALAPAK, commonSearchRequest, mockContent
+            )
+            val searchResultData = searchProduct.data.first()
+
+            assertEquals("0000001" + EcommerceSource.BUKALAPAK, searchResultData.id)
+            assertEquals(BigDecimal.valueOf(199000), searchResultData.price)
+            assertNull(searchResultData.lowPrice)
+            assertNull(searchResultData.highPrice)
+            assertThat(
+                searchResultData.name,
+                containsString("Batocera Full Games PS1 PS2 PS3 Emulator Portable Ubah PC")
+            )
+            assertThat(
+                searchResultData.url,
+                containsString("https://www.bukalapak.com/p/hobi-koleksi/video-game/game-watch-portable")
+            )
+            assertEquals(-1, searchProduct.meta.total)
+            assertEquals(EcommerceSource.BUKALAPAK.toString(), searchProduct.meta.source)
+
+        }
+    }
 }

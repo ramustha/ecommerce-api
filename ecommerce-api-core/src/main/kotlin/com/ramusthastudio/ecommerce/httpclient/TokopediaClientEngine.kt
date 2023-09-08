@@ -1,8 +1,13 @@
 package com.ramusthastudio.ecommerce.httpclient
 
 import com.microsoft.playwright.Browser
+import com.microsoft.playwright.Page
+import com.microsoft.playwright.options.LoadState
 import com.ramusthastudio.ecommerce.common.asResourceMap
 import com.ramusthastudio.ecommerce.common.convertTokopediaSearchResponse
+import com.ramusthastudio.ecommerce.common.currencyFormat
+import com.ramusthastudio.ecommerce.common.getJsonObject
+import com.ramusthastudio.ecommerce.common.getJsonValue
 import com.ramusthastudio.ecommerce.model.CommonSearchRequest
 import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceEngine
@@ -18,11 +23,21 @@ import io.ktor.client.request.setBody
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
+import io.ktor.http.URLBuilder
 import io.ktor.http.URLProtocol
 import io.ktor.http.contentType
 import io.ktor.http.path
+import io.ktor.http.set
+import it.skrape.core.htmlDocument
+import it.skrape.selects.html
+import it.skrape.selects.html5.script
 import kotlinx.coroutines.coroutineScope
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
 import org.slf4j.LoggerFactory
+import java.util.*
 
 class TokopediaClientEngine(
     private val httpClient: HttpClient,
@@ -57,7 +72,78 @@ class TokopediaClientEngine(
     }
 
     override suspend fun searchByScraper(content: String?): CommonSearchResponse = coroutineScope {
-        TODO("Please implement search by scraper first")
+        val starTime = System.currentTimeMillis()
+        val searchData = mutableListOf<CommonSearchResponse.Data>()
+
+        Optional.ofNullable(content)
+            .ifPresentOrElse({
+                log.debug("extracted from file")
+                extractContent(it, searchData)
+            }, {
+                log.debug("extracted from url")
+
+                val urlBuilder = URLBuilder()
+                urlBuilder.set {
+                    protocol = URLProtocol.HTTPS
+                    host = ecommerceSource.scraperHost
+
+                    path(ecommerceSource.scraperPath)
+                    parameters.append("page", commonSearchRequest.page)
+                    parameters.append("q", commonSearchRequest.query)
+                }
+                val page: Page = browser.newPage()
+                page.navigate(urlBuilder.build().toString())
+
+                page.waitForLoadState(LoadState.NETWORKIDLE)
+                page.keyboard().down("End")
+                extractContent(page.content(), searchData)
+            })
+
+        val processTime = System.currentTimeMillis() - starTime
+        log.debug("process time (SCRAPE)= $processTime")
+
+        CommonSearchResponse(
+            searchData,
+            CommonSearchResponse.Meta(
+                source = ecommerceSource.toString(),
+                processTime = processTime
+            )
+        )
+    }
+
+    private fun extractContent(
+        availableContent: String,
+        searchData: MutableList<CommonSearchResponse.Data>
+    ) {
+        htmlDocument(availableContent) {
+            script {
+                withAttribute = "type" to "application/ld+json"
+                val json = findAll { removeScriptTag(this@findAll.html) }
+                log.debug("available content = {}", json)
+
+                Json.parseToJsonElement(json).jsonObject["itemListElement"]?.jsonArray.orEmpty()
+                    .mapNotNull { it.getJsonObject("item") }
+                    .forEach { productJson -> searchData.add(extractProductData(productJson)) }
+            }
+        }
+    }
+
+    private fun extractProductData(productJson: JsonObject): CommonSearchResponse.Data {
+        val productId = productJson.getJsonValue("sku")
+        val name = productJson.getJsonValue("name")
+        val url = ecommerceSource.restfulHost + productJson.getJsonValue("url")
+        val image = productJson.getJsonValue("image")
+
+        val offers = productJson.getJsonObject("offers")
+        val price = offers?.getJsonValue("price")?.currencyFormat()
+
+        return CommonSearchResponse.Data(
+            id = productId,
+            name = name,
+            price = price,
+            url = url,
+            imagesUrl = image,
+        )
     }
 }
 
@@ -67,7 +153,7 @@ suspend fun tokopediaSearch(
     searchParameter: () -> SearchParameter
 ): CommonSearchResponse {
     val parameter = searchParameter()
-    val ecommerceEngine = parameter.ecommerceEngine ?: EcommerceEngine.RESTFUL
+    val ecommerceEngine = EcommerceEngine.SCRAPER
     val searchRequest = parameter.commonSearchRequest
     return when (ecommerceEngine) {
         EcommerceEngine.RESTFUL ->

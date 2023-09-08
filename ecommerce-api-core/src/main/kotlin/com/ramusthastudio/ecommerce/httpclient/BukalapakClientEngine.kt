@@ -1,8 +1,11 @@
 package com.ramusthastudio.ecommerce.httpclient
 
 import com.microsoft.playwright.Browser
+import com.microsoft.playwright.Page
+import com.microsoft.playwright.options.LoadState
 import com.ramusthastudio.ecommerce.common.asResourceMap
 import com.ramusthastudio.ecommerce.common.convertBukalapakSearchResponse
+import com.ramusthastudio.ecommerce.common.currencyFormat
 import com.ramusthastudio.ecommerce.model.BukalapakAuthRequest
 import com.ramusthastudio.ecommerce.model.BukalapakAuthResponse
 import com.ramusthastudio.ecommerce.model.BukalapakSearchResponse
@@ -19,11 +22,16 @@ import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.ContentType
+import io.ktor.http.URLBuilder
 import io.ktor.http.URLProtocol
 import io.ktor.http.contentType
 import io.ktor.http.path
+import io.ktor.http.set
 import kotlinx.coroutines.coroutineScope
+import org.jsoup.Jsoup
+import org.jsoup.nodes.Element
 import org.slf4j.LoggerFactory
+import java.util.*
 
 class BukalapakClientEngine(
     private val httpClient: HttpClient,
@@ -84,7 +92,71 @@ class BukalapakClientEngine(
     }
 
     override suspend fun searchByScraper(content: String?): CommonSearchResponse = coroutineScope {
-        TODO("Please implement search by scraper first")
+        val starTime = System.currentTimeMillis()
+        val searchData = mutableListOf<CommonSearchResponse.Data>()
+
+        Optional.ofNullable(content)
+            .ifPresentOrElse({
+                log.debug("extracted from file")
+                extractContent(it, searchData)
+            }, {
+                log.debug("extracted from url")
+
+                val urlBuilder = URLBuilder()
+                urlBuilder.set {
+                    protocol = URLProtocol.HTTPS
+                    host = ecommerceSource.scraperHost
+
+                    path(ecommerceSource.scraperPath)
+                    parameters.append("search[keywords]", commonSearchRequest.query)
+                    parameters.append("page", commonSearchRequest.page)
+                }
+                val page: Page = browser.newPage()
+                page.navigate(urlBuilder.build().toString())
+
+                page.waitForLoadState(LoadState.NETWORKIDLE)
+                page.keyboard().down("End")
+                extractContent(page.content(), searchData)
+            })
+
+        val processTime = System.currentTimeMillis() - starTime
+        log.debug("process time (SCRAPE)= $processTime")
+
+        CommonSearchResponse(
+            searchData,
+            CommonSearchResponse.Meta(
+                source = ecommerceSource.toString(),
+                processTime = processTime
+            )
+        )
+    }
+
+    private fun extractContent(
+        availableContent: String,
+        searchData: MutableList<CommonSearchResponse.Data>
+    ) {
+        val document = Jsoup.parse(availableContent)
+        val productCards = document.getElementsByClass("te-product-card")
+        productCards.forEachIndexed { index, data -> searchData.add(extractProductData(index, data)) }
+    }
+
+    private fun extractProductData(index: Int, element: Element): CommonSearchResponse.Data {
+        val sliders = element.getElementsByClass("bl-thumbnail__slider")
+
+        val name = element.getElementsByClass("bl-product-card-new__name").text()
+        val prices = element.getElementsByClass("bl-product-card-new__prices").text()
+
+        val sl = sliders.first()
+        val url = sl.select("a").attr("href")
+        val image = sl.select("img").attr("src")
+
+        return CommonSearchResponse.Data(
+            id = String.format("000000${index + 1}") + ecommerceSource.toString(),
+            name = name,
+            price = prices.currencyFormat(),
+            url = url,
+            imagesUrl = image,
+        )
     }
 }
 
