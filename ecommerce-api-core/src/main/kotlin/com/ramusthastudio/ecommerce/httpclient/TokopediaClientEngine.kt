@@ -153,7 +153,7 @@ suspend fun tokopediaSearch(
     searchParameter: () -> SearchParameter
 ): CommonSearchResponse {
     val parameter = searchParameter()
-    val ecommerceEngine = EcommerceEngine.SCRAPER
+    val ecommerceEngine = parameter.ecommerceEngine ?: EcommerceEngine.RESTFUL
     val searchRequest = parameter.commonSearchRequest
     return when (ecommerceEngine) {
         EcommerceEngine.RESTFUL ->
