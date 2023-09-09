@@ -76,18 +76,20 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
             val searchProduct = ecommerceClientApi.searchProduct(
                 EcommerceSource.BLIBLI, commonSearchRequest("batocera")
             )
-
-            val productData = searchProduct.data.first()
+            val data = searchProduct.data
             val productMeta = searchProduct.meta
 
-            assertNotNull(productData.id)
-            assertNotNull(productData.name)
-            assertNotNull(productData.price)
-            assertNotNull(productData.originalPrice)
-            assertNotNull(productData.storeName)
-            assertNotNull(productData.storeAddressCity)
-            assertNotNull(productData.url)
-            assertNotNull(productData.imagesUrl)
+            data.forEach{ println(it)}
+            val searchResultData = data.first()
+
+            assertNotNull(searchResultData.id)
+            assertNotNull(searchResultData.name)
+            assertNotNull(searchResultData.price)
+            assertNotNull(searchResultData.originalPrice)
+            assertNotNull(searchResultData.storeName)
+            assertNotNull(searchResultData.storeAddressCity)
+            assertNotNull(searchResultData.url)
+            assertNotNull(searchResultData.imagesUrl)
             assertNotEquals(-1, productMeta.page)
             assertNotEquals(-1, productMeta.perPage)
             assertNotEquals(-1, productMeta.total)
@@ -101,18 +103,20 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
             val searchProduct = ecommerceClientApi.searchProduct(
                 EcommerceSource.BUKALAPAK, commonSearchRequest("batocera")
             )
-
-            val productData = searchProduct.data.first()
+            val data = searchProduct.data
             val productMeta = searchProduct.meta
 
-            assertNotNull(productData.id)
-            assertNotNull(productData.name)
-            assertNotNull(productData.price)
-            assertNotNull(productData.originalPrice)
-            assertNotNull(productData.storeName)
-            assertNotNull(productData.storeAddressCity)
-            assertNotNull(productData.url)
-            assertNotNull(productData.imagesUrl)
+            data.forEach{ println(it)}
+            val searchResultData = data.first()
+
+            assertNotNull(searchResultData.id)
+            assertNotNull(searchResultData.name)
+            assertNotNull(searchResultData.price)
+            assertNotNull(searchResultData.originalPrice)
+            assertNotNull(searchResultData.storeName)
+            assertNotNull(searchResultData.storeAddressCity)
+            assertNotNull(searchResultData.url)
+            assertNotNull(searchResultData.imagesUrl)
             assertNotEquals(-1, productMeta.page)
             assertNotEquals(-1, productMeta.perPage)
             assertNotEquals(-1, productMeta.total)
@@ -126,18 +130,20 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
             val searchProduct = ecommerceClientApi.searchProduct(
                 EcommerceSource.TOKOPEDIA, commonSearchRequest("batocera")
             )
-
-            val productData = searchProduct.data.first()
+            val data = searchProduct.data
             val productMeta = searchProduct.meta
 
-            assertNotNull(productData.id)
-            assertNotNull(productData.name)
-            assertNotNull(productData.price)
-            assertNotNull(productData.originalPrice)
-            assertNotNull(productData.storeName)
-            assertNotNull(productData.storeAddressCity)
-            assertNotNull(productData.url)
-            assertNotNull(productData.imagesUrl)
+            data.forEach{ println(it)}
+            val searchResultData = data.first()
+
+            assertNotNull(searchResultData.id)
+            assertNotNull(searchResultData.name)
+            assertNotNull(searchResultData.price)
+            assertNotNull(searchResultData.originalPrice)
+            assertNotNull(searchResultData.storeName)
+            assertNotNull(searchResultData.storeAddressCity)
+            assertNotNull(searchResultData.url)
+            assertNotNull(searchResultData.imagesUrl)
             assertNotEquals(-1, productMeta.total)
         }
     }
@@ -149,15 +155,17 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
             val searchProduct = ecommerceClientApi.searchProduct(
                 ecommerceSource, commonSearchRequest("batocera")
             )
-
-            val productData = searchProduct.data.first()
+            val data = searchProduct.data
             val productMeta = searchProduct.meta
 
+            data.forEach{ println(it)}
+            val searchResultData = data.first()
+
             assertNotEquals(0, searchProduct.data.size)
-            assertNotNull(productData.id)
-            assertNotNull(productData.name)
-            assertNotNull(productData.url)
-            assertNotNull(productData.imagesUrl)
+            assertNotNull(searchResultData.id)
+            assertNotNull(searchResultData.name)
+            assertNotNull(searchResultData.url)
+            assertNotNull(searchResultData.imagesUrl)
             assertEquals(ecommerceSource.toString(), productMeta.source)
             assertNotEquals(-1, productMeta.processTime)
         }

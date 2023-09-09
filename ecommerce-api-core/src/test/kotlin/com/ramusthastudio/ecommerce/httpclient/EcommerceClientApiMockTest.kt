@@ -74,7 +74,11 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
         runBlocking {
             val mockEngine = engineMock("blibli-normal-response.json")
             val searchProduct = searchProductMock(mockEngine, EcommerceSource.BLIBLI)
-            val searchResultData = searchProduct.data.first()
+            val data = searchProduct.data
+            data.forEach{ println(it)}
+            assertEquals(36, searchProduct.data.size)
+
+            val searchResultData = data.first()
 
             assertEquals("SUP-25818-00923", searchResultData.id)
             assertEquals(BigDecimal.valueOf(200000), searchResultData.price)
@@ -101,7 +105,11 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
         runBlocking {
             val mockEngine = engineMock("bukalapak-normal-response.json")
             val searchProduct = searchProductMock(mockEngine, EcommerceSource.BUKALAPAK)
-            val searchResultData = searchProduct.data.first()
+            val data = searchProduct.data
+            data.forEach{ println(it)}
+            assertEquals(11, searchProduct.data.size)
+
+            val searchResultData = data.first()
 
             assertEquals("4hj8vfm", searchResultData.id)
             assertEquals(BigDecimal.valueOf(199000), searchResultData.price)
@@ -128,7 +136,11 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
         runBlocking {
             val mockEngine = engineMock("tokopedia-normal-response.json")
             val searchProduct = searchProductMock(mockEngine, EcommerceSource.TOKOPEDIA)
-            val searchResultData = searchProduct.data.first()
+            val data = searchProduct.data
+            data.forEach{ println(it)}
+            assertEquals(60, searchProduct.data.size)
+
+            val searchResultData = data.first()
 
             assertEquals("8926635387", searchResultData.id)
             assertEquals(BigDecimal.valueOf(100000), searchResultData.price)
@@ -157,7 +169,11 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
             val searchProduct = searchProductMock(
                 EcommerceSource.SHOPEE, commonSearchRequest, mockContent
             )
-            var searchResultData = searchProduct.data.first()
+            val data = searchProduct.data
+            data.forEach{ println(it)}
+            assertEquals(60, searchProduct.data.size)
+
+            var searchResultData = data.first()
 
             assertEquals("17692676207", searchResultData.id)
             assertEquals(BigDecimal.valueOf(-1), searchResultData.price)
@@ -203,7 +219,11 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
             val searchProduct = searchProductMock(
                 EcommerceSource.BLIBLI, commonSearchRequest, mockContent
             )
-            val searchResultData = searchProduct.data.first()
+            val data = searchProduct.data
+            data.forEach{ println(it)}
+            assertEquals(36, searchProduct.data.size)
+
+            val searchResultData = data.first()
 
             assertEquals("TIS-70232-14582", searchResultData.id)
             assertEquals(BigDecimal.valueOf(605000), searchResultData.price)
@@ -233,19 +253,23 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
             val searchProduct = searchProductMock(
                 EcommerceSource.TOKOPEDIA, commonSearchRequest, mockContent
             )
-            val searchResultData = searchProduct.data.first()
+            val data = searchProduct.data
+            data.forEach{ println(it)}
+            assertEquals(83, searchProduct.data.size)
 
-            assertEquals("TIS-70232-14582", searchResultData.id)
-            assertEquals(BigDecimal.valueOf(605000), searchResultData.price)
+            val searchResultData = data.first()
+
+            assertEquals("0000001TOKOPEDIA", searchResultData.id)
+            assertEquals(BigDecimal.valueOf(97900), searchResultData.price)
             assertNull(searchResultData.lowPrice)
             assertNull(searchResultData.highPrice)
             assertThat(
                 searchResultData.name,
-                containsString("USB Flashdisk Batocera Flashdisk Full Games Flashdisk Batocera USB")
+                containsString("Flashdisk Batocera All in One Game Emulator - Game Konsol Retro - 16 GB")
             )
             assertThat(
                 searchResultData.url,
-                containsString("/p/usb-flashdisk-batocera-flashdisk-full-games-flashdisk-batocera-usb/")
+                containsString("https://ta.tokopedia.com/promo/v1/clicks/8a-xgVY2gmUEH_KNHs1p")
             )
             assertEquals(-1, searchProduct.meta.total)
             assertEquals(EcommerceSource.TOKOPEDIA.toString(), searchProduct.meta.source)
@@ -263,7 +287,11 @@ class EcommerceClientApiMockTest : AbstractEcommerceClientApiTest {
             val searchProduct = searchProductMock(
                 EcommerceSource.BUKALAPAK, commonSearchRequest, mockContent
             )
-            val searchResultData = searchProduct.data.first()
+            val data = searchProduct.data
+            data.forEach{ println(it)}
+            assertEquals(16, searchProduct.data.size)
+
+            val searchResultData = data.first()
 
             assertEquals("0000001" + EcommerceSource.BUKALAPAK, searchResultData.id)
             assertEquals(BigDecimal.valueOf(199000), searchResultData.price)
