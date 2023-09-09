@@ -33,7 +33,7 @@ import org.jsoup.nodes.Element
 import org.slf4j.LoggerFactory
 import java.util.*
 
-class BukalapakClientEngine(
+private class BukalapakClientEngine(
     private val httpClient: HttpClient,
     private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest

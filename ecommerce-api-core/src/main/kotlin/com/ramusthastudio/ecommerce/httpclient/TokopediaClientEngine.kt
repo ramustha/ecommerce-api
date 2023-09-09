@@ -32,7 +32,7 @@ import org.jsoup.nodes.Element
 import org.slf4j.LoggerFactory
 import java.util.*
 
-class TokopediaClientEngine(
+private class TokopediaClientEngine(
     private val httpClient: HttpClient,
     private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest

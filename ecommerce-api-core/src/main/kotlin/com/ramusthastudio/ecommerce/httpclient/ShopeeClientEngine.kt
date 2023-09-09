@@ -26,7 +26,7 @@ import kotlinx.serialization.json.jsonArray
 import org.slf4j.LoggerFactory
 import java.util.*
 
-class ShopeeClientEngine(
+private class ShopeeClientEngine(
     private val httpClient: HttpClient,
     private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest

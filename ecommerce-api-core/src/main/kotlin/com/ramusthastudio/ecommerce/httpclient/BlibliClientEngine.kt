@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory
 import java.util.*
 
 
-class BlibliClientEngine(
+private class BlibliClientEngine(
     private val httpClient: HttpClient,
     private val browser: Browser,
     private val commonSearchRequest: CommonSearchRequest
