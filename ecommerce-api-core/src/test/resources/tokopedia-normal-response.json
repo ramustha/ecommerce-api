@@ -1,0 +1,3674 @@
+[
+  {
+    "data": {
+      "ace_search_product_v4": {
+        "header": {
+          "totalData": 2506,
+          "totalDataText": "2.506",
+          "processTime": 0.033707851,
+          "responseCode": 0,
+          "errorMessage": "",
+          "additionalParams": "",
+          "keywordProcess": "0",
+          "componentId": "02.01.00.00",
+          "__typename": "AceSearchUnifyHeader"
+        },
+        "data": {
+          "banner": {
+            "position": 0,
+            "text": "",
+            "imageUrl": "",
+            "url": "",
+            "componentId": "",
+            "trackingOption": 0,
+            "__typename": "AceSearchUnifyBanner"
+          },
+          "backendFilters": "",
+          "isQuerySafe": true,
+          "ticker": {
+            "text": "",
+            "query": "",
+            "typeId": 0,
+            "componentId": "",
+            "trackingOption": 0,
+            "__typename": "AceSearchUnifyTicker"
+          },
+          "redirection": {
+            "redirectUrl": "",
+            "departmentId": 0,
+            "__typename": "AceSearchUnifyRedirection"
+          },
+          "related": {
+            "position": 0,
+            "trackingOption": 0,
+            "relatedKeyword": "",
+            "otherRelated": [],
+            "__typename": "AceSearchUnifyRelated"
+          },
+          "suggestion": {
+            "currentKeyword": "batocera",
+            "suggestion": "",
+            "suggestionCount": 0,
+            "instead": "",
+            "insteadCount": 0,
+            "query": "",
+            "text": "",
+            "componentId": "",
+            "trackingOption": 0,
+            "__typename": "AceSearchUnifySuggestion"
+          },
+          "products": [
+            {
+              "id": 8926635387,
+              "name": "BATOCERA Flashdrive Hardisk For PC Laptop Plug \u0026 Play",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Official Store",
+                  "imageUrl": "https://images.tokopedia.net/img/official_store_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 322,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/harddisk-internal",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 42,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/harddisk-internal/batocera/mpgame/batocera-flashdrive-hardisk-for-pc-laptop-plug-play-tidak-pilihgame-40gb-usb3",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/8/3/15746519-a0ce-4e20-953e-4fd448b1dc5c.png",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "70+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp100.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.8",
+              "shop": {
+                "shopId": 267090,
+                "name": "MPGAME",
+                "url": "https://www.tokopedia.com/mpgame",
+                "city": "Tangerang",
+                "isOfficial": true,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/mpgame/batocera-flashdrive-hardisk-for-pc-laptop-plug-play-tidak-pilihgame-40gb-usb3?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 3900787534,
+              "name": "Flashdisk Gaming Portable Batocera Full Games",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 182,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/abangwawa/flashdisk-gaming-portable-batocera-full-games-32gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/10/25/24a320bd-c268-4a52-bbe9-4322952db18b.jpg",
+              "labelGroups": [
+                {
+                  "position": "gimmick",
+                  "title": "Sisa 3",
+                  "type": "textDarkRed",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "250+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp105.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.9",
+              "shop": {
+                "shopId": 5931058,
+                "name": "abangwawa",
+                "url": "https://www.tokopedia.com/abangwawa",
+                "city": "Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/abangwawa/flashdisk-gaming-portable-batocera-full-games-32gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 4772487430,
+              "name": "flashdisk gaming portable batocera Full Games",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 93,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/sumberjayanext/flashdisk-gaming-portable-batocera-full-games-128gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/6/18/3acb52ca-01e2-48b9-9ba4-48cf5b85cc44.jpg",
+              "labelGroups": [
+                {
+                  "position": "gimmick",
+                  "title": "Sisa 3",
+                  "type": "textDarkRed",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 4%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "100+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp300.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 3825455,
+                "name": "Sumber Jaya next gen",
+                "url": "https://www.tokopedia.com/sumberjayanext",
+                "city": "Tangerang Selatan",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/sumberjayanext/flashdisk-gaming-portable-batocera-full-games-128gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6913474899,
+              "name": "BATOCERA BOOTABLE SSD SATA III + ENCLOSURE | USB 3.0 - 128 GB",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 10,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/nvi/batocera-bootable-ssd-sata-iii-enclosure-usb-3-0-128-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/6/15/1486af09-0060-499a-a846-b9c4da328bdd.png",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 3%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "15 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp249.500",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 14722748,
+                "name": "Nvi Gaming",
+                "url": "https://www.tokopedia.com/nvi",
+                "city": "Kab. Bogor",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/nvi/batocera-bootable-ssd-sata-iii-enclosure-usb-3-0-128-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6862617522,
+              "name": "SSD GAMING PORTABLE BATOCERA 256GB 240GB 128GB - bukan flashdisk",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 323,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/ssd",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 14,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/ssd/batocera/premierecomp/ssd-gaming-portable-batocera-256gb-240gb-128gb-bukan-flashdisk-240gb-88d5",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/11/1/13b79a2b-3b5a-4aa3-b1f2-6f52db9e931f.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "23 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp350.000",
+              "priceRange": "",
+              "rating": 4,
+              "ratingAverage": "4.4",
+              "shop": {
+                "shopId": 2183600,
+                "name": "PREMIERE COMP",
+                "url": "https://www.tokopedia.com/premierecomp",
+                "city": "Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/premierecomp/ssd-gaming-portable-batocera-256gb-240gb-128gb-bukan-flashdisk-240gb-88d5?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 4454003660,
+              "name": "Flashdisk Batocera - 128 GB - Full Games Switch",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 6,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/gudanggamestasik/flashdisk-batocera-128-gb-full-games-switch",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/6/13/d3f03c64-f870-49c5-884e-994a21f2e85d.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 2%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "16 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp349.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.8",
+              "shop": {
+                "shopId": 4654696,
+                "name": "Gudang Games Tasikmalaya",
+                "url": "https://www.tokopedia.com/gudanggamestasik",
+                "city": "Tasikmalaya",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/gudanggamestasik/flashdisk-batocera-128-gb-full-games-switch?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 5998153580,
+              "name": "SSD Gaming Batocera Paket Lengkap Emulator PC dan Laptop",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 323,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/ssd",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 22,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/ssd/batocera/dnf-store/ssd-gaming-batocera-paket-lengkap-emulator-pc-dan-laptop-120gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2022/9/8/2e3fa0cb-1302-411f-a7e7-5fdafec4f430.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "30+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp290.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 259359,
+                "name": "DNF STORE ONLINE",
+                "url": "https://www.tokopedia.com/dnf-store",
+                "city": "Tangerang",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/dnf-store/ssd-gaming-batocera-paket-lengkap-emulator-pc-dan-laptop-120gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 9578773631,
+              "name": "Jasa Isi Hardisk Batocera Full Games",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 322,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/harddisk-internal",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 6,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/harddisk-internal/batocera/gudanggamestasik/jasa-isi-hardisk-batocera-full-games-1tb-full-ps4",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/4/17/109b8059-c5d4-4b63-a19e-cb3f14c9c46e.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 2%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "6 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp469.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.8",
+              "shop": {
+                "shopId": 4654696,
+                "name": "Gudang Games Tasikmalaya",
+                "url": "https://www.tokopedia.com/gudanggamestasik",
+                "city": "Tasikmalaya",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/gudanggamestasik/jasa-isi-hardisk-batocera-full-games-1tb-full-ps4?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7441248819,
+              "name": "USB Flashdisk Batocera Flashdisk Full Games Flashdisk Batocera USB",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Official Store",
+                  "imageUrl": "https://images.tokopedia.net/img/official_store_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 1,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/super-gameshop/usb-flashdisk-batocera-flashdisk-full-games-flashdisk-batocera-usb-fd-64gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/1/6/ce53d9b7-fd74-4c83-b731-6a47320a0577.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 2%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "1 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp200.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 809244,
+                "name": "Super-Gameshop",
+                "url": "https://www.tokopedia.com/super-gameshop",
+                "city": "Jakarta Pusat",
+                "isOfficial": true,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/super-gameshop/usb-flashdisk-batocera-flashdisk-full-games-flashdisk-batocera-usb-fd-64gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 5997986786,
+              "name": "Paket Lengkap SSD Gaming Batocera Dengan Controller",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 323,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/ssd",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 8,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/ssd/batocera/dnf-store/paket-lengkap-ssd-gaming-batocera-dengan-controller-120gb-1-stik",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2022/9/8/95ae98a8-d243-4a6b-860c-fabd4d203922.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "24 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp340.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 259359,
+                "name": "DNF STORE ONLINE",
+                "url": "https://www.tokopedia.com/dnf-store",
+                "city": "Tangerang",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/dnf-store/paket-lengkap-ssd-gaming-batocera-dengan-controller-120gb-1-stik?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 4836580048,
+              "name": "BATOCERA BOOTABLE FLASHDISK Emulator Game",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 22,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/animeindozone/batocera-bootable-flashdisk-emulator-game-32gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/7/16/748a1d5b-29d2-4c30-9c7a-dd18d833d2a2.png",
+              "labelGroups": [
+                {
+                  "position": "integrity",
+                  "title": "30+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp70.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.9",
+              "shop": {
+                "shopId": 506665,
+                "name": "Amina phonsel",
+                "url": "https://www.tokopedia.com/animeindozone",
+                "city": "Kab. Indragiri Hilir",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/animeindozone/batocera-bootable-flashdisk-emulator-game-32gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 5135804830,
+              "name": "FLASHDISK GAMING BATOCERA 128GB 64GB 32GB 16 GB",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 3,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/premierecomp/flashdisk-gaming-batocera-128gb-64gb-32gb-16-gb-16gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/7/31/28e5fcdb-b38e-4ab5-8cc1-16da84a1c267.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "3 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp90.000",
+              "priceRange": "",
+              "rating": 4,
+              "ratingAverage": "3.7",
+              "shop": {
+                "shopId": 2183600,
+                "name": "PREMIERE COMP",
+                "url": "https://www.tokopedia.com/premierecomp",
+                "city": "Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/premierecomp/flashdisk-gaming-batocera-128gb-64gb-32gb-16-gb-16gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6770995411,
+              "name": "Batocera Flashdisk Full Game PSP PS1 PS2 PS3 SEGA Nitendo DLL",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2101,
+              "categoryBreadcrumb": "gaming/game-console/playstation",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 5,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/playstation/batocera/pixelstoreid/batocera-flashdisk-full-game-psp-ps1-ps2-ps3-sega-nitendo-dll-usb-2-0-16gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/11/26/3634f4ac-5544-4f4a-a454-0f640a90f53a.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 3%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "8 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp70.000",
+              "priceRange": "",
+              "rating": 4,
+              "ratingAverage": "4.2",
+              "shop": {
+                "shopId": 14583580,
+                "name": "Pixel Store_id",
+                "url": "https://www.tokopedia.com/pixelstoreid",
+                "city": "Kab. Malang",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/pixelstoreid/batocera-flashdisk-full-game-psp-ps1-ps2-ps3-sega-nitendo-dll-usb-2-0-16gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 4869079307,
+              "name": "Jual Flasdisk Batocera Portabel ( Game OS )",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3960,
+              "categoryBreadcrumb": "komputer-laptop/software/sistem-operasi",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 13,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/software/sistem-operasi/batocera/mofficial-95/jual-flasdisk-batocera-portabel-game-os-32-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/7/24/8cf9f03e-f79f-4fd8-bde7-5a90abd0bf73.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "15 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp145.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.8",
+              "shop": {
+                "shopId": 13243200,
+                "name": "Miiracle Official Store",
+                "url": "https://www.tokopedia.com/mofficial-95",
+                "city": "Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/mofficial-95/jual-flasdisk-batocera-portabel-game-os-32-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 3664917659,
+              "name": "Batocera Flashdisk Bootable Games Plug \u0026 Play",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3960,
+              "categoryBreadcrumb": "komputer-laptop/software/sistem-operasi",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 117,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/software/sistem-operasi/batocera/vanacomp/batocera-flashdisk-bootable-games-plug-play-32gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/5/11/4beeae55-0e5d-48a2-bd56-a2b678416cde.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 2%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "100+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp120.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.9",
+              "shop": {
+                "shopId": 9525404,
+                "name": "VANACOMP",
+                "url": "https://www.tokopedia.com/vanacomp",
+                "city": "Kab. Sleman",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/vanacomp/batocera-flashdisk-bootable-games-plug-play-32gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6612124992,
+              "name": "Flashdisk Gaming Batocera 128GB Full Plug \u0026 Play USB 3.1",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 54,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/levelupid/flashdisk-gaming-batocera-128gb-full-plug-play-usb-3-1-64-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/9/27/8d37bc59-65e0-418d-b950-4eca2ba1466d.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "90+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp200.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.8",
+              "shop": {
+                "shopId": 3361635,
+                "name": "Levelup ID Store",
+                "url": "https://www.tokopedia.com/levelupid",
+                "city": "Banjarmasin",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/levelupid/flashdisk-gaming-batocera-128gb-full-plug-play-usb-3-1-64-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7781665572,
+              "name": "Mobile Power Brand Batocera Harddrive Harddisk PC Laptop",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Official Store",
+                  "imageUrl": "https://images.tokopedia.net/img/official_store_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 321,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/harddisk-external",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 1,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/harddisk-external/batocera/mpgame/mobile-power-brand-batocera-harddrive-harddisk-pc-laptop-usb-2-0-500gb-fix-game-841bd",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/2/2/4dd4dbde-b95e-4589-b4c2-4bff126a2919.png",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "3 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp199.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 267090,
+                "name": "MPGAME",
+                "url": "https://www.tokopedia.com/mpgame",
+                "city": "Tangerang",
+                "isOfficial": true,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/mpgame/mobile-power-brand-batocera-harddrive-harddisk-pc-laptop-usb-2-0-500gb-fix-game-841bd?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7925331644,
+              "name": "Flashdisk Batocera All in One Game Emulator - Game Konsol Retro",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 25,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/vrchindo-digitalsolution/flashdisk-batocera-all-in-one-game-emulator-game-konsol-retro-16-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/2/11/f4afb127-c2aa-4faa-805b-eac3b07f941e.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 5%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "100+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp97.900",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.8",
+              "shop": {
+                "shopId": 15137051,
+                "name": "VRCHINDO Digital Solution",
+                "url": "https://www.tokopedia.com/vrchindo-digitalsolution",
+                "city": "Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/vrchindo-digitalsolution/flashdisk-batocera-all-in-one-game-emulator-game-konsol-retro-16-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 2216925082,
+              "name": "Emulator Game Batocera Kinhank HDD 2TB Full Game",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2121,
+              "categoryBreadcrumb": "gaming/cd-game/cd-pc-dan-laptop-gaming",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 5,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/cd-game/cd-pc-dan-laptop-gaming/batocera/megaquantum/emulator-game-batocera-kinhank-hdd-2tb-full-game",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/7/24/7d19cbaf-c7d8-4b58-88a2-02563d6f6f44.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "7 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp2.300.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.8",
+              "shop": {
+                "shopId": 6978073,
+                "name": "megaquantum",
+                "url": "https://www.tokopedia.com/megaquantum",
+                "city": "Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/megaquantum/emulator-game-batocera-kinhank-hdd-2tb-full-game?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7009885283,
+              "name": "Android TV Box Game Console Batocera Dual Boot",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3920,
+              "categoryBreadcrumb": "elektronik/tv-aksesoris/tv-box",
+              "categoryId": 60,
+              "categoryName": "Elektronik",
+              "countReview": 1,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/elektronik/tv-aksesoris/tv-box/batocera/abangwawa/android-tv-box-game-console-batocera-dual-boot-mcsd32gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/11/20/ab781738-1e65-4be2-b2f2-394957d5e412.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "2 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp105.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 5931058,
+                "name": "abangwawa",
+                "url": "https://www.tokopedia.com/abangwawa",
+                "city": "Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/abangwawa/android-tv-box-game-console-batocera-dual-boot-mcsd32gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6936526509,
+              "name": "Hardisk HDD SSD Gaming Portable Batocera Full Games",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2101,
+              "categoryBreadcrumb": "gaming/game-console/playstation",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/playstation/batocera/sholekhahshopp/hardisk-hdd-ssd-gaming-portable-batocera-full-games-hdd-case-2-0-80gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/11/11/8be05cfc-16f0-4648-8ce7-57544c84532b.png",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 2%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "1 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp100.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 3801083,
+                "name": "SholekhahShopp",
+                "url": "https://www.tokopedia.com/sholekhahshopp",
+                "city": "Kab. Gunungkidul",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/sholekhahshopp/hardisk-hdd-ssd-gaming-portable-batocera-full-games-hdd-case-2-0-80gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7477295852,
+              "name": "Batocera Full Games PS1 PS2 PS3 Emulator Portable PC Laptop Windows",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/rumahtante/batocera-full-games-ps1-ps2-ps3-emulator-portable-pc-laptop-windows-stick-game-pc",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/1/10/fbf99779-97ee-4944-9e65-51cdcd98f78c.png",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 5 rb",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp75.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 283849,
+                "name": "Rumah Tante",
+                "url": "https://www.tokopedia.com/rumahtante",
+                "city": "Jakarta Selatan",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/rumahtante/batocera-full-games-ps1-ps2-ps3-emulator-portable-pc-laptop-windows-stick-game-pc?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6078220547,
+              "name": "PROMO USB BOOTABLE BATOCERA - UBAH PC JADI CONSOLE DENGAN FLASHDISK",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 1,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/kapalgadget/promo-usb-bootable-batocera-ubah-pc-jadi-console-dengan-flashdisk-16-gb-random-seller",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/9/11/b74cd733-831f-4b43-aad1-6ad5ea3de8bc.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "1 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp65.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 12839697,
+                "name": "KapalGadget Store",
+                "url": "https://www.tokopedia.com/kapalgadget",
+                "city": "Kab. Sleman",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/kapalgadget/promo-usb-bootable-batocera-ubah-pc-jadi-console-dengan-flashdisk-16-gb-random-seller?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 5082999359,
+              "name": "USB CONSOLE GAME BATOCERA",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 41,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/cloudcomputerid/usb-console-game-batocera-16-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/7/27/dcdb5c09-9785-4eb0-b7b7-8272d6e0ab04.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "60+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp100.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.9",
+              "shop": {
+                "shopId": 8403017,
+                "name": "cloudcomputerid",
+                "url": "https://www.tokopedia.com/cloudcomputerid",
+                "city": "Jakarta Barat",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/cloudcomputerid/usb-console-game-batocera-16-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8332546677,
+              "name": "MINI PC GAMING RETRO CONSOLE BATOCERA + WINDOWS 10",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/gamepadstore/mini-pc-gaming-retro-console-batocera-windows-10",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/3/6/de620c85-99c0-4b38-8d86-4b81bf44cc55.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 2%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp1.599.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 1324876,
+                "name": "GAMEPADSTORE",
+                "url": "https://www.tokopedia.com/gamepadstore",
+                "city": "Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/gamepadstore/mini-pc-gaming-retro-console-batocera-windows-10?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 2641982726,
+              "name": "batocera emulator game retro pc laptop notebook 32gb",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2121,
+              "categoryBreadcrumb": "gaming/cd-game/cd-pc-dan-laptop-gaming",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 12,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/cd-game/cd-pc-dan-laptop-gaming/batocera/anggi25/batocera-emulator-game-retro-pc-laptop-notebook-32gb-32gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/1/4/1b4a552f-5fb6-4993-84d6-8096ef496128.png",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "30+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp85.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.9",
+              "shop": {
+                "shopId": 2175049,
+                "name": "murse murah sekali",
+                "url": "https://www.tokopedia.com/anggi25",
+                "city": "Kab.Ciamis",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/anggi25/batocera-emulator-game-retro-pc-laptop-notebook-32gb-32gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7878311285,
+              "name": "Batocera Gaming Station Portable Drive Plug \u0026 Play - USB3.0 64gb",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3872,
+              "categoryBreadcrumb": "komputer-laptop/memory-card/memory-stick-pro-duo",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 3,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/memory-card/memory-stick-pro-duo/batocera/anggi25/batocera-gaming-station-portable-drive-plug-play-usb3-0-64gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/2/9/dc3331a0-e78a-45c0-931d-c6464fb5ca62.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "14 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp135.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 2175049,
+                "name": "murse murah sekali",
+                "url": "https://www.tokopedia.com/anggi25",
+                "city": "Kab.Ciamis",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/anggi25/batocera-gaming-station-portable-drive-plug-play-usb3-0-64gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 3453557841,
+              "name": "BATOCERA BOOTABLE FLASHDISK ORIGINAL 100%",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3960,
+              "categoryBreadcrumb": "komputer-laptop/software/sistem-operasi",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 25,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/software/sistem-operasi/batocera/xdapower/batocera-bootable-flashdisk-original-100-32-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/8/7/f20712ea-b24d-48f2-97b7-8cfc3b5afdec.png",
+              "labelGroups": [
+                {
+                  "position": "integrity",
+                  "title": "30+ terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp99.800",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.8",
+              "shop": {
+                "shopId": 1526452,
+                "name": "XDA POWER",
+                "url": "https://www.tokopedia.com/xdapower",
+                "city": "Malang",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/xdapower/batocera-bootable-flashdisk-original-100-32-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8309091452,
+              "name": "Batocera MicroSD Game Emulator - All in One Retro Game Console",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 1,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/cv-vrchindo-digital-5/batocera-microsd-game-emulator-all-in-one-retro-game-console-16-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/3/23/ae34153a-04e3-4a63-ad72-171e93c2e41b.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 5%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "1 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp175.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 14990258,
+                "name": "CV.VRCHINDO Digital Solutions",
+                "url": "https://www.tokopedia.com/cv-vrchindo-digital-5",
+                "city": "Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/cv-vrchindo-digital-5/batocera-microsd-game-emulator-all-in-one-retro-game-console-16-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 3704989694,
+              "name": "BATOCERA BOOTABLE FLASHDISK DUAL TYPE C \u0026 TYPE A ORIGINAL 100%",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3960,
+              "categoryBreadcrumb": "komputer-laptop/software/sistem-operasi",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 9,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/software/sistem-operasi/batocera/xdapower/batocera-bootable-flashdisk-dual-type-c-type-a-original-100-16-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/8/7/da901453-944f-4c59-8ed2-72cf0bbfb7f2.png",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 2%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "15 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp165.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 1526452,
+                "name": "XDA POWER",
+                "url": "https://www.tokopedia.com/xdapower",
+                "city": "Malang",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/xdapower/batocera-bootable-flashdisk-dual-type-c-type-a-original-100-16-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8079225999,
+              "name": "5TB Hardisk Game Batocera - All in One Game Console Retro Emulator !!",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/vrchindo/5tb-hardisk-game-batocera-all-in-one-game-console-retro-emulator-batocera-5tb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/12/22/7a2aabf7-8647-44ef-9d3a-18c8915ab8b1.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 5%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp4.199.300",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 2380456,
+                "name": "VRCHINDO Digital Solutions",
+                "url": "https://www.tokopedia.com/vrchindo",
+                "city": "Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/vrchindo/5tb-hardisk-game-batocera-all-in-one-game-console-retro-emulator-batocera-5tb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6798449270,
+              "name": "Paket Murah Stik Rockcandy Plus Games Batocera Joystick Gamepad Switch",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Official Store",
+                  "imageUrl": "https://images.tokopedia.net/img/official_store_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 4015,
+              "categoryBreadcrumb": "komputer-laptop/aksesoris-pc-gaming/joystick-wheel",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 6,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/aksesoris-pc-gaming/joystick-wheel/batocera/mpgame/paket-murah-stik-rockcandy-plus-games-batocera-joystick-gamepad-switch-biru-muda-320gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/10/21/6732ed21-623f-48f2-838b-d295695103de.png",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "9 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp299.000",
+              "priceRange": "",
+              "rating": 4,
+              "ratingAverage": "4.3",
+              "shop": {
+                "shopId": 267090,
+                "name": "MPGAME",
+                "url": "https://www.tokopedia.com/mpgame",
+                "city": "Tangerang",
+                "isOfficial": true,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/mpgame/paket-murah-stik-rockcandy-plus-games-batocera-joystick-gamepad-switch-biru-muda-320gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 4914318885,
+              "name": "Batocera Lengkap 500 GB - 1 TB External Harddisk Full Game",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 321,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/harddisk-external",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 2,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/harddisk-external/batocera/abangwawa/batocera-lengkap-500-gb-1-tb-external-harddisk-full-game-fd32gb-256gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/8/7/9ac6caf6-4f5b-4993-b8c7-16f639b9b5f3.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "3 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp35.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 5931058,
+                "name": "abangwawa",
+                "url": "https://www.tokopedia.com/abangwawa",
+                "city": "Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/abangwawa/batocera-lengkap-500-gb-1-tb-external-harddisk-full-game-fd32gb-256gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7457823480,
+              "name": "USB Flashdisk Batocera Flash Disk Full Games Flashdisk Batocera USB",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/titangames/usb-flashdisk-batocera-flash-disk-full-games-flashdisk-batocera-usb-fd-64-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/1/8/b0315a61-2a4a-4f2d-82f0-eaffe62dc51e.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 3%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp175.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 1675187,
+                "name": "Titan Games",
+                "url": "https://www.tokopedia.com/titangames",
+                "city": "Jakarta Pusat",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/titangames/usb-flashdisk-batocera-flash-disk-full-games-flashdisk-batocera-usb-fd-64-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6925392644,
+              "name": "FD Game portable PlayStation PS1 PS2 PS3 Hardisk SSD Bootable Batocera",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2101,
+              "categoryBreadcrumb": "gaming/game-console/playstation",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 4,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/playstation/batocera/sholekhahshopp/fd-game-portable-playstation-ps1-ps2-ps3-hardisk-ssd-bootable-batocera-fd-usb-2-0-16gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/9/3/75f25fc4-33d7-4764-9b42-94cd2be6cc79.jpg",
+              "labelGroups": [
+                {
+                  "position": "integrity",
+                  "title": "8 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp60.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.8",
+              "shop": {
+                "shopId": 3801083,
+                "name": "SholekhahShopp",
+                "url": "https://www.tokopedia.com/sholekhahshopp",
+                "city": "Kab. Gunungkidul",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/sholekhahshopp/fd-game-portable-playstation-ps1-ps2-ps3-hardisk-ssd-bootable-batocera-fd-usb-2-0-16gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8049219172,
+              "name": "Promo Batocera Flashdisk Batocera Game PS2 / Batocera PS2 Murah Banget",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 4389,
+              "categoryBreadcrumb": "komputer-laptop/aksesoris-pc-gaming/memory-card-gaming",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/aksesoris-pc-gaming/memory-card-gaming/batocera/masjava/promo-batocera-flashdisk-batocera-game-ps2-batocera-ps2-murah-banget",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/2/18/4932bd8f-90d0-4e82-aad5-0370ef38859f.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp110.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 7467079,
+                "name": "Mas Java",
+                "url": "https://www.tokopedia.com/masjava",
+                "city": "Jakarta Timur",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/masjava/promo-batocera-flashdisk-batocera-game-ps2-batocera-ps2-murah-banget?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8926612064,
+              "name": "Emulator BATOCERA Flashdrive Hardisk For PC Laptop Plug \u0026 Play",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Official Store",
+                  "imageUrl": "https://images.tokopedia.net/img/official_store_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 322,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/harddisk-internal",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 13,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/harddisk-internal/batocera/mpgame/emulator-batocera-flashdrive-hardisk-for-pc-laptop-plug-play-tidak-pilihgame-40gb-usb3",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/8/4/648f1abb-a826-49dd-ac0a-a17288ce30b1.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "14 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp100.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.9",
+              "shop": {
+                "shopId": 267090,
+                "name": "MPGAME",
+                "url": "https://www.tokopedia.com/mpgame",
+                "city": "Tangerang",
+                "isOfficial": true,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/mpgame/emulator-batocera-flashdrive-hardisk-for-pc-laptop-plug-play-tidak-pilihgame-40gb-usb3?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8701817388,
+              "name": "SALE GERCEP!!! SSD GAMING PORTABLE BATOCERA 256GB 240GB 128GB - BUKAN",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 323,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/ssd",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/ssd/batocera/andiekha86/sale-gercep-ssd-gaming-portable-batocera-256gb-240gb-128gb-bukan",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2023/3/23/e7c6fe3a-262f-4775-8c0a-7148999d3ee7.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp792.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 15272640,
+                "name": "Andiekha86",
+                "url": "https://www.tokopedia.com/andiekha86",
+                "city": "Jakarta Pusat",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/andiekha86/sale-gercep-ssd-gaming-portable-batocera-256gb-240gb-128gb-bukan?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7080656132,
+              "name": "Game Stick Batocera - Flashdisk Gaming Portable",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2121,
+              "categoryBreadcrumb": "gaming/cd-game/cd-pc-dan-laptop-gaming",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 1,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/cd-game/cd-pc-dan-laptop-gaming/batocera/tomarishop/game-stick-batocera-flashdisk-gaming-portable-fd-32-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/11/28/27489478-b86e-4015-ba5e-1aed849edbfa.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "2 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp140.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 4202108,
+                "name": "Tomari shop",
+                "url": "https://www.tokopedia.com/tomarishop",
+                "city": "Palembang",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/tomarishop/game-stick-batocera-flashdisk-gaming-portable-fd-32-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7385641491,
+              "name": "Batocera Portable Game Station Hdd Plug \u0026 Play 160Gb Full Game | Promo",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3829,
+              "categoryBreadcrumb": "komputer-laptop/aksesoris-pc-gaming/joystick-game",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/aksesoris-pc-gaming/joystick-game/batocera/lesti2/batocera-portable-game-station-hdd-plug-play-160gb-full-game-promo",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2023/1/2/bff81348-2a2b-4d47-b9a3-74d301d923a1.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp282.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 14961318,
+                "name": "Electroa",
+                "url": "https://www.tokopedia.com/lesti2",
+                "city": "Jakarta Pusat",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/lesti2/batocera-portable-game-station-hdd-plug-play-160gb-full-game-promo?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6762429597,
+              "name": "BATOCERA Bootable Flashdisk Original Full Game pilihan Termurah",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 7,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/jjnkawarung/batocera-bootable-flashdisk-original-full-game-pilihan-termurah-64-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/10/16/615b65fc-9891-46d5-aee1-ea96a1c2a703.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "12 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp135.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 6827719,
+                "name": "Jajanan ka warung",
+                "url": "https://www.tokopedia.com/jjnkawarung",
+                "city": "Kab. Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/jjnkawarung/batocera-bootable-flashdisk-original-full-game-pilihan-termurah-64-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 9822884644,
+              "name": "(NEW STOCK) FLASHDISK FULL GAME PS3, UNTUK LAPTOP/PC BATOCERA",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2121,
+              "categoryBreadcrumb": "gaming/cd-game/cd-pc-dan-laptop-gaming",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/cd-game/cd-pc-dan-laptop-gaming/batocera/dafa44/new-stock-flashdisk-full-game-ps3-untuk-laptop-pc-batocera-64gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2023/5/30/27d1339b-df3e-4d77-b9de-c0f7837fd1d8.jpg",
+              "labelGroups": [],
+              "originalPrice": "",
+              "price": "Rp275.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 15574980,
+                "name": "dafa44store",
+                "url": "https://www.tokopedia.com/dafa44",
+                "city": "Jakarta Selatan",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/dafa44/new-stock-flashdisk-full-game-ps3-untuk-laptop-pc-batocera-64gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7208830545,
+              "name": "HDD External PS3 Full Game | Batocera Emulator | Console PS3",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2101,
+              "categoryBreadcrumb": "gaming/game-console/playstation",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/playstation/batocera/atk110-official/hdd-external-ps3-full-game-batocera-emulator-console-ps3-pc-laptop",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/12/22/c6554f02-9bc1-4afd-bdfb-be9e03537f8a.png",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "1 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp320.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 803879,
+                "name": "ATK110 Official",
+                "url": "https://www.tokopedia.com/atk110-official",
+                "city": "Kab. Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/atk110-official/hdd-external-ps3-full-game-batocera-emulator-console-ps3-pc-laptop?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8658832094,
+              "name": "SSD Game Batocera 1 TB - Game Console All in One Retro Emulator !!",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 1,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/cv-vrchindo/ssd-game-batocera-1-tb-game-console-all-in-one-retro-emulator",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/3/22/7a4d1c37-f881-4543-a3ef-03d33f0b7131.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 4%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "2 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp1.749.300",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 11231731,
+                "name": "CV. VRCHINDO Digital Solutions",
+                "url": "https://www.tokopedia.com/cv-vrchindo",
+                "city": "Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/cv-vrchindo/ssd-game-batocera-1-tb-game-console-all-in-one-retro-emulator?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7423862615,
+              "name": "Flashdisk Batocera Retrogames",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 10,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/ggss/flashdisk-batocera-retrogames-64-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/1/5/e2edfb2a-b974-4272-aec9-c26acd030d3d.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 2%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "10 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp110.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 1490111,
+                "name": "Gaming \u0026 Gadget SuperStore",
+                "url": "https://www.tokopedia.com/ggss",
+                "city": "Jakarta Utara",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/ggss/flashdisk-batocera-retrogames-64-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8752302915,
+              "name": "Game Emulator Batocera MicroSD 256 GB - Game Console",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/cv-vrchindo/game-emulator-batocera-microsd-256-gb-game-console-batocera-256gb-87c73",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/3/25/d329d7da-952e-4542-9cd8-994525227f1c.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 4%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp542.500",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 11231731,
+                "name": "CV. VRCHINDO Digital Solutions",
+                "url": "https://www.tokopedia.com/cv-vrchindo",
+                "city": "Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/cv-vrchindo/game-emulator-batocera-microsd-256-gb-game-console-batocera-256gb-87c73?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7846712627,
+              "name": "EK568 Batocera Portablestation E Hdd Plug \u0026 Play Full",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 1129,
+              "categoryBreadcrumb": "kesehatan/lainnya",
+              "categoryId": 715,
+              "categoryName": "Kesehatan",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/kesehatan/lainnya/batocera/hadifood2/ek568-batocera-portablestation-e-hdd-plug-play-full",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2023/2/7/703fd6ca-8af3-4e91-822a-6db3dc5db0a0.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 3%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp895.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 14996632,
+                "name": "hadifood2",
+                "url": "https://www.tokopedia.com/hadifood2",
+                "city": "Bogor",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/hadifood2/ek568-batocera-portablestation-e-hdd-plug-play-full?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 4924535756,
+              "name": "FLASHDISK FD USB FLASHDISK BATOCERA",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 4,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/brothercompbks/flashdisk-fd-usb-flashdisk-batocera-16-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/7/20/cc0caf32-e710-43f8-b0e7-83291e0f525f.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "4 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp85.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 562395,
+                "name": "Brothercomputer",
+                "url": "https://www.tokopedia.com/brothercompbks",
+                "city": "Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/brothercompbks/flashdisk-fd-usb-flashdisk-batocera-16-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8047931279,
+              "name": "Promo Batocera Flashdisk Batocera Game PS2 / Batocera PS2 Murah",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 4389,
+              "categoryBreadcrumb": "komputer-laptop/aksesoris-pc-gaming/memory-card-gaming",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/aksesoris-pc-gaming/memory-card-gaming/batocera/masjava/promo-batocera-flashdisk-batocera-game-ps2-batocera-ps2-murah",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/2/18/2b5976c5-3311-4491-8d53-6a803b534022.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp110.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 7467079,
+                "name": "Mas Java",
+                "url": "https://www.tokopedia.com/masjava",
+                "city": "Jakarta Timur",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/masjava/promo-batocera-flashdisk-batocera-game-ps2-batocera-ps2-murah?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7880057477,
+              "name": "FLASHDISK GAMING RETRO PORTABLE BATOCERA EMULATOR FULL GAMES",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 342,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/usb-flash-disk",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/usb-flash-disk/batocera/gamepadstore/flashdisk-gaming-retro-portable-batocera-emulator-full-games-32-gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/2/24/2af6d694-2d5b-41ec-9a24-7003cbb5b6c8.png",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 2%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp124.500",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 1324876,
+                "name": "GAMEPADSTORE",
+                "url": "https://www.tokopedia.com/gamepadstore",
+                "city": "Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/gamepadstore/flashdisk-gaming-retro-portable-batocera-emulator-full-games-32-gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7855244326,
+              "name": "flashdisk batocera games",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2121,
+              "categoryBreadcrumb": "gaming/cd-game/cd-pc-dan-laptop-gaming",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 2,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/cd-game/cd-pc-dan-laptop-gaming/batocera/anggi25/flashdisk-batocera-games-32gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/2/8/e8e8b1d6-5558-46a8-9a31-77274a33bd7a.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "25 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp85.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 2175049,
+                "name": "murse murah sekali",
+                "url": "https://www.tokopedia.com/anggi25",
+                "city": "Kab.Ciamis",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/anggi25/flashdisk-batocera-games-32gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7250868195,
+              "name": "SD Card 128GB Batocera full games RK2020 RG351 Powkiddy RGB10",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/abangwawa-smg/sd-card-128gb-batocera-full-games-rk2020-rg351-powkiddy-rgb10",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/12/18/4be86977-fac5-4a9e-bd26-c4a26ca5854b.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp285.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 14283268,
+                "name": "abangwawa_smg",
+                "url": "https://www.tokopedia.com/abangwawa-smg",
+                "city": "Semarang",
+                "isOfficial": false,
+                "isPowerBadge": false,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/abangwawa-smg/sd-card-128gb-batocera-full-games-rk2020-rg351-powkiddy-rgb10?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 5818337918,
+              "name": "Distro Linux - Batocera - Emulator Portable Game",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3960,
+              "categoryBreadcrumb": "komputer-laptop/software/sistem-operasi",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/software/sistem-operasi/batocera/samony/distro-linux-batocera-emulator-portable-game",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/8/31/e8c39ec5-410c-4275-8c1c-61b5cf7fe1ad.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp125.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 5315830,
+                "name": "Sam \u0026 Ony",
+                "url": "https://www.tokopedia.com/samony",
+                "city": "Jakarta Selatan",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/samony/distro-linux-batocera-emulator-portable-game?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8090968224,
+              "name": "4TB Hardisk Game Batocera - All in One Game Konsol Retro Emulator !!",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Merchant Pro Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/goldmerchant/pm_activation/badge/PM%20Pro%20Small.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 321,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/harddisk-external",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/harddisk-external/batocera/cv-vrchindo/4tb-hardisk-game-batocera-all-in-one-game-konsol-retro-emulator-batocera-4tb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/4/10/e00bd22c-1015-467d-b0e1-d8d2993b7f6f.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Cashback 4%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp3.499.300",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 11231731,
+                "name": "CV. VRCHINDO Digital Solutions",
+                "url": "https://www.tokopedia.com/cv-vrchindo",
+                "city": "Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/cv-vrchindo/4tb-hardisk-game-batocera-all-in-one-game-konsol-retro-emulator-batocera-4tb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 4845312585,
+              "name": "Batocera Lengkap 1 TB External Harddisk Full Game Bebas Pilih Judul",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 321,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/harddisk-external",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 1,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/harddisk-external/batocera/abangwawa/batocera-lengkap-1-tb-external-harddisk-full-game-bebas-pilih-judul-500gb",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/8/7/da51e479-a443-414c-a0ef-80a22143ce2f.jpg",
+              "labelGroups": [
+                {
+                  "position": "status",
+                  "title": "PreOrder",
+                  "type": "transparentBlack",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "price",
+                  "title": "Cashback 1%",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "3 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp500.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "5.0",
+              "shop": {
+                "shopId": 5931058,
+                "name": "abangwawa",
+                "url": "https://www.tokopedia.com/abangwawa",
+                "city": "Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/abangwawa/batocera-lengkap-1-tb-external-harddisk-full-game-bebas-pilih-judul-500gb?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 7080928768,
+              "name": "Flashdisk Full Game Ps2 Untuk Laptop/Pc Batocera",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 2121,
+              "categoryBreadcrumb": "gaming/cd-game/cd-pc-dan-laptop-gaming",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/cd-game/cd-pc-dan-laptop-gaming/batocera/robert15/flashdisk-full-game-ps2-untuk-laptop-pc-batocera",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2022/11/28/14539de1-1e48-4fea-a0c8-d7fa0570400f.jpg",
+              "labelGroups": [],
+              "originalPrice": "",
+              "price": "Rp343.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 14694457,
+                "name": "Robert15",
+                "url": "https://www.tokopedia.com/robert15",
+                "city": "Kab. Bekasi",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/robert15/flashdisk-full-game-ps2-untuk-laptop-pc-batocera?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 5433892149,
+              "name": "Flashdisk full game ps2 untuk Laptop/PC Batocera",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [],
+              "category": 2121,
+              "categoryBreadcrumb": "gaming/cd-game/cd-pc-dan-laptop-gaming",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/cd-game/cd-pc-dan-laptop-gaming/batocera/salwamarket7/flashdisk-full-game-ps2-untuk-laptop-pc-batocera-32",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/8/14/dccb4091-0a10-4998-ad24-7a6a40137993.jpg",
+              "labelGroups": [],
+              "originalPrice": "",
+              "price": "Rp170.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 13850702,
+                "name": "salwamarket7",
+                "url": "https://www.tokopedia.com/salwamarket7",
+                "city": "Jakarta Barat",
+                "isOfficial": false,
+                "isPowerBadge": false,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/salwamarket7/flashdisk-full-game-ps2-untuk-laptop-pc-batocera-32?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 8154053467,
+              "name": "Hardisk 5TB Game Batocera - All in One Game Console Retro Emulator",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 3821,
+              "categoryBreadcrumb": "gaming/game-console/game-retro",
+              "categoryId": 2099,
+              "categoryName": "Gaming",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/gaming/game-console/game-retro/batocera/cv-vrchindo-digitals/hardisk-5tb-game-batocera-all-in-one-game-console-retro-emulator-extra-packing-660ab",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/2/24/6d83a1f3-8a27-41af-b42e-cf19108a9fe3.jpg",
+              "labelGroups": [],
+              "originalPrice": "",
+              "price": "Rp1.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 15245851,
+                "name": "CV. VRCHINDO Digitals",
+                "url": "https://www.tokopedia.com/cv-vrchindo-digitals",
+                "city": "Bandung",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/cv-vrchindo-digitals/hardisk-5tb-game-batocera-all-in-one-game-console-retro-emulator-extra-packing-660ab?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6990298684,
+              "name": "Hardisk Batocera Eksternal 320GB USB 3.0",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 321,
+              "categoryBreadcrumb": "komputer-laptop/media-penyimpanan-data/harddisk-external",
+              "categoryId": 297,
+              "categoryName": "Komputer \u0026 Laptop",
+              "countReview": 0,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/komputer-laptop/media-penyimpanan-data/harddisk-external/batocera/gadgetidsemarang/hardisk-batocera-eksternal-320gb-usb-3-0",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/11/17/7bcc8592-d1a4-418e-b0e1-e919e71d49cd.jpg",
+              "labelGroups": [],
+              "originalPrice": "",
+              "price": "Rp125.000",
+              "priceRange": "",
+              "rating": 0,
+              "ratingAverage": "",
+              "shop": {
+                "shopId": 9586916,
+                "name": "Gadget ID Semarang",
+                "url": "https://www.tokopedia.com/gadgetidsemarang",
+                "city": "Semarang",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/gadgetidsemarang/hardisk-batocera-eksternal-320gb-usb-3-0?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            },
+            {
+              "id": 6973108119,
+              "name": "AWETAN SERANGGA KUMBANG KERING LANGKA BATOCERA TIGRIS",
+              "ads": {
+                "adsId": "",
+                "productClickUrl": "",
+                "productWishlistUrl": "",
+                "productViewUrl": "",
+                "__typename": "AceSearchUnifyAds"
+              },
+              "badges": [
+                {
+                  "title": "Power Badge",
+                  "imageUrl": "https://images.tokopedia.net/img/power_merchant_badge.png",
+                  "show": true,
+                  "__typename": "AceSearchUnifyBadge"
+                }
+              ],
+              "category": 505,
+              "categoryBreadcrumb": "mainan-hobi/lainnya/lainnya",
+              "categoryId": 55,
+              "categoryName": "Mainan \u0026 Hobi",
+              "countReview": 3,
+              "customVideoURL": "",
+              "discountPercentage": 0,
+              "gaKey": "/searchproduct/mainan-hobi/lainnya/lainnya/batocera/betawionlinestore/awetan-serangga-kumbang-kering-langka-batocera-tigris",
+              "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/11/15/94f10a77-aeba-46db-8553-63fd31e9aeaa.jpg",
+              "labelGroups": [
+                {
+                  "position": "price",
+                  "title": "Grosir",
+                  "type": "lightGreen",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "integrity",
+                  "title": "4 terjual",
+                  "type": "textDarkGrey",
+                  "url": "",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                },
+                {
+                  "position": "campaign",
+                  "title": "WIB",
+                  "type": "",
+                  "url": "https://images.tokopedia.net/img/phOWBv/2023/8/4/cdcb24fa-9a0f-425d-9aa4-dbbbe52ad40f.png",
+                  "__typename": "AceSearchUnifyLabelGroup"
+                }
+              ],
+              "originalPrice": "",
+              "price": "Rp29.000",
+              "priceRange": "",
+              "rating": 5,
+              "ratingAverage": "4.7",
+              "shop": {
+                "shopId": 9868425,
+                "name": "betawionlinestore",
+                "url": "https://www.tokopedia.com/betawionlinestore",
+                "city": "Jakarta Selatan",
+                "isOfficial": false,
+                "isPowerBadge": true,
+                "__typename": "AceSearchUnifyShop"
+              },
+              "url": "https://www.tokopedia.com/betawionlinestore/awetan-serangga-kumbang-kering-langka-batocera-tigris?extParam=ivf%3Dfalse%26src%3Dsearch",
+              "wishlist": false,
+              "sourceEngine": "0",
+              "__typename": "AceSearchUnifyProduct"
+            }
+          ],
+          "violation": {
+            "headerText": "",
+            "descriptionText": "",
+            "imageURL": "",
+            "ctaURL": "",
+            "ctaApplink": "",
+            "buttonText": "",
+            "buttonType": "",
+            "__typename": "AceSearchUnifyViolation"
+          },
+          "__typename": "AceSearchUnifyData"
+        },
+        "__typename": "AceSearchUnifyResponse"
+      }
+    }
+  }
+]

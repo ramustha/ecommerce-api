@@ -1,0 +1,22 @@
+{
+  "data": [],
+  "meta": {
+    "blocked_keywords": {
+      "blocked": false,
+      "keyword": "",
+      "message": "",
+      "type": ""
+    },
+    "facets": [],
+    "http_status": 200,
+    "page": 1,
+    "price_range": {
+      "max": null,
+      "min": null
+    },
+    "suggestions": {
+      "typed_keyword": "",
+      "types": []
+    }
+  }
+}

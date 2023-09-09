@@ -1,0 +1,1289 @@
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "https://shopee.co.id",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "/search?keyword={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "name": "Shopee",
+    "sameAs": [
+      "https://www.facebook.com/ShopeeID",
+      "https://www.instagram.com/Shopee_ID",
+      "https://twitter.com/shopeeid",
+      "https://www.youtube.com/channel/UCwljrkoI5jsfvAKgW3zNC7Q",
+      "https://play.google.com/store/apps/details?id=com.shopee.id",
+      "https://itunes.apple.com/ID/app/id959841443"
+    ]
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "GAME BATOCERA FULL GAME PS1-4",
+    "description": "",
+    "url": "https://shopee.co.id/GAME-BATOCERA-FULL-GAME-PS1-4-i.99032190.17692676207",
+    "productID": "17692676207",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-23020-l4ntwzsjzhnv48",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "170000.00",
+      "highPrice": "370000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "2",
+      "ratingValue": "4.50"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "MICROSD GAME BATOCERA UNTUK TVBOX",
+    "description": "",
+    "url": "https://shopee.co.id/MICROSD-GAME-BATOCERA-UNTUK-TVBOX-i.716699572.18457473177",
+    "productID": "18457473177",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22100-mgkskome83iv19",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "200000.00",
+      "highPrice": "350000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Batocera RetroBat 1 Tera Full Games",
+    "description": "",
+    "url": "https://shopee.co.id/Batocera-RetroBat-1-Tera-Full-Games-i.34573512.22045173513",
+    "productID": "22045173513",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul8-lhvv5u9wuvq67f",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "550000.00",
+      "highPrice": "595000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "2",
+      "ratingValue": "4.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Flashdisk Gaming Batocera 64GB",
+    "description": "",
+    "url": "https://shopee.co.id/Flashdisk-Gaming-Batocera-64GB-i.15714292.22938755638",
+    "productID": "22938755638",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul2-lfjwopou7b3f6b",
+    "brand": "",
+    "offers": {
+      "@type": "Offer",
+      "price": "180000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Flashdisk Batocera Game",
+    "description": "",
+    "url": "https://shopee.co.id/Flashdisk-Batocera-Game-i.17456207.19934452530",
+    "productID": "19934452530",
+    "image": "https://down-id.img.susercontent.com/file/9b9802c68942347d6f9aad2463fd6726",
+    "brand": "",
+    "offers": {
+      "@type": "Offer",
+      "price": "140000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "FLASHDISK GAMING BATOCERA",
+    "description": "",
+    "url": "https://shopee.co.id/FLASHDISK-GAMING-BATOCERA-i.54650047.19789734000",
+    "productID": "19789734000",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul5-lhxmrbbvmino29",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "50000.00",
+      "highPrice": "300000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "4",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "USB CONSOLE GAME BATOCERA",
+    "description": "",
+    "url": "https://shopee.co.id/USB-CONSOLE-GAME-BATOCERA-i.234262788.19270245616",
+    "productID": "19270245616",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22120-f5pyelftndlv72",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "540000.00",
+      "highPrice": "1440000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "batocera game",
+    "description": "",
+    "url": "https://shopee.co.id/batocera-game-i.241481675.17995341167",
+    "productID": "17995341167",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qukw-ljaxuf5z4pqvc4",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "150000.00",
+      "highPrice": "200000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "USB CONSOLE GAME BATOCERA",
+    "description": "",
+    "url": "https://shopee.co.id/USB-CONSOLE-GAME-BATOCERA-i.716699572.19955343311",
+    "productID": "19955343311",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22100-ypzjnij4priv90",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "175000.00",
+      "highPrice": "1000000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Flashdisk Game Batocera",
+    "description": "",
+    "url": "https://shopee.co.id/Flashdisk-Game-Batocera-i.414704748.16492172894",
+    "productID": "16492172894",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-23010-kmjr7510ocmv15",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "70000.00",
+      "highPrice": "190000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Usb Console Game Batocera",
+    "description": "",
+    "url": "https://shopee.co.id/Usb-Console-Game-Batocera-i.382299245.23331606506",
+    "productID": "23331606506",
+    "image": "https://down-id.img.susercontent.com/file/id-11134201-23030-7o64nms2tlov3a",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "520000.00",
+      "highPrice": "1420000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "USB CONSOLE GAME BATOCERA",
+    "description": "",
+    "url": "https://shopee.co.id/USB-CONSOLE-GAME-BATOCERA-i.845737513.21743575644",
+    "productID": "21743575644",
+    "image": "https://down-id.img.susercontent.com/file/2f1d5f79faf718959af51ff0b76f4004",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "191000.00",
+      "highPrice": "406000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Flashdisk batocera 128 GB",
+    "description": "",
+    "url": "https://shopee.co.id/Flashdisk-batocera-128-GB-i.123341355.19244792859",
+    "productID": "19244792859",
+    "image": "https://down-id.img.susercontent.com/file/9bc68fa5cb6c8f8faf239aa1456aee03",
+    "brand": "",
+    "offers": {
+      "@type": "Offer",
+      "price": "300000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Usb Console Game Batocera",
+    "description": "",
+    "url": "https://shopee.co.id/Usb-Console-Game-Batocera-i.104773442.23912341646",
+    "productID": "23912341646",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22120-98abd1e1h9kvb7",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "620000.00",
+      "highPrice": "1520000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Usb Console Game Batocera",
+    "description": "",
+    "url": "https://shopee.co.id/Usb-Console-Game-Batocera-i.53999548.19681094138",
+    "productID": "19681094138",
+    "image": "https://down-id.img.susercontent.com/file/id-11134201-7qul8-li9nydh0aykb9b",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "630000.00",
+      "highPrice": "1530000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "USB CONSOLE GAME BATOCERA",
+    "description": "",
+    "url": "https://shopee.co.id/USB-CONSOLE-GAME-BATOCERA-i.206103794.16093914103",
+    "productID": "16093914103",
+    "image": "https://down-id.img.susercontent.com/file/id-11134201-7qul6-lf0nadhd6hx972",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "530000.00",
+      "highPrice": "1430000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Usb Console Game Batocera",
+    "description": "",
+    "url": "https://shopee.co.id/Usb-Console-Game-Batocera-i.90492782.23637072112",
+    "productID": "23637072112",
+    "image": "https://down-id.img.susercontent.com/file/id-11134201-7qukx-lf8vlb5nitmi83",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "699999.00",
+      "highPrice": "1599999.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Microsd Game Batocera Untuk Tvbox",
+    "description": "",
+    "url": "https://shopee.co.id/Microsd-Game-Batocera-Untuk-Tvbox-i.90492782.23637072404",
+    "productID": "23637072404",
+    "image": "https://down-id.img.susercontent.com/file/id-11134201-7qul3-lf8vl9fs1d8d7b",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "328999.00",
+      "highPrice": "478999.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "USB CONSOLE GAME BATOCERA",
+    "description": "",
+    "url": "https://shopee.co.id/USB-CONSOLE-GAME-BATOCERA-i.849636710.19565445911",
+    "productID": "19565445911",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22110-o1rfjjtwlfkvc8",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "500000.00",
+      "highPrice": "1400000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Batocera Portable Game Station HDD Plug & Play 160GB Full Game | PROMO",
+    "description": "",
+    "url": "https://shopee.co.id/Batocera-Portable-Game-Station-HDD-Plug-Play-160GB-Full-Game-PROMO-i.369843096.21337766039",
+    "productID": "21337766039",
+    "image": "https://down-id.img.susercontent.com/file/48ec0da72394fd8f289d6d36fd11b841",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "148000.00",
+      "highPrice": "168000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "116",
+      "ratingValue": "4.89"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "FLASHDISK ISI GAME ORIGINAL",
+    "description": "",
+    "url": "https://shopee.co.id/FLASHDISK-ISI-GAME-ORIGINAL-i.942142230.13598355997",
+    "productID": "13598355997",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-23020-y8zhor8dhxnvcc",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "165000.00",
+      "highPrice": "275000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "14",
+      "ratingValue": "4.71"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Flashdisk Game Batocera - All in One Game Konsol Retro",
+    "description": "",
+    "url": "https://shopee.co.id/Flashdisk-Game-Batocera-All-in-One-Game-Konsol-Retro-i.9648638.19768671121",
+    "productID": "19768671121",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22120-virlwr5bj4kv2a",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "104300.00",
+      "highPrice": "524930.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "2",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "HDD External 500GB Full game Langsung main Gamepad",
+    "description": "",
+    "url": "https://shopee.co.id/HDD-External-500GB-Full-game-Langsung-main-Gamepad-i.230188712.22640090573",
+    "productID": "22640090573",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qukx-lft9goirpa6m52",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "275000.00",
+      "highPrice": "475000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "58",
+      "ratingValue": "4.79"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Request Game PC dan LAPTOP Flasdisk USB 128GB/64GB/32GB",
+    "description": "",
+    "url": "https://shopee.co.id/Request-Game-PC-dan-LAPTOP-Flasdisk-USB-128GB-64GB-32GB-i.230656942.22175936990",
+    "productID": "22175936990",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qukw-lk2f1iwhrbcz73",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "90000.00",
+      "highPrice": "189000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "1",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "BATOCERA BOOTABLE Emulator Game",
+    "description": "",
+    "url": "https://shopee.co.id/BATOCERA-BOOTABLE-Emulator-Game-i.71904391.20260098346",
+    "productID": "20260098346",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22110-quonh4akfhjv60",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "115000.00",
+      "highPrice": "155000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "43",
+      "ratingValue": "4.86"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Paket Full Game PS3 Flashdisk Sandisk / VGen 64GB Games PlayStation 3 - Sandisk, 16 gb",
+    "description": "",
+    "url": "https://shopee.co.id/Paket-Full-Game-PS3-Flashdisk-Sandisk-VGen-64GB-Games-PlayStation-3-Sandisk-16-gb-i.25482658.17088861482",
+    "productID": "17088861482",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22110-yoxslfcc4djva5",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "89900.00",
+      "highPrice": "389900.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "33",
+      "ratingValue": "4.76"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Costum request game PC Flasdisk USB 64GB/32GB/128GB ( Tanpa Instal ) - Gamepad",
+    "description": "",
+    "url": "https://shopee.co.id/Costum-request-game-PC-Flasdisk-USB-64GB-32GB-128GB-(-Tanpa-Instal-)-Gamepad-i.230188712.23977761056",
+    "productID": "23977761056",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7r98o-lkrr31d6fkz82e",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "95000.00",
+      "highPrice": "199000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "2",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Hardisk External USB 3.0 500GB Full Game | HDD Hardisk Eksternal Termurah",
+    "description": "",
+    "url": "https://shopee.co.id/Hardisk-External-USB-3.0-500GB-Full-Game-HDD-Hardisk-Eksternal-Termurah-i.1025114732.22775744495",
+    "productID": "22775744495",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul1-ljzjbizgvtj71d",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "200000.00",
+      "highPrice": "494000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "4",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Batocera Gaming Station Portable Drive Plug & Play - USB3.0 64gb",
+    "description": "",
+    "url": "https://shopee.co.id/Batocera-Gaming-Station-Portable-Drive-Plug-Play-USB3.0-64gb-i.36324318.21272819744",
+    "productID": "21272819744",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-23020-17365j33qbnvd0",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "65000.00",
+      "highPrice": "125000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "3",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Game Batocera 32Gb 64Gb 128Gb Flashdisk",
+    "description": "",
+    "url": "https://shopee.co.id/Game-Batocera-32Gb-64Gb-128Gb-Flashdisk-i.410662863.16994600179",
+    "productID": "16994600179",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul8-lglzl0f665m4e2",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "125000.00",
+      "highPrice": "325000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "2",
+      "ratingValue": "4.50"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Flashdisk 16GB full game PS2 Bola 2024 Terbaru",
+    "description": "",
+    "url": "https://shopee.co.id/Flashdisk-16GB-full-game-PS2-Bola-2024-Terbaru-i.257259929.17814107620",
+    "productID": "17814107620",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul3-ljkqefh5n8b3e3",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "35000.00",
+      "highPrice": "50000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "9",
+      "ratingValue": "4.89"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Konsole Original Batocera Portaebel portable portebel Game Station Plug & Play",
+    "description": "",
+    "url": "https://shopee.co.id/Konsole-Original-Batocera-Portaebel-portable-portebel-Game-Station-Plug-Play-i.34573512.22704664817",
+    "productID": "22704664817",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22110-ygr3u2knuojv9e",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "65000.00",
+      "highPrice": "200000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "22",
+      "ratingValue": "4.82"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Paket 100 PC LAPTOP Games Terbaik",
+    "description": "",
+    "url": "https://shopee.co.id/Paket-100-PC-LAPTOP-Games-Terbaik-i.107577246.19590416299",
+    "productID": "19590416299",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qukw-litb6kcdofo7e0",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "4500.00",
+      "highPrice": "15000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "269",
+      "ratingValue": "4.85"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Hardisk 320GB 500GB Game PC bisa Request",
+    "description": "",
+    "url": "https://shopee.co.id/Hardisk-320GB-500GB-Game-PC-bisa-Request-i.27644428.22046343095",
+    "productID": "22046343095",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7r98o-lkt3hxsdkhkz3e",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "99500.00",
+      "highPrice": "249500.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "58",
+      "ratingValue": "4.90"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Hardisk Eksternal Transparent 500GB 320GB USB 3.0 ISI GAME PC FULL LAPTOP",
+    "description": "",
+    "url": "https://shopee.co.id/Hardisk-Eksternal-Transparent-500GB-320GB-USB-3.0-ISI-GAME-PC-FULL-LAPTOP-i.12674887.18029023160",
+    "productID": "18029023160",
+    "image": "https://down-id.img.susercontent.com/file/ebac8d59621ae1220b5cc853523bedf2",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "295000.00",
+      "highPrice": "1235000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "26",
+      "ratingValue": "4.92"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Batocera Khusus PC Laptop Populer [Mobile Power]",
+    "description": "",
+    "url": "https://shopee.co.id/Batocera-Khusus-PC-Laptop-Populer-Mobile-Power--i.3962336.16788722194",
+    "productID": "16788722194",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul0-lf3dcvjkk41z43",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "100000.00",
+      "highPrice": "575000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "6",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Retrobat Portabel Gaming Station HDD plug & play full game |  | PS,XBOX,SEGA,WII,N64,MAME,SWITCH",
+    "description": "",
+    "url": "https://shopee.co.id/Retrobat-Portabel-Gaming-Station-HDD-plug-play-full-game-PS-XBOX-SEGA-WII-N64-MAME-SWITCH-i.34573512.15396650846",
+    "productID": "15396650846",
+    "image": "https://down-id.img.susercontent.com/file/id-11134201-23020-yjucgwz2j1nv00",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "65000.00",
+      "highPrice": "250000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "5",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "SSD Gaming Batocera Paket Lengkap Emulator PC dan Laptop",
+    "description": "",
+    "url": "https://shopee.co.id/SSD-Gaming-Batocera-Paket-Lengkap-Emulator-PC-dan-Laptop-i.6225645.22151194289",
+    "productID": "22151194289",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-7qvfv-lkewyt6g6qhef4",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "290000.00",
+      "highPrice": "650000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Super Mario Bros Game Lampu Malam Anime Figure Mario Lamp USB Charging LED Night Light Lampu Meja Kamar Tidur Hadiah Ulang Tahun Anak",
+    "description": "",
+    "url": "https://shopee.co.id/Super-Mario-Bros-Game-Lampu-Malam-Anime-Figure-Mario-Lamp-USB-Charging-LED-Night-Light-Lampu-Meja-Kamar-Tidur-Hadiah-Ulang-Tahun-Anak-i.48823527.20680591034",
+    "productID": "20680591034",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-7qvfy-lhpw8l1i9gxadc",
+    "brand": "",
+    "offers": {
+      "@type": "Offer",
+      "price": "99979.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "11",
+      "ratingValue": "3.82"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Original Flashdisk Full Game 4/8/16/32/64/128GB USB 2/3",
+    "description": "",
+    "url": "https://shopee.co.id/Original-Flashdisk-Full-Game-4-8-16-32-64-128GB-USB-2-3-i.365355539.23647133072",
+    "productID": "23647133072",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul7-lis8wckifmne3f",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "59850.00",
+      "highPrice": "418950.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "6",
+      "ratingValue": "4.83"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Android TV Box STB + Gamepad USB Paket games Android APK SIAP Main Support UHD 4K",
+    "description": "",
+    "url": "https://shopee.co.id/Android-TV-Box-STB-Gamepad-USB-Paket-games-Android-APK-SIAP-Main-Support-UHD-4K-i.162931164.4542278094",
+    "productID": "4542278094",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-23030-7kuo6ru3kmov2e",
+    "brand": "",
+    "offers": {
+      "@type": "Offer",
+      "price": "297000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "23",
+      "ratingValue": "4.30"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Untuk HP Android OTG isi 25 Game PS2 Tanpa Kuota Internet USB Type C Micro USB Game",
+    "description": "",
+    "url": "https://shopee.co.id/Untuk-HP-Android-OTG-isi-25-Game-PS2-Tanpa-Kuota-Internet-USB-Type-C-Micro-USB-Game-i.8126468.8447921841",
+    "productID": "8447921841",
+    "image": "https://down-id.img.susercontent.com/file/1f0b7e594f66c6e6e78b924d0a957be5",
+    "brand": "Playstation",
+    "offers": {
+      "@type": "Offer",
+      "price": "85455.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "51",
+      "ratingValue": "4.47"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Rexus Gladius GX2 Pro Stick Gaming Gamepad Controler USB PC Joystick",
+    "description": "",
+    "url": "https://shopee.co.id/Rexus-Gladius-GX2-Pro-Stick-Gaming-Gamepad-Controler-USB-PC-Joystick-i.1419657.2352079706",
+    "productID": "2352079706",
+    "image": "https://down-id.img.susercontent.com/file/4d63df2dbcc325ce9a1ee13537a5dfb7",
+    "brand": "Rexus",
+    "offers": {
+      "@type": "Offer",
+      "price": "159000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "2694",
+      "ratingValue": "4.90"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "flashdisk gaming portable game batocera laptop atau pc new tinggal colok",
+    "description": "",
+    "url": "https://shopee.co.id/flashdisk-gaming-portable-game-batocera-laptop-atau-pc-new-tinggal-colok-i.56972666.22752831283",
+    "productID": "22752831283",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-7rbk0-lkzqbthf76lt05",
+    "brand": "",
+    "offers": {
+      "@type": "Offer",
+      "price": "140000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "SSD ISI GAME BATOCERA RETRO 512GB 256GB 240GB 128GB",
+    "description": "",
+    "url": "https://shopee.co.id/SSD-ISI-GAME-BATOCERA-RETRO-512GB-256GB-240GB-128GB-i.18495747.22274143560",
+    "productID": "22274143560",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul5-ljd27rnv0hhy94",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "300000.00",
+      "highPrice": "500000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "2",
+      "ratingValue": "4.50"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Paket Lengkap SSD Gaming Batocera Dengan Controller",
+    "description": "",
+    "url": "https://shopee.co.id/Paket-Lengkap-SSD-Gaming-Batocera-Dengan-Controller-i.6225645.20882932435",
+    "productID": "20882932435",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul2-lkfqppaxtk1l4c",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "340000.00",
+      "highPrice": "800000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "NIntendo Wiiu / WII-U 500GB Full Games",
+    "description": "",
+    "url": "https://shopee.co.id/NIntendo-Wiiu-WII-U-500GB-Full-Games-i.3962336.4841357188",
+    "productID": "4841357188",
+    "image": "https://down-id.img.susercontent.com/file/6debf4cf405a7dc3b85401fe33c7c5c1",
+    "brand": "Nintendo",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "1300000.00",
+      "highPrice": "2050000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "52",
+      "ratingValue": "4.88"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Komputer motherboard For Asus ROG STRIX B250G GAMING   Desktop Intel B250 B250M DDR4 Motherboard LGA 1151  i7/i5/i3 USB3.0 SATA3",
+    "description": "",
+    "url": "https://shopee.co.id/Komputer-motherboard-For-Asus-ROG-STRIX-B250G-GAMING-Desktop-Intel-B250-B250M-DDR4-Motherboard-LGA-1151-i7-i5-i3-USB3.0-SATA3-i.428310277.9156229116",
+    "productID": "9156229116",
+    "image": "https://down-id.img.susercontent.com/file/909a983681fb0cfe577c64d0a534cc89",
+    "brand": "",
+    "offers": {
+      "@type": "Offer",
+      "price": "1258562.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "5",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Votre Paket KB-2308 Keyboard KM-310 Mouse Model Gaming USB",
+    "description": "",
+    "url": "https://shopee.co.id/Votre-Paket-KB-2308-Keyboard-KM-310-Mouse-Model-Gaming-USB-i.1039800452.22349850336",
+    "productID": "22349850336",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-7qvdp-ljqp0nrkt2wud3",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "58500.00",
+      "highPrice": "146000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "1",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Game Xbox 360 Via Flashdisk",
+    "description": "",
+    "url": "https://shopee.co.id/Game-Xbox-360-Via-Flashdisk-i.31524318.19570156939",
+    "productID": "19570156939",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22120-gqkcr4cedplv73",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "79000.00",
+      "highPrice": "195000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "12",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Setir + Pedal Rem + Vibrasi Gaming Warna Hitam Untuk Ps3 / Pc Usb",
+    "description": "",
+    "url": "https://shopee.co.id/Setir-Pedal-Rem-Vibrasi-Gaming-Warna-Hitam-Untuk-Ps3-Pc-Usb-i.401214535.11105002402",
+    "productID": "11105002402",
+    "image": "https://down-id.img.susercontent.com/file/cdc8a487b96e9886718c12ff1a3743bf",
+    "brand": "",
+    "offers": {
+      "@type": "Offer",
+      "price": "567930.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "2",
+      "ratingValue": "5.00"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "PS2 SECOND HARDIS NA /USB BACKGROUND FOTO BISA REQUES",
+    "description": "",
+    "url": "https://shopee.co.id/PS2-SECOND-HARDIS-NA-USB-BACKGROUND-FOTO-BISA-REQUES-i.224890929.8821048202",
+    "productID": "8821048202",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul1-lh66dqlteoa6f3",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "400000.00",
+      "highPrice": "675000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "14",
+      "ratingValue": "4.79"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "(Lovoski2) Handbrake Usb 14-bit Bahan Aluminum Alloy Untuk Game Balap",
+    "description": "",
+    "url": "https://shopee.co.id/(Lovoski2)-Handbrake-Usb-14-bit-Bahan-Aluminum-Alloy-Untuk-Game-Balap-i.140396468.13809438934",
+    "productID": "13809438934",
+    "image": "https://down-id.img.susercontent.com/file/5f1e29fa9d6d096c5ccabf281728920e",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "728106.00",
+      "highPrice": "731812.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "27",
+      "ratingValue": "4.70"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "FLASHDISK GAME REQUEST PS3 16GB/32GB/64GB CFW/HFW/HEN",
+    "description": "",
+    "url": "https://shopee.co.id/FLASHDISK-GAME-REQUEST-PS3-16GB-32GB-64GB-CFW-HFW-HEN-i.25482658.18320926563",
+    "productID": "18320926563",
+    "image": "https://down-id.img.susercontent.com/file/7e38b8ae133f370009a1e1475348cc61",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "89900.00",
+      "highPrice": "210000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "24",
+      "ratingValue": "4.96"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Flashdisk Isi Game PC dan Emulator - Bebas Isi Sampai Penuh (RETROBAT)",
+    "description": "",
+    "url": "https://shopee.co.id/Flashdisk-Isi-Game-PC-dan-Emulator-Bebas-Isi-Sampai-Penuh-(RETROBAT)-i.143542297.23451771310",
+    "productID": "23451771310",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-7rbk0-lkkwxj07e9wuf6",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "50000.00",
+      "highPrice": "200000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Batocera Bootable Emulator + Game",
+    "description": "",
+    "url": "https://shopee.co.id/Batocera-Bootable-Emulator-Game-i.22509267.21759993457",
+    "productID": "21759993457",
+    "image": "https://down-id.img.susercontent.com/file/sg-11134201-22110-uq01qe07zgjv55",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "60000.00",
+      "highPrice": "229800.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Komputer Full Set Murah Intel Core I5 Ram 8GB SSD 120GB HDD 500GB LED 19\" Cocok Buat Office Siap Pakai PRIDE02",
+    "description": "",
+    "url": "https://shopee.co.id/Komputer-Full-Set-Murah-Intel-Core-I5-Ram-8GB-SSD-120GB-HDD-500GB-LED-19-Cocok-Buat-Office-Siap-Pakai-PRIDE02-i.269930514.8507053026",
+    "productID": "8507053026",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7quky-lih103ym0a3lf3",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "1030000.00",
+      "highPrice": "2898000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "1133",
+      "ratingValue": "4.71"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "❤USB Arcade Joystick Circuit Board Zero Delay Arcade USB Encoder PC to Joystick Board Kit for Digital Analog Modes Game Equipment",
+    "description": "",
+    "url": "https://shopee.co.id/❤USB-Arcade-Joystick-Circuit-Board-Zero-Delay-Arcade-USB-Encoder-PC-to-Joystick-Board-Kit-for-Digital-Analog-Modes-Game-Equipment-i.1049745054.23551388056",
+    "productID": "23551388056",
+    "image": "https://down-id.img.susercontent.com/file/id-11134201-7qul2-lkh5gciv5y9le2",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "217719.00",
+      "highPrice": "260231.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "【Ready+Bisa dikirim hari ini】Game/PC Game/Stick Game 4K/Gaming/Game Konsol PS2 64G 15000 Game Genggam Wireless Video TV Game",
+    "description": "",
+    "url": "https://shopee.co.id/【Ready-Bisa-dikirim-hari-ini】Game-PC-Game-Stick-Game-4K-Gaming-Game-Konsol-PS2-64G-15000-Game-Genggam-Wireless-Video-TV-Game-i.845809888.14995372947",
+    "productID": "14995372947",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qula-lkg2ie06no747c",
+    "brand": "",
+    "offers": {
+      "@type": "Offer",
+      "price": "268000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingCount": "371",
+      "ratingValue": "4.75"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Batocera Portable Game Station HDD Plug & Play | PROMO",
+    "description": "",
+    "url": "https://shopee.co.id/Batocera-Portable-Game-Station-HDD-Plug-Play-PROMO-i.43652377.21383254492",
+    "productID": "21383254492",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7r98o-lkqdi1gz32fe71",
+    "brand": "",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "155000.00",
+      "highPrice": "500000.00",
+      "priceCurrency": "IDR",
+      "availability": "http://schema.org/InStock"
+    }
+  }
+]
