@@ -14,27 +14,57 @@
         <!-- https://kotlinlang.org/docs/maven.html#create-self-contained-jar-file -->
         <kotlin.version>1.9.10</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
+        <kotlin.compiler.jvmTarget>17</kotlin.compiler.jvmTarget>
 
-        <java.version>11</java.version>
-        <maven.compiler.target>11</maven.compiler.target>
-        <maven.compiler.source>11</maven.compiler.source>
+        <java.version>17</java.version>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
 
-        <core-api.version>0.0.1-SNAPSHOT</core-api.version>
-        <common-model.version>0.0.1-SNAPSHOT</common-model.version>
-        <backend-service.version>0.0.1-SNAPSHOT</backend-service.version>
+        <ecommerce-api-core.version>0.0.1-SNAPSHOT</ecommerce-api-core.version>
+        <ecommerce-api-common.version>0.0.1-SNAPSHOT</ecommerce-api-common.version>
+        <ecommerce-api-endpoint.version>0.0.1-SNAPSHOT</ecommerce-api-endpoint.version>
 
-        <ktor-client.version>2.3.3</ktor-client.version>
+        <ktor-client.version>2.3.4</ktor-client.version>
+        <playwright.version>1.36.0</playwright.version>
+        <skrapeit-html-parser.version>1.2.2</skrapeit-html-parser.version>
         <slf4j.version>2.0.7</slf4j.version>
         <logback-classic.version>1.4.9</logback-classic.version>
+        <junit.version>5.10.2</junit.version>
+        <junit-jupiter.version>5.9.3</junit-jupiter.version>
+        <hamcrest.version>2.2</hamcrest.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-stdlib</artifactId>
+                <artifactId>kotlin-bom</artifactId>
                 <version>${kotlin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ramusthastudio.ecommerce</groupId>
+                <artifactId>ecommerce-api-common</artifactId>
+                <version>${ecommerce-api-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ramusthastudio.ecommerce</groupId>
+                <artifactId>ecommerce-api-core</artifactId>
+                <version>${ecommerce-api-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ramusthastudio.ecommerce</groupId>
+                <artifactId>ecommerce-api-endpoint</artifactId>
+                <version>${ecommerce-api-endpoint.version}</version>
             </dependency>
 
             <dependency>
@@ -49,8 +79,35 @@
             </dependency>
             <dependency>
                 <groupId>io.ktor</groupId>
+                <artifactId>ktor-client-mock-jvm</artifactId>
+                <version>${ktor-client.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.ktor</groupId>
+                <artifactId>ktor-client-content-negotiation-jvm</artifactId>
+                <version>${ktor-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.ktor</groupId>
+                <artifactId>ktor-serialization-kotlinx-json-jvm</artifactId>
+                <version>${ktor-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.ktor</groupId>
                 <artifactId>ktor-client-logging-jvm</artifactId>
                 <version>${ktor-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.microsoft.playwright</groupId>
+                <artifactId>playwright</artifactId>
+                <version>${playwright.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>it.skrape</groupId>
+                <artifactId>skrapeit-html-parser</artifactId>
+                <version>${skrapeit-html-parser.version}</version>
             </dependency>
 
             <dependency>
@@ -63,6 +120,19 @@
                 <artifactId>logback-classic</artifactId>
                 <version>${logback-classic.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest</artifactId>
+                <version>${hamcrest.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -74,9 +144,9 @@
     </dependencies>
 
     <modules>
-        <module>core-api</module>
-        <module>common-model</module>
-        <module>backend-service</module>
+        <module>ecommerce-api-core</module>
+        <module>ecommerce-api-common</module>
+        <module>ecommerce-api-endpoint</module>
     </modules>
 
     <build>

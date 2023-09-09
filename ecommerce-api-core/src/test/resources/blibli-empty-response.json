@@ -1,0 +1,123 @@
+{
+  "code": 422,
+  "status": "UNPROCESSABLE_ENTITY",
+  "data": {
+    "pageType": [],
+    "suggestions": [],
+    "correctedSearchResponses": [],
+    "ageRestricted": false,
+    "products": [],
+    "sorting": {
+      "parameter": "sort",
+      "options": [
+        {
+          "label": "Produk terlaris",
+          "name": "terlaris",
+          "value": 16,
+          "selected": false
+        },
+        {
+          "label": "Harga termurah",
+          "name": "cheapest",
+          "value": 3,
+          "selected": false
+        },
+        {
+          "label": "Harga termahal",
+          "name": "expensive",
+          "value": 4,
+          "selected": false
+        },
+        {
+          "label": "Produk terpopuler",
+          "name": "popular",
+          "value": 7,
+          "selected": false
+        },
+        {
+          "label": "Produk terbaru",
+          "name": "newest",
+          "value": 1,
+          "selected": false
+        }
+      ]
+    },
+    "filters": [],
+    "brandFilterCount": {},
+    "quickFilters": [],
+    "paging": {
+      "page": 1,
+      "total_page": 0,
+      "item_per_page": 0,
+      "total_item": 0
+    },
+    "maxOffers": 0,
+    "serverCurrentTime": 1693291636672,
+    "productInfo": {},
+    "code": "UNPROCESSABLE_ENTITY",
+    "selectedCategoryIds": [],
+    "visibleCategoryIds": [],
+    "sellerNewProducts": [],
+    "similarProductsMerchantSearch": {
+      "similarProductList": [],
+      "seeAllVisible": false
+    },
+    "responseFlags": [],
+    "showRestrictedMsg": false,
+    "redirectionUrl": "",
+    "trackerFields": {
+      "is_ner_eligible": "false",
+      "group_type": "L3"
+    },
+    "productsPerRow": 5,
+    "needMoreSearchResponse": false,
+    "pageMetadata": {},
+    "selectedFilters": [],
+    "intentAttributes": {},
+    "intentApplied": false,
+    "nerApplied": false,
+    "showAllCategories": false,
+    "searchPageUrl": "",
+    "catIntentFailed": false,
+    "sellerAdsPosition": [
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "sellerAdsPositionWebListView": [
+      16,
+      17,
+      18
+    ],
+    "relatedSearchTermsPosition": 35,
+    "nearbyLocationFailed": false,
+    "correctedNearbyLocation": "",
+    "interspersedCardFilters": [],
+    "materiallResponse": false,
+    "interspersedCardPos": {
+      "ROM": 30,
+      "Memori Internal": 35,
+      "Ukuran": 20,
+      "Optical Zoom": 40,
+      "Kondisi Produk": 10,
+      "Lokasi toko": 5,
+      "Warna": 15,
+      "RAM": 25
+    },
+    "topRatedProduct": {
+      "itemCount": 0,
+      "merchantVoucherCount": 0,
+      "numLocations": 0,
+      "wholesaleMinQuantity": 0,
+      "wholesaleDiscountPercentage": 0.0,
+      "freshnessDaysCount": 0,
+      "hasVariants": false,
+      "preorder": false,
+      "official": false
+    },
+    "correctedContextualSearchTerm": "",
+    "sponsorProductOS": false
+  }
+}

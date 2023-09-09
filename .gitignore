@@ -25,5 +25,6 @@ hs_err_pid*
 replay_pid*
 
 /.idea/
-/core-api/target/
-/backend-service/target/
+/ecommerce-api-core/target/
+/ecommerce-api-common/target/
+/ecommerce-api-endpoint/target/
