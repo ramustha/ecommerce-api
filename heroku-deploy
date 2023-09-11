@@ -1,0 +1,5 @@
+heroku login
+heroku buildpacks:set heroku/gradle
+heroku config:set GRADLE_TASK=":ecommerce-api-endpoint:stage"
+heroku create ecommerce-api-search --buildpack heroku/gradle
+git push heroku main
