@@ -57,13 +57,14 @@ fun Route.ecommerceRouting() {
                 "Missing query",
                 status = HttpStatusCode.BadRequest
             )
+            val engine = call.request.queryParameters["engine"] ?: "RESTFUL"
             val source = call.request.queryParameters["source"] ?: return@get call.respond(
                 call.respond(ecommerceClientApiImpl.searchProductCombine(
-                    commonSearchRequest(query = query)))
+                    commonSearchRequest(query = query, engine = engine)))
             )
             call.respond(ecommerceClientApiImpl.searchProduct(
                 ecommerceSource = EcommerceSource.valueOf(source),
-                commonSearchRequest(query = query)))
+                commonSearchRequest(query = query, engine = engine)))
         }
     }
 }
