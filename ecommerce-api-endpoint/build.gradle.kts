@@ -32,8 +32,4 @@ dependencies {
 
 tasks {
     create("stage").dependsOn("installDist")
-
-    test {
-        enabled = false
-    }
 }
