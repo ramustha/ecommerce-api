@@ -27,3 +27,7 @@ dependencies {
     api("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
     testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
 }
+
+tasks {
+    create("stage").dependsOn("installDist")
+}

@@ -11,7 +11,7 @@ import kotlin.test.assertNotNull
 class EcommerceApi {
 
     @Test
-    fun testGetOrder() = testApplication {
+    fun `Search Product Test`() = testApplication {
         val response = client.get("/api/search?q=batocera")
         assertNotNull(response.bodyAsText())
         assertEquals(HttpStatusCode.OK, response.status)

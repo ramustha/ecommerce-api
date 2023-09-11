@@ -20,7 +20,7 @@ import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 
 fun main() {
-    embeddedServer(CIO, port = 8080, host = "0.0.0.0", module = Application::module)
+    embeddedServer(CIO, port = System.getenv("PORT").toInt(), module = Application::module)
         .start(wait = true)
 }
 
