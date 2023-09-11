@@ -1,5 +1,8 @@
 package com.ramusthastudio.ecommerce.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class CommonSearchRequest(
     val page: String,
     val offset: String,

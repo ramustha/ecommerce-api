@@ -1,6 +1,6 @@
 package com.ramusthastudio.ecommerce.model
 
-import com.ramusthastudio.ecommerce.httpclient.BigDecimalSerializer
+import com.ramusthastudio.ecommerce.common.BigDecimalSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonObject

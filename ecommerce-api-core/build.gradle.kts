@@ -27,3 +27,11 @@ dependencies {
     api("it.skrape:skrapeit-html-parser:$skrapeItHtmlParserVersion")
     testImplementation("io.ktor:ktor-client-mock:$ktorVersion")
 }
+
+sourceSets {
+    main {
+        resources {
+//            srcDirs("src/main/resources")
+        }
+    }
+}

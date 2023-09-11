@@ -1,4 +1,4 @@
-package com.ramusthastudio.ecommerce.httpclient
+package com.ramusthastudio.ecommerce.common
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.PrimitiveKind
