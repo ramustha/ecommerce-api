@@ -34,6 +34,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    testLogging.showStandardStreams = true
 }
 
 java.sourceCompatibility = JavaVersion.VERSION_17
