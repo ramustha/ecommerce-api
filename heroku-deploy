@@ -1,4 +1,4 @@
 heroku login
-heroku buildpacks:set heroku/java
+heroku buildpacks:set heroku/gradle
 heroku create ecommerce-api-search --buildpack heroku/gradle
 git push heroku main
