@@ -1,6 +1,7 @@
 package com.ramusthastudio.ecommerce.outbound
 
 import com.ramusthastudio.ecommerce.httpclient.EcommerceClientApiImpl
+import com.ramusthastudio.ecommerce.model.EcommerceSource
 import com.ramusthastudio.ecommerce.model.commonSearchRequest
 import io.ktor.http.HttpStatusCode
 import io.ktor.serialization.kotlinx.json.json
@@ -56,7 +57,13 @@ fun Route.ecommerceRouting() {
                 "Missing query",
                 status = HttpStatusCode.BadRequest
             )
-            call.respond(ecommerceClientApiImpl.searchProductCombine(commonSearchRequest(query = query)))
+            val source = call.request.queryParameters["source"] ?: return@get call.respond(
+                call.respond(ecommerceClientApiImpl.searchProductCombine(
+                    commonSearchRequest(query = query)))
+            )
+            call.respond(ecommerceClientApiImpl.searchProduct(
+                ecommerceSource = EcommerceSource.valueOf(source),
+                commonSearchRequest(query = query)))
         }
     }
 }
