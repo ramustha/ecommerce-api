@@ -14,7 +14,7 @@ plugins {
 }
 
 application {
-    mainClass.set("com.ramusthastudio.ecommerce.outbound.EcommerceApi.kt")
+    mainClass.set("com.ramusthastudio.ecommerce.outbound.EcommerceApiKt")
 }
 
 description = "ecommerce-api-endpoint"
