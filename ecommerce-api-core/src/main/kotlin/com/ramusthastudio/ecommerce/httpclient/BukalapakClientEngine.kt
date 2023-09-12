@@ -128,12 +128,12 @@ private class BukalapakClientEngine(
                     parameters.append("search[keywords]", commonSearchRequest.query)
                     parameters.append("page", commonSearchRequest.page)
                 }
-                val page: Page = browser.newPage()
-                page.navigate(urlBuilder.build().toString())
-
-                page.waitForTimeout(EcommerceClientApiImpl.SCRAPER_PAGE_TIMEOUT_MILLIS)
-                page.keyboard().down("End")
-                extractContent(page.content(), searchData)
+                browser.newPage().use { page ->
+                    page.navigate(urlBuilder.build().toString())
+                    page.waitForTimeout(EcommerceClientApiImpl.SCRAPER_PAGE_TIMEOUT_MILLIS)
+                    page.keyboard().down("End")
+                    extractContent(page.content(), searchData)
+                }
             })
     }
 

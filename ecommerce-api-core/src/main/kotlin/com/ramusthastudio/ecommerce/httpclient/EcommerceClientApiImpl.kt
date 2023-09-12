@@ -41,7 +41,7 @@ class EcommerceClientApiImpl(
     private var currentState: Boolean = true
 
     companion object {
-        const val SCRAPER_PAGE_TIMEOUT_MILLIS: Double = 15_000.0
+        val SCRAPER_PAGE_TIMEOUT_MILLIS: Double = System.getenv("SCRAPER_PAGE_TIMEOUT").toDoubleOrNull()?: 15_000.0
     }
 
     @OptIn(ExperimentalSerializationApi::class)

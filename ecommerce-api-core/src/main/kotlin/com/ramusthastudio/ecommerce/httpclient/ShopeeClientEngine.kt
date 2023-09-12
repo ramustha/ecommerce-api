@@ -75,12 +75,12 @@ private class ShopeeClientEngine(
                     parameters.append("keyword", commonSearchRequest.query)
                     parameters.append("page", commonSearchRequest.page.toInt().minus(1).toString())
                 }
-                val page: Page = browser.newPage()
-                page.navigate(urlBuilder.build().toString())
-
-                page.waitForTimeout(EcommerceClientApiImpl.SCRAPER_PAGE_TIMEOUT_MILLIS)
-                page.keyboard().down("End")
-                extractContent(page.content(), searchData)
+                browser.newPage().use { page ->
+                    page.navigate(urlBuilder.build().toString())
+                    page.waitForTimeout(EcommerceClientApiImpl.SCRAPER_PAGE_TIMEOUT_MILLIS)
+                    page.keyboard().down("End")
+                    extractContent(page.content(), searchData)
+                }
             })
     }
 
