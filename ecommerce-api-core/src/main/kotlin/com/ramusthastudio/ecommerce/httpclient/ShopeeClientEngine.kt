@@ -20,6 +20,7 @@ import it.skrape.core.htmlDocument
 import it.skrape.selects.html
 import it.skrape.selects.html5.script
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonArray
@@ -42,6 +43,26 @@ private class ShopeeClientEngine(
         val starTime = System.currentTimeMillis()
         val searchData = mutableListOf<CommonSearchResponse.Data>()
 
+        withTimeout(5000L) {
+            performScraper(content, searchData)
+        }
+
+        val processTime = System.currentTimeMillis() - starTime
+        log.debug("process time (SCRAPE)= $processTime")
+
+        CommonSearchResponse(
+            searchData,
+            CommonSearchResponse.Meta(
+                source = ecommerceSource.toString(),
+                processTime = processTime
+            )
+        )
+    }
+
+    private fun performScraper(
+        content: String?,
+        searchData: MutableList<CommonSearchResponse.Data>
+    ) {
         Optional.ofNullable(content)
             .ifPresentOrElse({
                 log.debug("extracted from file")
@@ -65,17 +86,6 @@ private class ShopeeClientEngine(
                 page.keyboard().down("End")
                 extractContent(page.content(), searchData)
             })
-
-        val processTime = System.currentTimeMillis() - starTime
-        log.debug("process time (SCRAPE)= $processTime")
-
-        CommonSearchResponse(
-            searchData,
-            CommonSearchResponse.Meta(
-                source = ecommerceSource.toString(),
-                processTime = processTime
-            )
-        )
     }
 
     private fun extractContent(
@@ -126,6 +136,7 @@ suspend fun shopeeSearch(
     val parameter = searchParameter()
     val ecommerceEngine = EcommerceEngine.SCRAPER
     val searchRequest = parameter.commonSearchRequest
+    LoggerFactory.getLogger("ShopeeClientEngine").debug("actual engine = {}", ecommerceEngine)
     return when (ecommerceEngine) {
         EcommerceEngine.RESTFUL ->
             ShopeeClientEngine(httpClient, browser, searchRequest).searchByRestful()

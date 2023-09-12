@@ -5,6 +5,7 @@
 val ktorVersion: String by project
 val playwrightVersion: String by project
 val skrapeItHtmlParserVersion: String by project
+val coroutinesTestVersion: String by project
 
 plugins {
     id("com.ramusthastudio.ecommerce.java-conventions")
@@ -26,4 +27,5 @@ dependencies {
     api("com.microsoft.playwright:playwright:$playwrightVersion")
     api("it.skrape:skrapeit-html-parser:$skrapeItHtmlParserVersion")
     testImplementation("io.ktor:ktor-client-mock:$ktorVersion")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion")
 }

@@ -27,6 +27,7 @@ import it.skrape.core.htmlDocument
 import it.skrape.selects.html
 import it.skrape.selects.html5.script
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonArray
@@ -78,6 +79,26 @@ private class BlibliClientEngine(
         val starTime = System.currentTimeMillis()
         val searchData = mutableListOf<CommonSearchResponse.Data>()
 
+        withTimeout(5000L) {
+            performScraper(content, searchData)
+        }
+
+        val processTime = System.currentTimeMillis() - starTime
+        log.debug("process time (SCRAPE)= $processTime")
+
+        CommonSearchResponse(
+            searchData,
+            CommonSearchResponse.Meta(
+                source = ecommerceSource.toString(),
+                processTime = processTime
+            )
+        )
+    }
+
+    private fun performScraper(
+        content: String?,
+        searchData: MutableList<CommonSearchResponse.Data>
+    ) {
         Optional.ofNullable(content)
             .ifPresentOrElse({
                 log.debug("extracted from file")
@@ -101,17 +122,6 @@ private class BlibliClientEngine(
                 page.keyboard().down("End")
                 extractContent(page.content(), searchData)
             })
-
-        val processTime = System.currentTimeMillis() - starTime
-        log.debug("process time (SCRAPE)= $processTime")
-
-        CommonSearchResponse(
-            searchData,
-            CommonSearchResponse.Meta(
-                source = ecommerceSource.toString(),
-                processTime = processTime
-            )
-        )
     }
 
     private fun extractContent(
@@ -158,6 +168,7 @@ suspend fun blibliSearch(
     val parameter = searchParameter()
     val ecommerceEngine = parameter.ecommerceEngine ?: EcommerceEngine.RESTFUL
     val searchRequest = parameter.commonSearchRequest
+    LoggerFactory.getLogger("BlibliClientEngine").debug("actual engine = {}", ecommerceEngine)
     return when (ecommerceEngine) {
         EcommerceEngine.RESTFUL ->
             BlibliClientEngine(httpClient, browser, searchRequest).searchByRestful()

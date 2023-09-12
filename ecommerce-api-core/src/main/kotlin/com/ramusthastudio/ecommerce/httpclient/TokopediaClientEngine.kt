@@ -27,6 +27,7 @@ import io.ktor.http.contentType
 import io.ktor.http.path
 import io.ktor.http.set
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.withTimeout
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import org.slf4j.LoggerFactory
@@ -68,6 +69,26 @@ private class TokopediaClientEngine(
         val starTime = System.currentTimeMillis()
         val searchData = mutableListOf<CommonSearchResponse.Data>()
 
+        withTimeout(5000L) {
+            performScraper(content, searchData)
+        }
+
+        val processTime = System.currentTimeMillis() - starTime
+        log.debug("process time (SCRAPE)= $processTime")
+
+        CommonSearchResponse(
+            searchData,
+            CommonSearchResponse.Meta(
+                source = ecommerceSource.toString(),
+                processTime = processTime
+            )
+        )
+    }
+
+    private fun performScraper(
+        content: String?,
+        searchData: MutableList<CommonSearchResponse.Data>
+    ) {
         Optional.ofNullable(content)
             .ifPresentOrElse({
                 log.debug("extracted from file")
@@ -91,17 +112,6 @@ private class TokopediaClientEngine(
                 page.keyboard().down("End")
                 extractContent(page.content(), searchData)
             })
-
-        val processTime = System.currentTimeMillis() - starTime
-        log.debug("process time (SCRAPE)= $processTime")
-
-        CommonSearchResponse(
-            searchData,
-            CommonSearchResponse.Meta(
-                source = ecommerceSource.toString(),
-                processTime = processTime
-            )
-        )
     }
 
     private fun extractContent(
@@ -138,6 +148,7 @@ suspend fun tokopediaSearch(
     val parameter = searchParameter()
     val ecommerceEngine = parameter.ecommerceEngine ?: EcommerceEngine.RESTFUL
     val searchRequest = parameter.commonSearchRequest
+    LoggerFactory.getLogger("TokopediaClientEngine").debug("actual engine = {}", ecommerceEngine)
     return when (ecommerceEngine) {
         EcommerceEngine.RESTFUL ->
             TokopediaClientEngine(httpClient, browser, searchRequest).searchByRestful()

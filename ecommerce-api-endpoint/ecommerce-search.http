@@ -1,2 +1,18 @@
+GET {{host}}/api/search?q=batocera&source=BUKALAPAK
+Accept: application/json
+
+###
+GET {{host}}/api/search?q=batocera&source=BLIBLI
+Accept: application/json
+
+###
+GET {{host}}/api/search?q=batocera&source=TOKOPEDIA
+Accept: application/json
+
+###
+GET {{host}}/api/search?q=batocera&source=SHOPEE
+Accept: application/json
+
+###
 GET {{host}}/api/search?q=batocera
 Accept: application/json
