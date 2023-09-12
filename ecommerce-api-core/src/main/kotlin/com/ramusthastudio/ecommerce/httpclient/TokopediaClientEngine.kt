@@ -104,7 +104,6 @@ private class TokopediaClientEngine(
                 browser.newPage().use { page ->
                     page.navigate(urlBuilder.build().toString())
                     page.waitForTimeout(EcommerceClientApiImpl.SCRAPER_PAGE_TIMEOUT_MILLIS)
-                    page.keyboard().down("End")
                     extractContent(page.content(), searchData)
                 }
             })
