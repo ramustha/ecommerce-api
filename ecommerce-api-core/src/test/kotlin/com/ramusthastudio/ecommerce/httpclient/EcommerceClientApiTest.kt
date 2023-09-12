@@ -4,13 +4,11 @@ import com.ramusthastudio.ecommerce.model.CommonSearchResponse
 import com.ramusthastudio.ecommerce.model.EcommerceSource
 import com.ramusthastudio.ecommerce.model.commonSearchRequest
 import kotlinx.coroutines.test.runTest
-import kotlinx.coroutines.withTimeout
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
-import java.time.Duration
 import kotlin.time.Duration.Companion.seconds
 
 class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
@@ -163,7 +161,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     @Test
     override fun searchProductEmptyCombineTest() = runTest(
         timeout = 20.seconds
-    )  {
+    ) {
         val searchProductList = ecommerceClientApi.searchProductCombine()
         assertEquals(4, searchProductList.size)
     }
@@ -171,7 +169,7 @@ class EcommerceClientApiTest : AbstractEcommerceClientApiTest {
     @Test
     override fun searchProductNormalCombineTest() = runTest(
         timeout = 20.seconds
-    )  {
+    ) {
         val searchProductList = ecommerceClientApi.searchProductCombine(
             commonSearchRequest("batocera")
         )

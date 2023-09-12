@@ -17,7 +17,6 @@ import com.ramusthastudio.ecommerce.model.SearchParameter
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.engine.cio.CIO
-import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.cache.HttpCache
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.LogLevel
@@ -41,6 +40,10 @@ class EcommerceClientApiImpl(
     )
     private var currentState: Boolean = true
 
+    companion object {
+        const val SCRAPER_PAGE_TIMEOUT_MILLIS: Double = 10000.0
+    }
+
     @OptIn(ExperimentalSerializationApi::class)
     private fun initializeHttpClient(engine: HttpClientEngine) = HttpClient(engine) {
         install(ContentNegotiation) {
@@ -51,11 +54,6 @@ class EcommerceClientApiImpl(
                 explicitNulls = false
 
             })
-        }
-        install(HttpTimeout) {
-            requestTimeoutMillis = 2000
-            connectTimeoutMillis = 5000
-            socketTimeoutMillis = 5000
         }
         install(HttpCache)
         install(Logging) {

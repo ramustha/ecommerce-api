@@ -2,7 +2,6 @@ package com.ramusthastudio.ecommerce.httpclient
 
 import com.microsoft.playwright.Browser
 import com.microsoft.playwright.Page
-import com.microsoft.playwright.options.LoadState
 import com.ramusthastudio.ecommerce.common.asResourceMap
 import com.ramusthastudio.ecommerce.common.convertBlibliSearchResponse
 import com.ramusthastudio.ecommerce.common.currencyFormat
@@ -27,7 +26,6 @@ import it.skrape.core.htmlDocument
 import it.skrape.selects.html
 import it.skrape.selects.html5.script
 import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonArray
@@ -79,9 +77,7 @@ private class BlibliClientEngine(
         val starTime = System.currentTimeMillis()
         val searchData = mutableListOf<CommonSearchResponse.Data>()
 
-        withTimeout(5000L) {
-            performScraper(content, searchData)
-        }
+        performScraper(content, searchData)
 
         val processTime = System.currentTimeMillis() - starTime
         log.debug("process time (SCRAPE)= $processTime")
@@ -118,7 +114,7 @@ private class BlibliClientEngine(
                 val page: Page = browser.newPage()
                 page.navigate(urlBuilder.build().toString())
 
-                page.waitForLoadState(LoadState.NETWORKIDLE)
+                page.waitForTimeout(EcommerceClientApiImpl.SCRAPER_PAGE_TIMEOUT_MILLIS)
                 page.keyboard().down("End")
                 extractContent(page.content(), searchData)
             })

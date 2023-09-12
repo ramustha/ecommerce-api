@@ -40,7 +40,7 @@ data class BukalapakSearchResponse(
         @SerialName("discount_percentage")
         val discountPercentage: Int?,
         @SerialName("discount_subsidy")
-        val discountSubsidy: String?,
+        val discountSubsidy: JsonObject?,
         @SerialName("dynamic_tags")
         val dynamicTags: List<JsonObject?>?,
         @SerialName("for_sale")

@@ -783,7 +783,7 @@ data class BlibliSearchResponse(
             @SerialName("storeClosingInfo")
             val storeClosingInfo: StoreClosingInfo?,
             @SerialName("promoEndTime")
-            val promoEndTime: Int?,
+            val promoEndTime: Long?,
             @SerialName("debugData")
             val debugData: DebugData?,
             @SerialName("allCategories")

@@ -2,7 +2,6 @@ package com.ramusthastudio.ecommerce.httpclient
 
 import com.microsoft.playwright.Browser
 import com.microsoft.playwright.Page
-import com.microsoft.playwright.options.LoadState
 import com.ramusthastudio.ecommerce.common.asResourceMap
 import com.ramusthastudio.ecommerce.common.convertBukalapakSearchResponse
 import com.ramusthastudio.ecommerce.common.currencyFormat
@@ -16,7 +15,6 @@ import com.ramusthastudio.ecommerce.model.EcommerceSource
 import com.ramusthastudio.ecommerce.model.SearchParameter
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
-import io.ktor.client.plugins.timeout
 import io.ktor.client.request.get
 import io.ktor.client.request.header
 import io.ktor.client.request.post
@@ -29,7 +27,6 @@ import io.ktor.http.contentType
 import io.ktor.http.path
 import io.ktor.http.set
 import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.withTimeout
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import org.slf4j.LoggerFactory
@@ -50,9 +47,6 @@ private class BukalapakClientEngine(
             val authRequest = EcommerceSource.BUKALAPAK_AUTH
 
             httpClient.post {
-                timeout {
-                    requestTimeoutMillis = 5000
-                }
                 url {
                     protocol = URLProtocol.HTTPS
                     host = authRequest.restfulHost
@@ -100,9 +94,7 @@ private class BukalapakClientEngine(
         val starTime = System.currentTimeMillis()
         val searchData = mutableListOf<CommonSearchResponse.Data>()
 
-        withTimeout(5000L) {
-            performScraper(content, searchData)
-        }
+        performScraper(content, searchData)
 
         val processTime = System.currentTimeMillis() - starTime
         log.debug("process time (SCRAPE)= $processTime")
@@ -139,7 +131,7 @@ private class BukalapakClientEngine(
                 val page: Page = browser.newPage()
                 page.navigate(urlBuilder.build().toString())
 
-                page.waitForLoadState(LoadState.NETWORKIDLE)
+                page.waitForTimeout(EcommerceClientApiImpl.SCRAPER_PAGE_TIMEOUT_MILLIS)
                 page.keyboard().down("End")
                 extractContent(page.content(), searchData)
             })
