@@ -48,7 +48,7 @@ async function performScrapingPlaywright(url, timeout, res, stealth) {
         console.log('stealth mode..' + url);
     }
 
-    const browser = await chromium.launch({headless: false});
+    const browser = await chromium.launch({headless: true});
     const page = await browser.newPage()
 
     try {
