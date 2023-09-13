@@ -22,9 +22,9 @@ async function performScrapingPuppeteer(url, timeout, res, stealth) {
         console.log('Scraping puppeteer..' + url);
         await page.goto(url, {waitUntil: 'networkidle0'});
 
-        await page.click("div[id=main]")
-        await page.locator("input[class=shopee-searchbar-input__input]").fill("batocera")
-        await page.keyboard.press('Enter');
+        // await page.click("div[id=main]")
+        // await page.locator("input[class=shopee-searchbar-input__input]").fill("batocera")
+        // await page.keyboard.press('Enter');
         await page.waitForTimeout(timeout)
 
         let screenshotBuffer = await page.screenshot({fullPage: true});
@@ -48,16 +48,16 @@ async function performScrapingPlaywright(url, timeout, res, stealth) {
         console.log('stealth mode..' + url);
     }
 
-    const browser = await chromium.launch({headless: true});
+    const browser = await chromium.launchPersistentContext("/", {headless: false});
     const page = await browser.newPage()
 
     try {
         console.log('Scraping playwright..' + url);
         await page.goto(url, {waitUntil: 'networkidle'})
 
-        await page.click("div[id=main]")
-        await page.locator("input[class=shopee-searchbar-input__input]").fill("batocera")
-        await page.keyboard.press('Enter');
+        // await page.click("div[id=main]")
+        // await page.locator("input[class=shopee-searchbar-input__input]").fill("batocera")
+        // await page.keyboard.press('Enter');
         await page.waitForTimeout(timeout)
 
         let screenshotBuffer = await page.screenshot({fullPage: true});
