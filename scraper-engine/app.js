@@ -7,7 +7,7 @@ const port = 3000
 const defaultTimeout = 0
 
 async function performScrapingPuppeteer(url, timeout, res) {
-    puppeteer.use(StealthPlugin())
+    puppeteer.use(StealthPlugin());
 
     const browser = await puppeteer.launch({
         headless: 'new',
@@ -17,15 +17,16 @@ async function performScrapingPuppeteer(url, timeout, res) {
 
     try {
         console.log('Scraping puppeteer..' + url);
-        await page.goto(url, {waitUntil: 'networkidle0'})
-        await page.setDefaultTimeout(timeout)
-        // await page.screenshot({path: 'puppeteer-stealth.png', fullPage: true})
-
+        await page.goto(url, {waitUntil: 'networkidle0'});
+        await page.setDefaultTimeout(timeout);
+        let screenshotBuffer = await page.screenshot({fullPage: true});
         console.log('All done ✨');
-        const content = await page.content();
+
         await browser.close();
 
-        res.send(content);
+        // Set the correct content-type.
+        res.setHeader('Content-Type', 'image/png');
+        res.send(screenshotBuffer);
     } catch (err) {
         await browser.close();
         console.error(err);
@@ -42,13 +43,14 @@ async function performScrapingPlaywright(url, timeout, res) {
     try {
         console.log('Scraping playwright..' + url);
         await page.goto(url, {waitUntil: 'networkidle', timeout: timeout})
-        // await page.screenshot({path: 'playwright-stealth.png', fullPage: true})
-
+        let screenshotBuffer = await page.screenshot({fullPage: true});
         console.log('All done ✨');
-        const content = await page.content();
+
         await browser.close();
 
-        res.send(content);
+        // Set the correct content-type.
+        res.setHeader('Content-Type', 'image/png');
+        res.send(screenshotBuffer);
     } catch (err) {
         await browser.close();
         console.error(err);
