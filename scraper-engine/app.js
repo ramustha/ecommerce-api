@@ -9,6 +9,7 @@ const defaultTimeout = 0
 async function performScrapingPuppeteer(url, timeout, res, stealth) {
     if (stealth === '1') {
         puppeteer.use(StealthPlugin());
+        console.log('stealth mode..' + url);
     }
 
     const browser = await puppeteer.launch({
@@ -20,7 +21,12 @@ async function performScrapingPuppeteer(url, timeout, res, stealth) {
     try {
         console.log('Scraping puppeteer..' + url);
         await page.goto(url, {waitUntil: 'networkidle0'});
-        await page.setDefaultTimeout(timeout);
+
+        await page.click("div[id=main]")
+        await page.locator("input[class=shopee-searchbar-input__input]").fill("batocera")
+        await page.keyboard.press('Enter');
+        await page.waitForTimeout(timeout)
+
         let screenshotBuffer = await page.screenshot({fullPage: true});
         console.log('All done ✨');
 
@@ -39,14 +45,21 @@ async function performScrapingPuppeteer(url, timeout, res, stealth) {
 async function performScrapingPlaywright(url, timeout, res, stealth) {
     if (stealth === '1') {
         chromium.use(StealthPlugin());
+        console.log('stealth mode..' + url);
     }
 
-    const browser = await chromium.launch({headless: true});
+    const browser = await chromium.launch({headless: false});
     const page = await browser.newPage()
 
     try {
         console.log('Scraping playwright..' + url);
-        await page.goto(url, {waitUntil: 'networkidle', timeout: timeout})
+        await page.goto(url, {waitUntil: 'networkidle'})
+
+        await page.click("div[id=main]")
+        await page.locator("input[class=shopee-searchbar-input__input]").fill("batocera")
+        await page.keyboard.press('Enter');
+        await page.waitForTimeout(timeout)
+
         let screenshotBuffer = await page.screenshot({fullPage: true});
         console.log('All done ✨');
 
