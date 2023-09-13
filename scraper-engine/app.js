@@ -7,7 +7,7 @@ const port = 3000
 const defaultTimeout = 0
 
 async function performScrapingPuppeteer(url, timeout, res, stealth) {
-    if (stealth === true) {
+    if (stealth === '1') {
         puppeteer.use(StealthPlugin());
     }
 
@@ -37,7 +37,7 @@ async function performScrapingPuppeteer(url, timeout, res, stealth) {
 }
 
 async function performScrapingPlaywright(url, timeout, res, stealth) {
-    if (stealth === true) {
+    if (stealth === '1') {
         chromium.use(StealthPlugin());
     }
 
@@ -70,7 +70,7 @@ app.get('/', async (req, res) => {
     }
 
     timeout = timeout ? parseInt(timeout) : defaultTimeout;
-    if (mode === true)
+    if (mode === '1')
         await performScrapingPuppeteer(url, timeout, res, stealth);
     else
         await performScrapingPlaywright(url, timeout, res, stealth);
