@@ -6,8 +6,10 @@ const app = express()
 const port = 3000
 const defaultTimeout = 0
 
-async function performScrapingPuppeteer(url, timeout, res) {
-    puppeteer.use(StealthPlugin());
+async function performScrapingPuppeteer(url, timeout, res, stealth) {
+    if (stealth) {
+        puppeteer.use(StealthPlugin());
+    }
 
     const browser = await puppeteer.launch({
         headless: 'new',
@@ -34,8 +36,10 @@ async function performScrapingPuppeteer(url, timeout, res) {
     }
 }
 
-async function performScrapingPlaywright(url, timeout, res) {
-    chromium.use(StealthPlugin());
+async function performScrapingPlaywright(url, timeout, res, stealth) {
+    if (stealth) {
+        chromium.use(StealthPlugin());
+    }
 
     const browser = await chromium.launch({headless: true});
     const page = await browser.newPage()
@@ -59,17 +63,17 @@ async function performScrapingPlaywright(url, timeout, res) {
 }
 
 app.get('/', async (req, res) => {
-    let {url, timeout, mode} = req.query;
+    let {url, timeout, mode, stealth} = req.query;
 
     if (!url) {
         return res.status(400).send('The url parameter is required.');
     }
 
     timeout = timeout ? parseInt(timeout) : defaultTimeout;
-    if (mode === '1')
-        await performScrapingPuppeteer(url, timeout, res);
+    if (mode)
+        await performScrapingPuppeteer(url, timeout, res, stealht);
     else
-        await performScrapingPlaywright(url, timeout, res);
+        await performScrapingPlaywright(url, timeout, res, stealht);
 });
 
 app.listen(port, () => {
