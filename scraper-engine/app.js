@@ -2,6 +2,7 @@ const express = require('express')
 const puppeteer = require('puppeteer-extra')
 const {chromium} = require('playwright-extra')
 const StealthPlugin = require("puppeteer-extra-plugin-stealth")
+const AnonymizeUA = require("puppeteer-extra-plugin-anonymize-ua");
 const app = express()
 const port = 3000
 const defaultTimeout = 0
@@ -9,22 +10,17 @@ const defaultTimeout = 0
 async function performScrapingPuppeteer(url, timeout, res, stealth) {
     if (stealth === '1') {
         puppeteer.use(StealthPlugin());
-        console.log('stealth mode..' + url);
+        puppeteer.use(AnonymizeUA());
+        console.log('Puppeteer stealth mode..' + url);
     }
 
-    const browser = await puppeteer.launch({
-        headless: 'new',
-        defaultViewport: null,
-    });
+    const browser = await puppeteer.launch({headless: 'new'});
     const page = await browser.newPage();
+    await page.setDefaultTimeout(timeout)
 
     try {
         console.log('Scraping puppeteer..' + url);
         await page.goto(url, {waitUntil: 'networkidle0'});
-
-        // await page.click("div[id=main]")
-        // await page.locator("input[class=shopee-searchbar-input__input]").fill("batocera")
-        // await page.keyboard.press('Enter');
         await page.waitForTimeout(timeout)
 
         let screenshotBuffer = await page.screenshot({fullPage: true});
@@ -45,19 +41,17 @@ async function performScrapingPuppeteer(url, timeout, res, stealth) {
 async function performScrapingPlaywright(url, timeout, res, stealth) {
     if (stealth === '1') {
         chromium.use(StealthPlugin());
-        console.log('stealth mode..' + url);
+        chromium.use(AnonymizeUA());
+        console.log('Playwright stealth mode..' + url);
     }
 
-    const browser = await chromium.launchPersistentContext("/", {headless: true});
+    const browser = await chromium.launch({headless: true});
     const page = await browser.newPage()
+    await page.setDefaultTimeout(timeout)
 
     try {
         console.log('Scraping playwright..' + url);
         await page.goto(url, {waitUntil: 'networkidle'})
-
-        // await page.click("div[id=main]")
-        // await page.locator("input[class=shopee-searchbar-input__input]").fill("batocera")
-        // await page.keyboard.press('Enter');
         await page.waitForTimeout(timeout)
 
         let screenshotBuffer = await page.screenshot({fullPage: true});
